@@ -18,10 +18,10 @@ jobs:
       - name: Free disk space and add swap
         run: |
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
-          sudo fallocate -l 12G /swapfile2
-          sudo chmod 600 /swapfile2
-          sudo mkswap /swapfile2
-          sudo swapon /swapfile2
+          sudo fallocate -l 12G /swapfile22
+          sudo chmod 600 /swapfile22
+          sudo mkswap /swapfile22
+          sudo swapon /swapfile22
       - uses: leanprover/lean-action@v1
       - run: lake exe cache get
       - name: Build Lean documentation
