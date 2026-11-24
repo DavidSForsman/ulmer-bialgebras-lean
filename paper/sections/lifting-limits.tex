@@ -1,0 +1,247 @@
+
+\section{Lifting Limits and Colimits}\label{sec:lifting_limits}
+In this section, we study limits within an object $c$ of a $2$-category $\K$. A natural notion for a limit in $c$ is a right Kan extension of a morphism $d\colon I\to c$ along a morphism $k\colon I\to K$. Ordinary limits are obtained when $\K$ is the $2$-category $\CAT$ and $K$ is the terminal category. Weighted limits in the enriched setting can also be expressed as Kan extensions \cite{Kelly:Enriched}.
+
+Understanding the lifting of Kan extensions along PIE limits allows us to prove completeness and monadicity properties of the objects $\BialgB$ of bialgebras.
+
+\subsection{Kan Extensions and Their Strict Creation}
+
+\begin{definition}
+   Let $\C$ be a category. We call an object $c$ in $\C$ a \textbf{quotient initial} object if for any object $c'$ in $\C$ there exists at most one morphism $c\to c'$. \textbf{Subterminality} of an object is defined dually.
+\end{definition}
+Quotient initiality of a cocone $\lambda = (\lambda_i)_i\colon D\Rightarrow c\colon I\to \C$, where $c$ refers to the constant functor at an object $c$ in $\C$, means that $\lambda$ is jointly epic as a family of morphisms to $c$. Similarly, subterminality of a cone over a diagram is the same as the cone determining a jointly monic family of morphisms.
+\begin{definition}[Kan Extensions]
+   Let $K\xleftarrow{k}I\xrightarrow{d}c$ be a span of morphisms in a $2$-category $\K$. Consider the pre-composition functor $k^*\colon \K(K,c)\to \K(I,c)$. We define the following notions:
+   \begin{enumerate}
+       \item We call the comma categories $\LE(d,k) \coloneqq d\downarrow k^*$ and $\RE(d,k)\coloneqq k^*\downarrow d$ the categories of \textbf{left} and \textbf{right extensions} of $d$ \textbf{along} $k$, respectively.
+       \item An initial (terminal) left (right) extension of $d$ along $k$ is called a \textbf{left} (\textbf{right}) \textbf{Kan extension} of $d$ \textbf{along} $k$. We also call a (left) right Kan extension of $d$ along $k$ a $k$-\textbf{(co)limit}.
+       \item We say that $c$ has all $k$-\textbf{(co)limits} and is $k$-\textbf{(co)complete} if every morphism $d'\colon I\to c$ has a (left) right Kan extension along $k$. When $K$ is a terminal object of $\K$, we identify $k$ with its domain $I$.
+   \end{enumerate}
+\end{definition}
+For the formal theory of Kan extensions in $2$-categories, see \cite{streetYonedaStructures2categories1978}.
+\begin{definition}
+   Let $F = (F_i\colon\C\to \D_i)_{i\in I}$ be a family of functors, which we identify with the induced functor $F\colon \C\to \D\coloneqq \prod_i\D_i$. We say that $F$
+   \begin{enumerate}
+       \item \textbf{preserves} initial objects if $Fc$ is an initial object of $\D$ for each initial object $c$ in $\C$.
+       \item \textbf{reflects} initial objects if an object $c$ in $\C$ is an initial object whenever $Fc$ is.
+       \item \textbf{strictly creates} initial objects if for any initial object $d$ in $\D$ there is a unique object $c$ in $\C$ such that $Fc = d$, and, moreover, $c$ is an initial object in $\C$.
+       \item \textbf{creates} initial objects if whenever $\D$ has an initial object, then $\C$ has one and $F$ preserves and reflects initial objects.
+   \end{enumerate}
+   We often use the word jointly to indicate that the indexing set $I$ might have cardinality different from $1$. These interaction properties have a dual form with respect to terminal objects.
+\end{definition}
+\begin{definition}[Preservation and Strict Creation of Kan Extensions]
+   Consider a span $K\xleftarrow{k}I\xrightarrow{d}c\xrightarrow{f}c'$ of morphisms in a $2$-category $\K$. We say that $f$ \textbf{preserves, reflects, strictly creates} or \textbf{creates} the left Kan extension of $d$ along $k$, when the induced functor $f_*\colon \LE(d,k)\to \LE(fd,k), \eta\mapsto f*\eta,$ respects initial objects in the corresponding manner. Dually, we define the same notions for right Kan extensions. We say that $f$ preserves $k$-(co)limits if it preserves (left) right Kan extensions of morphisms $d'\colon I\to c$ along $k$.
+\end{definition}
+
+\begin{remark}
+    If $\LE(d,k)$ has an initial object $(l,\eta\colon d\Rightarrow lk)$, then transposition along $\eta$ gives an isomorphism $\LE(d,k)\cong l\backslash \K(K,c)$ over $\K(K,c)$. Conversely, if $\LE(d,k)$ is equivalent to a coslice category, then it has an initial object, since every coslice category has one.
+\end{remark}
+
+\begin{lemma}\label{lem:PIEExtensionsFunctors}
+    Let $\K$ be a $2$-category. Consider morphisms $K\xleftarrow{k} I\xrightarrow{d} a\xrightarrow{u} b\xrightarrow{f,g} c$ in $\K$. Then the following hold:
+    \begin{enumerate}
+        \item Let $(a_j)_{j\in J}$ be a family of objects in $\K$. Assume that the product $\prod_j a_j$ exists and equals $a$. Then we have the isomorphism of categories
+        $$
+        \LE(d,k) \cong \prod_{j\in J}\LE(d_j,k), (l = (l_j)_j,\eta = (\eta_j)_j)\mapsto (l_j,\eta_j)_j, \text{ where $d = (d_j)_j.$}
+        $$      
+        \item Assume $(u\colon a\to b,\phi\colon fu\Rightarrow gu)$ is the inserter of $f$ and $g$, then there is an isomorphism of categories $F\colon \LE(d,k)\to \Ins(f_*,g_*)$ so that the diagram
+        $$
+        \begin{tikzcd}
+{\LE(d,k)} \arrow[rr, "F"] \arrow[rd, "u_*"'] &             & {\Ins(f_*,g_*)} \arrow[ld, "U"] \\
+                                              & {\LE(ud,k)} &                                
+\end{tikzcd}
+        $$
+        commutes. Here $f_*,g_*\colon \LE(ud,k)\to \LE(fud,k)$ are functors defined on objects as follows:
+        $$
+        f_*(l'\colon K\to b,\eta'\colon ud\Rightarrow l'k) = (fl',f\eta'), \quad g_*(l',\eta') = (gl',g\eta'\bullet \phi d).
+        $$
+        \item Let $\alpha,\beta\colon f\Rightarrow g$ be transformations in $\K$ and assume $u\colon a\to b$ determines the equifier $\Eq(\alpha,\beta)$. Then there is an isomorphism $F\colon \LE(d,k)\cong \Eq(\alpha_*,\beta_*)$ in the slice category $\CAT/\LE(ud,k)$, where the horizontal composition defines the natural transformations $\alpha_*,\beta_*\colon f_*\Rightarrow g_*\colon \LE(ud,k)\to \LE(fud,k)$ ($g_*(l',\eta')=(gl',\,g\eta'\bullet\alpha ud)$).
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \hfill
+    \begin{enumerate}
+        \item The claim follows immediately from the universal property of products.
+        \item Post-composing with $u$ determines a functor $F\colon \LE(d,k)\to \Ins(f_*,g_*)$, which is given on objects as follows: 
+        $$
+        (l\colon K\to \Ins(f,g),\eta\colon d\Rightarrow lk)\mapsto ((ul,u\eta), f_*(ul,u\eta)\xrightarrow{\phi l} g_*(ul,u\eta)).
+        $$
+        We show that $F$ is an isomorphism of categories. The functor $F$ is bijective on objects since the objects in $\Ins(f_*,g_*)$ consist exactly of triples 
+        $$
+        (l'\colon K\to b, \eta'\colon ud\Rightarrow l'k,  \gamma\colon (fl',f\eta')\to (gl',g\eta'\bullet \phi d)),
+        $$
+        each of which, by the universal properties of the inserters, corresponds uniquely to a pair $(l\colon K\to \Ins(f,g), \eta\colon d\Rightarrow lk)$ where $ul = l', \phi l = \gamma$ and $\eta' = u\eta$. The second universal property of inserters shows the full faithfulness of $F$. Thus $F$ is an isomorphism and, by construction, $UF = u_*$. 
+
+        \item Again by post-composing with $u$, we obtain a functor $F\colon \LE(d,k)\to \Eq(\alpha_*,\beta_*)$. As the object $(l\colon K\to \Eq(\alpha,\beta), \eta\colon d\Rightarrow lk)$ in $\LE(d,k)$ naturally and bijectively corresponds to a pair $(l'\colon K\to b, \eta'\colon ud\Rightarrow l'k)$, where $\alpha l' = \beta l'$, via $(l,\eta)\mapsto (ul,u\eta)$, we have the bijectivity on objects of the functor $F\colon \LE(d,k)\to \Eq(\alpha_*,\beta_*)$. The full faithfulness follows similarly.\qedhere
+    \end{enumerate}
+\end{proof}
+
+
+\subsection{Lifting Kan Extensions Along PIE Limits}
+In this subsection, we fix a signature pair $(\Sigma,\sigma)$ with a $\sigma$-theory $T$. The following theorem serves as the primary technical result of this section, demonstrating how the existence of Kan extensions lifts along PIE limits. This theorem provides a unified $2$-categorical framework for limit and colimit inheritance. Consequently, classical results showing that models of universal algebraic theories\footnote{Universal algebraic theory $T$ refers, from our perspective, to an algebraic theory whose associated $2$-signature is the cartesian signature $\Sigma_{\text{Cart}}$ in Example~\ref{ex:2-signatures}.}, Eilenberg--Moore categories, and categories of coalgebras inherit structures from their background categories follow as immediate consequences of these three basic $2$-categorical constructions.
+
+\begin{theorem}[Lifting Kan Extensions Along PIE Limits]\label{thm:pie_kan_creation}
+   Let $\K$ be a $2$-category. Then the following assertions hold:
+   \begin{enumerate}
+       \item Let $(c_i)_{i \in J}$ be a family of objects in $\K$ whose product $c = \prod_{i\in J} c_i$ exists in $\K$. Then the family $(\pi_i \colon c \to c_i)_{i\in J}$ of projections preserves and jointly strictly creates all right and left Kan extensions. Additionally, the family of projections jointly strictly creates and preserves (subterminality) quotient initiality of a (right) left extension.
+       \item Consider the inserter diagram
+       \[
+\begin{tikzcd}
+{\Ins(f,g)} \arrow[d, "u"'] \arrow[r, "u"]        & a \arrow[d, "g"] \\
+a \arrow[r, "f"'] \arrow[ru, "\phi" description, Rightarrow] & b
+\end{tikzcd}
+\]
+       in $\K$. Then the morphism $u$ strictly creates left Kan extensions that $f$ preserves, and strictly creates right Kan extensions that $g$ preserves.
+       \item Let $\Eq(\eta,\theta)\xrightarrow{u}c$ be the equifier of $\eta,\theta \colon f \Rightarrow g \colon c \to c'$. Then $u$ strictly creates left (right) Kan extensions whose quotient initiality (subterminality) is preserved by $f$ $(g)$.
+   \end{enumerate}
+\end{theorem}
+\begin{proof} We show the claims for left Kan extensions; the cases for right Kan extensions follow dually.
+   \begin{enumerate}
+
+   \item Let $d = (d_i)_i\colon I\to \prod_i c_i$ and $k\colon I\to K$. As we have the isomorphism
+   $$
+   \LE(d,k)\cong\prod_i \LE(d_i,k), ((l_i)_i,(\eta_i)_i)\mapsto (l_i,\eta_i)_i,
+   $$
+   we have that $\LE(d,k)$ has an initial object if and only if each category $\LE(d_i,k)$ has one. Via this isomorphism, the projections both preserve and strictly create all left Kan extensions. The case for quotient initiality holds similarly.
+
+    \item Let $F,G\colon \C\to \D$ be functors. Via Lemma \ref{lem:PIEExtensionsFunctors}(2), it suffices to show that the forgetful functor $U\colon \Ins(F,G)\to \C$ strictly creates those initial objects that $F$ preserves. Assume $0$ and $F0$ are initial objects in $\C$ and $\D$, respectively. Clearly, $(0, !\colon F0\to G0)$ is the unique object in the fiber of $0$ along $U$. As $(0,!\colon F0\to G0)$ clearly is the initial object in $\Ins(F,G)$, $U$ strictly creates those initial objects that $F$ preserves. 
+
+       \item Assume $\alpha,\beta\colon F\Rightarrow G\colon \C\to \D$ are natural transformations between functors. By Lemma \ref{lem:PIEExtensionsFunctors}(3), it suffices to show that the forgetful functor $U\colon \Eq(\alpha,\beta)\to \C$ strictly creates those initial objects whose quotient initiality is preserved by $F$. Assume $0$ is an initial object in $\C$ and $F0$ is a quotient initial object in $\D$. It is sufficient to show that $\alpha_0 =\beta_0$, but this is clear as $F0$ is a quotient initial object. \qedhere
+   \end{enumerate}
+\end{proof}
+
+For $\K = \CAT$, the following corollary generalizes the limit lifting results found in \cite[3.3, 3.4]{Ulmer1977Bialgebras}:
+\begin{corollary}\label{cor:strictCreationToBialgebraicDatumObjectsKan}
+    Let $\B = (c,\ f,g,\ f',g',\ \alpha,\beta)$ be a bialgebraic datum in $\K$. Then the canonical morphism $u_\B\colon \BialgB\to c$ strictly creates those left Kan extensions that $f$ preserves and whose quotient initiality $f'$ preserves. Dually, $u_\B$ strictly creates those right Kan extensions that $g$ preserves and whose subterminality is preserved by $g'$. 
+\end{corollary}
+\begin{proof}
+    Follows directly from parts (2) and (3) of Theorem \ref{thm:pie_kan_creation}.
+\end{proof}
+
+
+\begin{definition}
+     We call a bialgebraic datum $\B = (c,\ f,g,\ f',g',\ \alpha,\beta)$ \textbf{relatively algebraic} if $g$ preserves all right Kan extensions and $g'$ preserves their subterminality. Dually, we define when $\B$ is \textbf{relatively coalgebraic}. We say a bialgebraic theory $T$ is $M$-\textbf{relatively (co)algebraic} if the bialgebraic datum $\B_{M,T}$ is relatively (co)algebraic.
+\end{definition}
+
+A left Kan extension in an object $c$ of $\K$ is \textbf{absolute} if each morphism $c\to d$ preserves it. For morphisms $K\xleftarrow{k}I\xrightarrow{d}c\xrightarrow{f}c'$, we say that a left extension $(l,\eta)$ in $\LE(d,k)$ is an \textbf{$f$-absolute $k$-colimit} if $(fl,f\eta)$ is an absolute left Kan extension of $fd$ along $k$.
+\begin{corollary}\label{cor:LiftingAbsoluteExtensions}
+    For a bialgebraic datum $\B$ over $c$, the canonical morphism $u\colon \BialgB\to c$ strictly creates $u$-absolute $k$-limits and $k$-colimits for every morphism $k$ in $\K$.
+\end{corollary}
+\begin{proof}
+    Since all morphisms preserve absolute Kan extensions, $u$ strictly creates $u$-absolute Kan extensions (Corollary \ref{cor:strictCreationToBialgebraicDatumObjectsKan}).
+\end{proof}
+
+\noindent
+For the rest of this subsection, we will fix a PIE-complete $2$-category $\K$ with a $\Sigma$-model $M$.
+
+\begin{corollary}\label{cor:LimitsLiftedToBialgebras}
+   Consider the canonical morphism $M^T\xrightarrow{u} M_0$. Then $u$ strictly creates those left Kan extensions that $M(t_1)$ preserves and whose quotient initiality $M(t_1')$ preserves for each function arity term $t_1$ and equational arity term $t_1'$. Dually, $u$ strictly creates those right Kan extensions that $M(t_2)$ preserves and whose subterminality $M(t_2')$ preserves for each function coarity term $t_2$ and equational coarity term $t_2'$.
+\end{corollary}
+\begin{proof}
+   The induced bialgebraic datum $\B_{M,T}$ (Proposition~\ref{prp:bialgebraic_datum}) satisfies the assumptions of Corollary~\ref{cor:strictCreationToBialgebraicDatumObjectsKan} by Theorem~\ref{thm:pie_kan_creation}(1).
+\end{proof}
+
+Theorem \ref{thm:pie_kan_creation}(1) shows that all (co)algebraic theories $T$ are $M$-relatively (co)algebraic in any $\Sigma$-model $M$. Corollary \ref{cor:strictCreationToBialgebraicDatumObjectsKan} shows, for any morphism $k$ in $\K$, that the $k$-(co)limits of $\BialgB$ are strictly created via the canonical morphism, when $\B$ is relatively (co)algebraic.
+
+\begin{corollary}\label{cor:limitPreservationFromAtomicPreservation}
+Let $k\colon I\to K$ be a morphism in $\K$. Assume each morphism $M(B)$ preserves $k$-colimits. Let $t\colon c$ be a term in $\Term_S^\Sigma$. Then $M(t)\colon M_0\to M_c$ preserves all left Kan extensions along $k$. In particular, the canonical morphism $u\colon M^T\to M_0$ strictly creates $k$-colimits.
+\end{corollary}
+\begin{proof}
+   An easy structural induction shows that $M(t)$ preserves $k$-colimits for each term $t$. Thus, Corollary~\ref{cor:LimitsLiftedToBialgebras} yields that $M^T\to M_0$ strictly creates $k$-colimits. 
+\end{proof}
+
+We list some classical results that follow from our framework.
+\begin{corollary}
+   Let $T$ be a monad on a category $\C$. Then the forgetful functor $\C^T\to \C$ from the Eilenberg--Moore category $\C^T$ of $T$ strictly creates limits and those colimits that $T$ preserves and whose quotient initiality $T^2$ preserves.
+\end{corollary}
+\begin{proof}
+    Consider the theory of monad algebras. Since the function arity support is $T$ and the equational arity support is $(\id_\C, T^2)$, Corollary~\ref{cor:LimitsLiftedToBialgebras} yields the result.
+\end{proof}
+
+\begin{corollary}
+   Let $F\colon \C\to \E$ and $G\colon \D\to \E$ be functors. Then the forgetful functor $U\colon F\downarrow G\to \C\times \D$ strictly creates those colimits and limits that $F$ and $G$ preserve, respectively.
+\end{corollary}
+\begin{proof}
+    Note that $F\downarrow G\cong \Ins(F\pi_1,G\pi_2)$ over $\C\times \D$ and $F\pi_1$ preserves a colimit in $\C\times\D$ if $F$ preserves it in the first component (Theorem \ref{thm:pie_kan_creation}(2)). The dual case holds for $G\pi_2$.
+\end{proof}
+
+\begin{corollary}
+   Let $c$ be an object of a category $\C$. Then the forgetful functor $U\colon \C/c\to \C$ from the slice category over $c$ strictly creates all colimits and connected limits.
+\end{corollary}
+\begin{proof}
+   The theory for $\C/c$ is coalgebraic, which yields the creation of colimits. Since a constant functor $\C\to 1\to \C$ is the only coarity functor and it preserves all connected limits, $\C/c\to \C$ strictly creates connected limits.
+\end{proof}
+
+\subsection{Sifted Colimits and Pushouts of Families of Regular Epis}\label{subsec:sifted}
+
+We now specialize to the $2$-category $\CAT$, where the preservation hypotheses of Corollary~\ref{cor:limitPreservationFromAtomicPreservation} can be checked componentwise for sifted colimits.
+
+A category $I$ is \textbf{sifted} if it is non-empty and the diagonal $\Delta\colon I\to I\times I$ is final \cite{AdamekRosickyVitale2010SiftedColimits, Adamek-Rosicky-Vitale}.\footnote{Recall that a functor $F\colon \C\to \D$ is final if $d\downarrow F$ is a connected (implying non-empty) category for each object $d$ in $\D$ and equivalently for any diagram $H\colon \D\to \E$ the functor of cocones $F^*\colon \mathrm{Cocone}(H)\to \mathrm{Cocone}(HF), (\eta\colon H\Rightarrow e)\mapsto (\eta F\colon HF\Rightarrow e),$ is an isomorphism of categories.} We recall some important examples of sifted categories:
+\begin{enumerate}
+    \item A category $I$ is called \textbf{filtered} if it is non-empty and any finite diagram $D$ on $I$ admits a cocone $D\Rightarrow i$. If a poset, as a category, is filtered, it is called (upward) directed. A colimit of a functor $I\to \C$ is called a filtered colimit.
+    \item Fix the category $I \coloneqq \begin{tikzcd}
+\bullet \arrow[r, shift left=2] \arrow[r, shift right=2] & \bullet \arrow[l]
+\end{tikzcd}$, the shape of \textbf{reflexive pairs}: a functor out of it chooses exactly a triple $(r_1,r_2\colon x\to y; s\colon y\to x)$ of morphisms where $s$ is a common section, $r_1 s = r_2s = \id_y$. The colimit of a functor $I\to \C$ is called a reflexive coequalizer.
+    \item We may generalize the previous example and consider a category $I = (\begin{tikzcd}
+k \arrow[r, shift left=2] \arrow[r, shift right=2] & a \arrow[l]
+\end{tikzcd})_{k\in K}$ of $K$-many reflexive pairs on an object $a$, where $K$ is a non-empty set. The category $I$ is sifted and a colimit of a diagram $D\colon I\to \C$ generalizes the notion of a wide pushout of $K$-many regular epimorphisms with a common domain under suitable assumptions on $\C$: If each regular epimorphism in $\C$ is a coequalizer of a reflexive pair, then a $K$-wide pushout of a family $(f_i\colon c\to y_i)_{i\in K}$ of regular epis with a common domain $c$ can be realized as a sifted colimit. This is done by associating to $f_i$ a reflexive pair, whose coequalizer is $f_i$ for each $i$. This defines a functor $D\colon I\to \C$. The wide pushout is then computed as the (sifted) colimit of $D$. Note that a functor preserving reflexive coequalizers preserves this $K$-wide pushout if and only if it preserves the colimit of $D$.
+
+Dualizing this example, we obtain a way to compute the intersection of regular subobjects via cosifted limits, when the ambient category either has binary products or cokernel pairs.
+\end{enumerate}
+
+\begin{lemma}\label{lem:SiftedTotalityFromComponents}
+   Let $F\colon \C \to \D$ be a functor, where $\C = \C_1\times\cdots \times \C_n$. Let $D = (D_i)_i\colon I\to \C$ be a diagram with a colimit and assume $I$ is a sifted category. Then $F$ preserves the colimit of $D$ if $F$ preserves the colimit of $D$ componentwise, meaning for any object $(c_i)_i$ in $\C$ the functor $x_i\mapsto F(c_1,\ldots,x_i,\ldots, c_n)\colon \C_i\to \D$ preserves the colimit of $D_i$ for $i\leq n$.
+\end{lemma}
+\begin{proof}
+   Assume $F$ preserves the colimit of $D$ componentwise. We show that $F$ preserves the colimit of $D$. It suffices to prove the claim for $n = 2$; the general case follows by induction. For $n = 2$, we have
+   \begin{align*}
+       F(\colim_i (D_1(i), D_2(i)))
+       &\cong F(\colim_{i,j}(D_1(i),D_2(j)))\tag{$\Delta$ is final}\\
+       &\cong F(\colim_i \colim_j(D_1(i),D_2(j)))\tag{Fubini}\\
+       &\cong \colim_i F(\colim_j(D_1(i),D_2(j)))\tag{Preservation componentwise}\\
+       &\cong \colim_i\colim_j F(D_1(i),D_2(j))\tag{Preservation componentwise}\\
+       &\cong \colim_{i,j} F(D_1(i),D_2(j))\tag{Fubini}\\
+       &\cong \colim_i F(D_1(i),D_2(i)).\tag{$\Delta$ is final}
+   \end{align*}
+\end{proof}
+
+The following corollary highlights the ubiquity of sifted colimits and cosifted limits in practice. Whenever a monoidal category possesses reflexive coequalizers that are preserved componentwise by its tensor product, any category of internal bialgebras constructed over it strictly inherits these reflexive coequalizers.
+
+\begin{corollary}\label{cor:liftingSifted}
+   Let $(\Sigma, \sigma)$ be a signature pair with a $\sigma$-theory $T$. Let $M$ be a categorical $\Sigma$-model and $I$ be a sifted category. If $M(B)$ preserves $I$-colimits componentwise for each $\Sigma$-functor symbol $B$, then the forgetful functor $U\colon M^T\to M_0$ strictly creates all $I$-indexed colimits.
+\end{corollary}
+\begin{proof}
+   This follows immediately from Lemma~\ref{lem:SiftedTotalityFromComponents} and Corollary~\ref{cor:limitPreservationFromAtomicPreservation}.
+\end{proof}
+
+When a category has binary coproducts or kernel pairs, each regular epimorphism is a coequalizer of a reflexive pair. This allows one to witness a wide pushout of regular epimorphisms as a sifted colimit. In the following we show how this realization allows one to compute certain kinds of pushouts in bialgebraic structures by computing them in the underlying structure.
+\begin{corollary}\label{cor:fromComponentwisePreservationOfRegSubobjects}
+    Let $\otimes\colon \C_1\times\cdots\times \C_n\to \C$ be a functor. Assume for each $i\leq n$ that every regular epimorphism in $\C_i$ is a coequalizer of a reflexive pair. Let $I$ be a set of cardinality at least $2$. If $\otimes$ preserves $I$-indexed pushouts of regular epimorphisms componentwise, then it preserves such pushouts and regular epimorphisms.
+\end{corollary}
+\begin{proof}
+    Assume that $\otimes$ preserves $I$-indexed pushouts of regular epis componentwise. We may also assume that $n = 2$. Note that a functor preserving pushouts of regular epis along regular epis preserves coequalizers of reflexive pairs. Consider an $I$-indexed family $f = ((f^i_1,f^i_2)\colon (a_1,a_2)\to (a_1^i,a_2^i))_{i\in I}$ of regular epimorphisms in $\C_1\times \C_2$. By assumption, there is a sifted diagram $D\colon \bar{I}\to \C_1\times \C_2$ that chooses reflexive pairs on $(a_1,a_2)$ whose coequalizers produce the morphisms $(f^i_1,f^i_2)_i$. Since $\otimes$ preserves the $I$-indexed pushouts componentwise, it preserves the colimit of $D$ componentwise and hence the colimit of $D$ (Lemma \ref{lem:SiftedTotalityFromComponents}). Here we used the fact that $\otimes$ preserves reflexive coequalizers componentwise. The preservation of the colimit of $D$ shows that $\otimes$ preserves the $I$-indexed pushout $(f_1^i,f^i_2)_i$ in $\C_1\times \C_2$. Lastly, as $\otimes$ preserves $I$-indexed pushouts, it preserves pushouts of regular epis along regular epis and especially reflexive coequalizers. Hence $\otimes$ preserves regular epimorphisms, since by assumption they can be written as coequalizers of reflexive pairs.
+\end{proof}
+
+\begin{theorem}\label{thm:creation_wide_pushouts}
+    Let $(\Sigma,\sigma)$ be a signature pair,  $T$ a $\sigma$-theory, $M$ a $\Sigma$-model in $\CAT$, and $I$ a set with cardinality at least $2$. Assume in each category $M_c$ regular epimorphisms are reflexive coequalizers and each functor $M(B)$ preserves $I$-indexed wide pushouts of regular epis componentwise. Let $f_i\colon a\to b_i$ be morphisms in $M^T$ such that $Uf_i$ is a regular epimorphism for each $i\in I$. Then the forgetful functor $U\colon M^T\to M_0$ strictly creates the $I$-indexed pushout of $(f_i)_{i\in I}$.
+\end{theorem}
+\begin{proof}
+    By Corollary~\ref{cor:fromComponentwisePreservationOfRegSubobjects} the functors $M(B)$ preserve regular epis and $I$-indexed pushouts of regular epis. Inductively, every term functor $M(t)$ preserves $I$-indexed pushouts of regular epis and the claim follows by Corollary~\ref{cor:LimitsLiftedToBialgebras}.
+\end{proof}
+
+\begin{example}
+    Consider a symmetric monoidal closed category $\C = (\C,\otimes,I)$ that is both complete and cocomplete. Assume the tensor $\otimes$ preserves finite limits componentwise. Consider the category $\Hopf$ of Hopf algebras in $\C$. Corollary~\ref{cor:liftingSifted} allows one to compute the following limits and colimits in $\Hopf$ by strictly creating them from $\C$:
+    \begin{enumerate}
+        \item Reflexive coequalizers and coreflexive equalizers in $\Hopf$ are strictly created from $\C$ as the tensor preserves such (co)limits (Corollary \ref{cor:liftingSifted} and its dual).
+        \item More generally, consider morphisms $f_i\colon x_i\to y$ in $\Hopf$ that are regular monomorphisms in $\C$ for $i\leq n$. The joint pullback of the $f_i$ is strictly created from $\C$ (dual of Theorem \ref{thm:creation_wide_pushouts}). Similarly, any wide pushout of morphisms in $\Hopf$ that are regular epimorphisms in $\C$ is strictly created from $\C$. This explains why for a field $k$ one can compute finite intersections of Hopf subalgebras in $\Hopf_k$ in the underlying category $\Vect_k$ of $k$-vector spaces. 
+        \item Any filtered colimit in $\Hopf$ is strictly created from $\C$.
+    \end{enumerate}
+    Of course, there is nothing special about $\Hopf$. We could have chosen any bialgebraic theory $T$ and considered $\C^T$, and obtained the same results. Similarly, nothing depends on the symmetric monoidal structure: we could have chosen any $\Sigma$-model $M$, where the categories $M_c$ have and the functors $M(B)$ (componentwise) preserve sifted colimits and finite cosifted limits, and the categories $M_c$ have kernel pairs and cokernel pairs.
+\end{example}
+
+\begin{corollary}
+    The category $\mathbf{Field}$ of fields is accessible, and the forgetful functor $\mathbf{Field}\to \mathbf{Set}, k\mapsto k^*,$ creates connected limits and sifted colimits.
+\end{corollary}
+\begin{proof}
+    Consider the signature pair $(\Sigma,\sigma)$ with the theory of fields $T$ and the categorical $\Sigma$-model $M = (\Set, \times, 1, (-)+1)$ from Example~\ref{exs:theories}(3). As the structural functors of $M$ preserve connected limits and sifted colimits, Corollary~\ref{cor:limitPreservationFromAtomicPreservation} shows that $M^T\simeq \textbf{Field}\to \Set$ creates connected limits and sifted colimits. As the category $\Set$ is accessible and the structural functors are accessible (they preserve directed colimits), it follows that $M^T$ is accessible.
+\end{proof}

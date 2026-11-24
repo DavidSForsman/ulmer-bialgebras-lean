@@ -1,0 +1,20 @@
+{
+  "challenge_module": "Palomar.Thm7_6.Challenge",
+  "solution_module": "Palomar.Thm7_6.Solution",
+  "theorem_names": [
+    "UlmerBialgebras.Paper.thm_7_6",
+    "UlmerBialgebras.Paper.thm_7_6_monadic",
+    "UlmerBialgebras.inserter_assoc_comp",
+    "UlmerBialgebras.TwoAdj.postcompUnit_naturality",
+    "UlmerBialgebras.TwoAdj.postcompCounit_naturality",
+    "UlmerBialgebras.TwoAdj.postcompAdj_left_triangle",
+    "UlmerBialgebras.TwoAdj.postcompAdj_right_triangle"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

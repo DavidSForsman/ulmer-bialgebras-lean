@@ -1,0 +1,25 @@
+{
+  "title": "A Syntactic Approach to Ulmer's Bialgebras: a Lean 4 formalization",
+  "upload_type": "software",
+  "description": "A formalization in Lean 4 and Mathlib of the results of the paper A Syntactic Approach to Ulmer's Bialgebras: 175 checked statements, proved with the axioms propext, Quot.sound and Classical.choice only. The paper in paper/ is released under CC BY 4.0. Exported at commit 9e9491abe72d2b97637162feea52474234db274b.",
+  "creators": [
+    {
+      "name": "Forsman, David",
+      "orcid": "0000-0003-0785-7034",
+      "affiliation": "UCLouvain"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": ["Lean 4", "Mathlib", "formalization", "category theory", "2-categories", "bialgebras"],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2607.19587",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "version": "v1.0.0",
+  "publication_date": "2026-11-24",
+  "notes": "The author is supported by an Aspirant fellowship of the F.R.S.-FNRS."
+}

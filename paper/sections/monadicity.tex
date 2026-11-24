@@ -1,0 +1,172 @@
+
+\section{Detection of Colimits and Monadicity}\label{sec:monadicity}
+
+In this section, we work in the $2$-category $\CAT$. We show that, under suitable assumptions on colimits, the forgetful functor $M^T\to M_0$ is monadic for algebraic theories $T$, and that it detects Kan extensions, in particular colimits. Comonadicity for coalgebraic theories requires accessibility or local presentability assumptions (compare the duality between varieties and covarieties in \cite{adamekVarietiesCovarietiesCategory2003}), which we treat in Subsection~\ref{subsec:comonadicity}.
+
+\subsection{Monadicity in a \texorpdfstring{$2$}{2}-Category}
+\begin{definition}
+    A morphism $g\colon d\to c$ in a $2$-category $\K$ is said to be \textbf{monadic} if $g$ admits a left adjoint $f$ with $(\eta,\varepsilon)$ as the unit-counit pair, where the triple $(d,g\colon d\to c,g\varepsilon\colon gfg\Rightarrow g)$ is an Eilenberg--Moore object of the monad $(gf,g\varepsilon f,\eta)$ up to equivalence, that is, the comparison functor $\K(x,d)\to\K(x,c)^{\K(x,gf)}$, $h\mapsto (gh,g\varepsilon h)$, is an equivalence of categories for each object $x$ in $\K$. \textbf{Comonadicity} is defined dually.
+\end{definition}
+Beck's monadicity theorem shows that a right adjoint functor $G\colon \D\to\C$ is monadic if and only if $G$ creates $G$-split coequalizers. This means that $G$ creates the coequalizer of $f,g\colon c\to d$ given that the pair $G(f),G(g)$ has a split coequalizer. A split coequalizer of $f,g\colon c\to d$ is a triple $(r\colon d\to e,s\colon e\to d, j\colon d\to c)$ so that $rf = rg$, $rs = \id_e$, $gj = \id_d$ and $fj = sr$.
+It should be noted that $r$ is then an absolute coequalizer of $f$ and $g$.
+\begin{lemma}\label{lem:2DimMonadicity}
+    Let $g\colon d\to c$ be a morphism in a $2$-category $\K$. Then $g$ is monadic if and only if $g$ is a right adjoint and $g_x\colon \K(x,d)\to \K(x,c)$ creates $g_x$-split coequalizers for each object $x$ in $\K$.
+\end{lemma}
+\begin{proof}
+    Assume $g$ has a left adjoint $f\dashv g$ with counit $\varepsilon$. Then $f_x\dashv g_x$ for each object $x$, and the induced monad on $\K(x,c)$ is $\K(x,gf)$. By definition, $g$ is monadic if and only if the comparison functor $\K(x,d)\to\K(x,c)^{\K(x,gf)}$ of $g_x$ is an equivalence for each $x$. By Beck's monadicity theorem, the latter holds if and only if $g_x$ creates $g_x$-split coequalizers. Thus the claim holds.
+\end{proof}
+
+\begin{corollary}\label{cor:GeneralMonadicity}
+    Consider the following commutative diagram in a $2$-category $\K$:
+    $$
+    \begin{tikzcd}
+a \arrow[rd, "u"'] \arrow[rr, "g"] &   &b \arrow[ld, "v"] \\
+                                       & c &                      
+\end{tikzcd}
+    $$
+    Assume $g$ is a right adjoint and, for each object $x$ in $\K$, the functor $v_x\colon \K(x,b)\to\K(x,c)$ is conservative and $u_x\colon \K(x,a)\to\K(x,c)$ creates $u_x$-split coequalizers. Then $g$ is monadic. In particular, for any bialgebraic data $\B$ and $\B'$ in $\K$ over the same object $c$ in $\K$, a (left) right adjoint $g\colon \BialgB\to \Bialg(\B')$, where $u_{\B'}g = u_\B$, is (co)monadic.
+\end{corollary}
+\begin{proof}
+    Consider an object $x$ in $\K$. By Lemma~\ref{lem:2DimMonadicity}, it suffices to show that $g_x\colon \K(x,a)\to \K(x,b)$ creates $g_x$-split coequalizers. Let $d_1,d_2$ be a $g_x$-split coequalizer pair in $\K(x,a)$. Then $(vg)_x(d_1),(vg)_x(d_2)$ also has a split coequalizer, which is then created by $u_x$. Thus $d_1,d_2$ has a coequalizer and it is preserved by $u_x$. By conservativity of $v_x$, $g_x$ also preserves this coequalizer. Similarly, $g_x$ reflects the coequalizers of $d_1$ and $d_2$. Thus $g_x$ creates $g_x$-split coequalizers.
+\end{proof}
+
+\subsection{Free Algebras and Detection of Kan Extensions}
+We say that a morphism $u\colon c\to c'$ detects a left/right Kan extension of $d\colon I\to c$ along $k\colon I\to K$ via morphisms $f_i\colon c'\to x_i$ if the existence of left/right Kan extensions of $ud$ and $f_iud$ along $k$ for all $i$ implies that $d$ has a left/right Kan extension along $k$.
+\begin{definition}
+    Let $\kappa$ be an infinite cardinal. As $\kappa$ is well-ordered, we identify $\kappa$ with the standard category determined by its posetal structure. A functor $F\colon\kappa\to \C$ is called a $\kappa$-\textbf{chain} in $\C$. A colimit of a $\kappa$-chain is called a $\kappa$-\textbf{colimit}, and $\C$ is $\kappa$-\textbf{cocomplete} if it has all $\kappa$-colimits. We say that $\C$ is $\kappa_\leq$-\textbf{cocomplete} if $\C$ is $\lambda$-cocomplete for each infinite cardinal $\lambda\leq \kappa$.
+\end{definition}
+
+\begin{theorem}\label{thm:BigMonadicity}
+Let $\kappa$ be an infinite cardinal and let $F,G\colon \C\to \D$ be functors with $\C$ $\kappa_\leq$-cocomplete. Assume that $G$ has an $F$-relative left adjoint $L$.\footnote{An $F$-relative left adjoint $L$ for $G$ means that there is an isomorphism $\hom(Lx,y)\cong\hom(Fx,Gy)$ natural in $x$ and $y$. If $G$ has a left adjoint $l$, then $L \cong lF$ \cite{ulmerPropertiesDenseRelative1968}} Then the following assertions hold:
+\begin{enumerate}
+    \item If $\C$ has finite coproducts and $F$ preserves $\kappa$-colimits, then $U\colon \Ins(F,G)\to \C$ is monadic.
+    \item Let $\alpha,\beta\colon F\Rightarrow G$ be natural transformations. If $\C$ has coequalizers and $F$ preserves joint epicness of colimiting cocones of $\kappa$-chains, then the forgetful functor $U\colon \Eq(\alpha,\beta)\to \C$ is monadic.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Without loss of generality, we may assume that $G = \id_\C\colon\C\to \C$, since the isomorphism $\hom(Lx,y)\cong \hom(Fx,Gy)$, natural in $x$ and $y$, determines an isomorphism $\Ins(L,\id_\C)\cong \Ins(F,G)$ over $\C$. Moreover, $L$ preserves those colimiting cocones that $F$ preserves and $L$ also preserves joint epicness of those families of morphisms whose joint epicness $F$ preserves. This justifies the assumption $G = \id_\C$. By Corollary \ref{cor:GeneralMonadicity}, to show the monadicity of the canonical forgetful functor from the object of bialgebras, it suffices to show only that it is a right adjoint.
+\begin{enumerate}
+    \item Assume that $\C$ has finite coproducts. Let $c$ be an object of $\C$. Consider the functor $W = c+F(-)\colon \C\to \C$, which preserves those connected colimits that $F$ preserves. A standard argument transforms the initial algebra of $W$ (the initial object of $\Ins(W,\id_\C)$) into the free object of $\Ins(F,\id)$ on $c$ \cite{Adamek1974}. Define
+    $$
+    W_{\lambda} = \begin{cases}
+            \colim_{\alpha<\lambda}W_{\alpha}, &\text{ $\lambda$ a limit ordinal (0 is a limit ordinal)},\\
+        W(W_\alpha), &\text{ if $\lambda = \alpha +1$}
+    \end{cases}
+    $$
+    for $\lambda\leq \kappa$ with the induced morphisms defining a functor $W_{(-)}\colon \kappa\to \C$. As $W$ preserves colimits of $\kappa$-chains, there is an induced isomorphism $W(W_\kappa)\to W_\kappa$ which determines the initial algebra of $W$, which shows that $U$ is a right adjoint. A full proof can be found in \cite{Adamek1974}.
+
+    \item Assume that $\C$ has coequalizers. We show that the forgetful functor $U\colon \Eq(\alpha,\beta)\to \C$ has a left adjoint. Let $c$ be an object of $\C$. We define $W\colon \kappa\to \C$ by first setting $W_0 = c$. Inductively assume that $W|_{\lambda}\colon \lambda\to \C$ is defined for some $0<\lambda<\kappa$. We extend $W$ to the value $\lambda$ as follows:
+    {\small $$
+    W_{\lambda',\lambda} = \begin{cases}
+        \mathrm{Coeq}(\alpha_{W_{\lambda''}},\beta_{W_{\lambda''}}\colon FW_{\lambda''}\to W_{\lambda''})\circ W_{\lambda',\lambda''}\colon W_{\lambda'}\to W_{\lambda}, &\text{ if $\lambda'\leq\lambda'', \lambda = \lambda''+1$}\\
+        W_{\lambda'}\xrightarrow{\text{can}_{\lambda'}}\colim_{{\lambda''}<\lambda}W_{\lambda''}, & \text{ if $\lambda>0$ is a limit ordinal.}
+    \end{cases}
+    $$
+    }
+    for $\lambda< \kappa$. Consider the colimiting cocone $\eta\colon W\Rightarrow d\colon \kappa\to \C$. First, we show that $\alpha_d = \beta_d$. By assumption, $F\eta\colon FW\Rightarrow Fd$ is a jointly epic cocone and so it suffices to show that $\alpha_d\bullet F\eta_\lambda = \beta_d\bullet F\eta_\lambda$ for all $\lambda$. Now for any $\lambda< \kappa$, we have
+    $$
+    \alpha_d\circ F\eta_\lambda = \eta_\lambda \circ\alpha_{W_\lambda} = \eta_{\lambda+1}\circ W_{\lambda,\lambda+1}\circ \alpha_{W_\lambda} = \eta_{\lambda+1}\circ W_{\lambda,\lambda+1}\circ \beta_{W_\lambda} = \beta_d\circ F\eta_\lambda.
+    $$
+    Thus $\alpha_d = \beta_d$ and so $d$ is an object in $\Eq(\alpha,\beta)$. Next, we show that $\eta_0\colon c\to d$ is an initial object of $c\downarrow U$. Let $f\colon c\to Ue$ be an object in $c\downarrow U$. We need to show that there is a unique morphism $\bar{f}\colon d\to e$ in $\C$ satisfying $\bar{f}\eta_0 = f$. Uniqueness is clear since an induction argument shows that $\eta_0$ is an epimorphism. It remains to construct a natural transformation $\theta\colon W\Rightarrow e$ with $\theta_0 = f$; the colimit then yields the extension $\bar{f}\colon d\to e$ of $f$. Assume $\theta_{\lambda'}$ is defined for $\lambda'< \lambda$. If $\lambda$ is a limit ordinal, then as $W_\lambda = \colim_{\lambda'< \lambda} W_{\lambda'}$, we define $\theta_\lambda\colon W_\lambda\to e$ as the morphism induced by the natural transformation $\theta|_\lambda\colon W|_\lambda\Rightarrow e$. Assume then that $\lambda = \lambda'+1$. Now
+    \[
+    \theta_{\lambda'} \alpha_{W_{\lambda'}} = \alpha_e F(\theta_{\lambda'}) = \beta_e F(\theta_{\lambda'}) = \theta_{\lambda'}\beta_{W_{\lambda'}}.
+    \]
+    As $W_{\lambda',\lambda}$ is the coequalizer of $\alpha_{W_{\lambda'}}$ and $\beta_{W_{\lambda'}}$, there is a unique morphism $\theta_{\lambda}\colon W_\lambda\to e$ such that $\theta_\lambda W_{\lambda',\lambda} = \theta_{\lambda'}$. Therefore, we obtain the unique natural transformation $\theta\colon W\Rightarrow e$ extending $f$, which produces the extension $\bar{f}\colon d\to e$ via the colimit.\qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{lemma}\label{lem:KanExtensionInserter}
+Let $\K$ be a $2$-category with a morphism $f\colon c\to c$. Consider the inserter diagram
+$$
+\begin{tikzcd}
+{\Ins(f,\id_c)} \arrow[d, "u"'] \arrow[r, "u"] & c \arrow[d, "\id_c"] \\
+c \arrow[r, "f"'] \arrow[ru, "\phi" description, Rightarrow] & c
+\end{tikzcd}
+$$
+in $\K$. Let $K\xleftarrow{k}I\xrightarrow{d} \Ins(f,\id_c)$ be a span in $\K$. Assume that $\K(K,c)$ has pushouts and the left Kan extensions $(l_1,\eta_1\colon ud\Rightarrow l_1k)$ and $(l_2,\eta_2\colon fud\Rightarrow l_2k)$ of $ud$ and $fud$ along $k$ exist. Consider the pushout induced endofunctor
+$$
+H = (l_1,\eta_1)+_{l_2} f_*(-)\colon \LE(ud,k)\to \LE(ud,k).
+$$
+Then there is an isomorphism of categories $\LE(d,k) \cong \Ins(H,\id)$ over $\LE(ud,k)$ with $H$ preserving those connected colimits that exist in $\K(K,c)$ and are preserved by $f_K\colon \K(K,c)\to \K(K,c)$. In particular, if $\K(K,c)$ has $\kappa_\leq$-colimits and $f_K$ preserves colimits of $\kappa$-chains for some infinite cardinal $\kappa$, then $u_*\colon \LE(d,k)\to \LE(ud,k)$ has a left adjoint and $d\colon I\to \Ins(f,\id_c)$ has a left Kan extension along $k$.
+\end{lemma}
+
+\begin{proof}
+We define $\alpha\colon l_2\Rightarrow l_1$ and $\alpha'\colon l_2\Rightarrow fl_1$ as the respective transpositions of
+\[
+fud\xRightarrow{\phi d} ud\xRightarrow{\eta_1}l_1k \quad \text{and}\quad fud\xRightarrow{f\eta_1}fl_1k.
+\]
+The forgetful functors induce the following isomorphisms: 
+$$
+\LE(ud,k)\cong l_1\backslash\K(K,c), \quad \LE(fud,k)\cong l_2\backslash\K(K,c).
+$$
+By Lemma~\ref{lem:PIEExtensionsFunctors}(2), $u_*\colon \LE(d,k)\to \LE(ud,k)$ is isomorphic to the forgetful functor $\Ins(f_*,\id_*)\to \LE(ud,k)$ with the identifications of $\LE(ud,k)$ and $\LE(fud,k)$ as coslice categories:
+$$
+f_*(l_1\Rightarrow l') = (l_2\Rightarrow fl_1\Rightarrow fl'),\quad \id_*(l_1\Rightarrow l')= (l_2\xRightarrow{\alpha} l_1\Rightarrow l').
+$$
+As $\id_*\colon l_1\backslash\K(K,c)\to l_2\backslash\K(K,c)$ is the functor $\alpha^*$ induced by the morphism $\alpha\colon l_2\Rightarrow l_1$ in $\K(K,c)$, we have that $\id_*$ has a left adjoint $\alpha_*\colon \LE(fud,k)\to \LE(ud,k)$ defined by pushouts along $\alpha$. Thus $u_*$ is isomorphic to the forgetful functor $\Ins(\alpha_*f_*,\id)\to \LE(ud,k)$ in the slice category $\CAT/\LE(ud,k)$. The functor $H$ in the statement is the functor $\alpha_*f_*\colon \LE(ud,k)\to \LE(ud,k)$. Since the forgetful functors $l_i\backslash \K(K,c)\to \K(K,c)$, for $i = 1,2$, strictly create connected colimits, $f_*\colon l_1\backslash\K(K,c)\to l_2\backslash \K(K,c)$ preserves those connected colimits that exist in $\K(K,c)$ and are preserved by $f_K$ and thus the same connected colimits are preserved by $H=\alpha_*f_*$ as $\alpha_*$ is a left adjoint which preserves all colimits. 
+
+Lastly, notice that by Theorem \ref{thm:BigMonadicity}(1), $u_*\colon\LE(d,k)\to \LE(ud,k)$ has a left adjoint if $f_K$ preserves colimits of $\kappa$-chains and $\K(K,c)$ has $\kappa_\leq$-colimits.
+\end{proof}
+
+\begin{theorem}\label{thm:BigMonadicityB}
+    Fix an infinite cardinal $\kappa$. Let $\B = (\C,\ F,G,\ F',G',\ \alpha, \beta)$ be a bialgebraic datum in $\CAT$. Assume the following:
+    \begin{enumerate}
+        \item Functors $G$ and $G'$ have $F$- and $F'$-relative left adjoints $L_1$ and $L_2$, respectively.
+        \item The category $\C$ has colimits of size at most $\kappa$.
+        \item The functor $F$ preserves the colimiting cocones of $\kappa$-chains and $F'$ their joint epicness.
+    \end{enumerate}
+    Then $U\colon \BialgB\to \C$ is monadic and $\BialgB$ has colimits of size at most $\kappa$. Furthermore, if $K\xleftarrow{k} I\xrightarrow{d}\BialgB$ is a span of functors, where the left Kan extensions of $Ud$ and $L_1Ud$ along $k$ exist, then the left Kan extension of $d$ along $k$ exists.
+\end{theorem}
+\begin{proof}
+    For monadicity, it is sufficient to show that the forgetful functors $U'\colon \Ins(F,G)\to \C$ and $E\colon \BialgB\to \Ins(F,G)$ both have a left adjoint (Corollary \ref{cor:GeneralMonadicity}). Without loss of generality, we may assume that $G$ and $G'$ are the identity functors on $\C$ as in Remark \ref{rmk:AdjointsInducingIsosBetweenBialgebras} (the relative left adjoints inherit the corresponding properties from the arity functors). Since $F$ preserves $\kappa$-colimits and $\C$ has colimits of size at most $\kappa$, $U'\colon \Ins(F,\id_\C)\to \C$ is monadic and $\Ins(F,\id_\C)$ has colimits of size at most $\kappa$ (Theorem \ref{thm:BigMonadicity} (1) and Lemma \ref{lem:KanExtensionInserter}). Note also that the functor $U'\colon \Ins(F,\id_\C)\to \C$ strictly creates $\kappa$-colimits, since $F$ preserves such colimits (Theorem \ref{thm:pie_kan_creation} (2)).
+
+    Next we show that the forgetful functor $E\colon \Eq(\alpha,\beta)\to \Ins(F,\id_\C)$ has a left adjoint. Notice that $F'U'$ preserves the joint epicness of colimiting cocones of $\kappa$-chains and $\Ins(F,\id_\C)$ has coequalizers and $\kappa_\leq$-colimits. By Theorem \ref{thm:BigMonadicity}(2), $E$ has a left adjoint. 
+
+    Assume then that $K\xleftarrow{k} I\xrightarrow{d} \BialgB$ is a span of functors and assume that $Ud$ and $FUd$ have left Kan extensions along $k$. We show that $d$ has a left Kan extension along $k$. By Lemma \ref{lem:KanExtensionInserter} we have that the left Kan extension of $Ed$ exists along $k$ and since the right adjoint $E$ is fully faithful, the left Kan extension of $d$ along $k$ exists.
+\end{proof}
+
+
+\begin{corollary}\label{cor:BigMonadicityModel}
+    Let $\kappa$ and $\lambda$ be infinite cardinals. Let $(\Sigma,\sigma)$ be a signature pair with at most $\lambda$-many symbols with an algebraic $\sigma$-theory $T$. Let $M$ be a categorical $\Sigma$-model. Assume the following:
+    \begin{enumerate}
+        \item Each category $M_c$ has colimits of size at most $\max(\lambda,\kappa)$.
+        \item Each functor $M(B)$ preserves $\kappa$-colimits componentwise.
+    \end{enumerate}
+    Then the forgetful functor $M^T\to M_0$ is monadic and $M^T$ has colimits of size at most $\max(\lambda,\kappa)$. Moreover, for any span $K\xleftarrow{k} I\xrightarrow{d} M^T$ of functors, the left Kan extension of $d$ along $k$ exists if $Ud$ and $M(t_1)Ud$ have left Kan extensions along $k$ for every function arity term $t_1$.
+\end{corollary}
+\begin{proof}
+    The coarity functors of the induced bialgebraic datum $\B_{M,T}$ have left adjoints, because the coarity supports $M(t_2)$ are projections ($T$ algebraic) and the category $M_0$ has coproducts of size up to $\lambda$. The claim then follows from Theorem \ref{thm:BigMonadicityB} and the fact that $\kappa$-colimits are sifted colimits and the functors $M(B)$ preserving sifted colimits componentwise implies that the support functors preserve them (Corollary~\ref{cor:liftingSifted}).
+\end{proof}
+\begin{corollary}
+    Let $\C$ be a cartesian closed category with countable colimits. Then for any single-sorted theory $T$ of universal algebra with a countable signature, the category $\C^T$ has countable colimits and the forgetful functor $U\colon \C^T\to \C$ is monadic and $U$ strictly creates countable sifted colimits.
+\end{corollary}
+\begin{proof}
+    The monadicity and existence of countable colimits follow from Corollary~\ref{cor:BigMonadicityModel}. The strict creation of countable sifted colimits follows from Corollary \ref{cor:liftingSifted}.
+\end{proof}
+
+\subsection{Accessibility and Comonadicity}\label{subsec:comonadicity}
+Consider a regular cardinal $\kappa$. A $\kappa$-accessible category is one that has a small set $A$ of objects with $\C$ having and $\C(a,-)$ preserving $\kappa$-directed colimits, for each $a\in A$, and for each object $c$ in $\C$ there is a diagram $D\colon I\to \C$ so that $c\cong \colim D$, where $I$ is a $\kappa$-directed poset and $D(\Obj(I))\subset A$ \cite{LPC}. If one such $\kappa$ exists, $\C$ is called an accessible category. A functor whose domain and codomain are $\kappa$-accessible categories and which preserves $\kappa$-directed colimits for some regular cardinal $\kappa$ is called an accessible functor. The $2$-category $\ACC$ of accessible categories, accessible functors and natural transformations is closed under PIE limits \cite{MakkaiPare1989AccessibleCategories, LPC} and an accessible category that is complete, cocomplete or locally presentable is all three \cite[Corollary 2.47]{LPC}. We explicitly state the following known theorem: 
+\begin{theorem}[Accessible Adjoint Functor Theorem]\label{AAFT}
+    Let $F\colon \C\to \D$ be a functor with $\C$ locally presentable. Then the following hold:
+    \begin{enumerate}
+        \item If $F$ preserves colimits and $\D$ is locally small, then $F$ is a left adjoint.
+        \item If $F$ is continuous and accessible, then $F$ is a right adjoint.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+The first claim follows from the dual of the Special Adjoint Functor Theorem \cite{MacLane1998} and the fact that a locally presentable category has a small generating set and is co-well-powered \cite{LPC}. 
+
+The second claim follows from the fact that the $2$-category $\ACC$ is closed under comma objects in $\CAT$ (\cite{MakkaiPare1989AccessibleCategories}) and that an accessible category is complete if and only if it is cocomplete. The right adjointness then follows from the cocompleteness of the categories $d\downarrow F$.
+\end{proof}
+
+\begin{theorem}\label{thm:LPandComonadicity}
+    Let $\B = (\C,\ F,G,\ F',G',\ \alpha,\beta)$ be a bialgebraic datum in $\CAT$ with $\C$ locally presentable and $F,F',G,G'$ accessible. Then $U_\B\colon \BialgB\to \C$ is accessible and the following hold:
+    \begin{enumerate}
+        \item If $G$ is continuous and $G'$ preserves joint monicness of limiting cones, then $\BialgB$ is locally presentable and the forgetful functor $U_\B\colon \BialgB\to \C$ is monadic.
+        \item If $F$ preserves colimiting cocones and $F'$ preserves their joint epicness, then $\BialgB$ is locally presentable and $U_\B$ is comonadic.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    Since $\ACC$ is closed under PIE limits in $\CAT$ by \cite[2.72 Theorem, 2.76 Lemma]{LPC}, it follows that $U$ is accessible. As the cases are similar, we prove the comonadicity case.  As $U$ strictly creates all colimits, $\BialgB$ is cocomplete and hence locally presentable. Since $U$ is a cocontinuous accessible functor, it is a left adjoint by Theorem \ref{AAFT}. Thus $U$ is comonadic by Corollary~\ref{cor:GeneralMonadicity}.
+\end{proof}

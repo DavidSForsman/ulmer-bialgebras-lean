@@ -1,0 +1,100 @@
+
+\appendix
+\section{Bi-Density of Small \texorpdfstring{$\V$}{V}-Categories in \texorpdfstring{$\V\text{-}\CAT$}{V-CAT}}
+
+Fix a monoidal category $\V$ with an \textbf{absorbing initial object} $0$, that is, an initial object that the tensor product preserves componentwise: $0\otimes z\cong 0\cong z\otimes 0$. We will construct a class $A$ of $\V$-categories and prove its bi-density. The proof is closely analogous to the one in \cite[Lemma~7.1]{hofstraInnerAutoequivalencesGeneral2024}, where a similar statement is shown for monoidal categories.
+
+\begin{definition}
+    Consider sets $E,G_0$ with a parallel pair of functions $E\rightrightarrows G_0$. We call the tuple $G = (E\rightrightarrows G_0)$ a \textbf{graph}. A $\V$-\textbf{graph} $\textbf{G}$ over $G_0$ is just a choice of hom-objects $\textbf{G}(a,b)$ in $\V$ for each $a,b\in G_0$. The elements of $G_0$ and $E$ are called vertices and edges, respectively. A graph $G$ is said to be a \textbf{forest} when the free category over $G$ is thin, that is to say, there is at most one path $x\to y$ in $G$ for any vertices $x$ and $y$ in $G$.
+\end{definition}
+
+\begin{definition}
+    Assume $G$ is a forest. A \textbf{$\V$-labelling} of $G$ is a function $\ell\colon E\to\Obj(\V)$. For a path $p=p_n\cdots p_1$ we write $\ell(p)\coloneqq\ell(p_n)\otimes\cdots\otimes\ell(p_1)$, with $\ell(p)=I$ for the empty path. The labelling determines a $\V$-graph $G_\ell$ with vertices $G_0$ and hom-objects $G_\ell(a,b)=\ell(e)$ if there is an edge $e\colon a\to b$, and $G_\ell(a,b)=0$ otherwise.
+\end{definition}
+
+\begin{lemma}\label{lem:freeForest}
+Let $G$ be a forest with a $\V$-labelling $\ell$. Then the $\V$-graph $G_\ell$ has a free $\V$-category $\overline{G}_\ell$, with objects $G_0$ and hom-objects
+$$
+\overline{G}_\ell(a,b)=\begin{cases}\ell(p), & \text{if } p\colon a\to b \text{ is a path},\\ 0, & \text{otherwise}.\end{cases}
+$$
+The composition $\overline{G}_\ell(b,c)\otimes \overline{G}_\ell(a,b)\to \overline{G}_\ell(a,c)$ is either the unique morphism from the initial object or the canonical isomorphism $\ell(q)\otimes \ell(p)\cong \ell(qp)$ induced by the monoidal structure, when paths $p\colon a\to b$ and $q\colon b\to c$ exist.
+\end{lemma}
+\begin{proof}
+The construction of a free $\V$-category over $G_\ell$ given in \cite{wolffVcatVgraph1974} works as is, since the needed coproducts trivialize by the fact that the graph $G$ is a forest and $\V$ has an absorbing initial object.
+\end{proof}
+
+\begin{definition}\label{def:test_categories_A}
+For $n\geq1$ and $x_1,\ldots,x_{n-1}\in\V$, the \textbf{linear $\V$-category} $\mathbf{n}_{x_1,\ldots,x_{n-1}}$ is $\overline{G}_\ell$ for the forest $0\to1\to\cdots\to n-1$ whose edge $(i-1)\to i$ is labelled by $x_i$ for each $i\leq n-1$.
+\end{definition}
+
+The $\V$-category $\mathbf{1}$ has a single object with hom-object $I$. The hom-objects of $\mathbf{2}_x$ and $\mathbf{3}_{x,y}$ above the diagonal are
+$$
+\mathbf{2}_x(0,1)=x,\qquad \mathbf{3}_{x,y}(0,1)=x,\quad \mathbf{3}_{x,y}(1,2)=y,\quad \mathbf{3}_{x,y}(0,2)=y\otimes x,
+$$
+and those below the diagonal are $0$.
+
+Consider a monoidal category $\V$ with an absorbing initial object and consider a $\V$-category $\C$. Lemma \ref{lem:freeForest} allows us to fix notation as follows: A $\V$-functor
+\begin{enumerate}
+    \item $\mathbf{1}\to \C$ describes a choice of an object $c$ in $\C$, denoted by $\Delta_c\colon \textbf{1}\to\C$.
+    \item $H\colon\mathbf{2}_x\to\C$ is equivalently described as a choice of objects $c,c'$ and a morphism $f\colon x\to\C(c,c')$. Motivated by this, we write $H=H_f$.
+    \item $L\colon \mathbf{3}_{x,y}\to\C$ amounts to a choice of objects $c_0,c_1,c_2$ and morphisms $f\colon x\to\C(c_0,c_1)$, $g\colon y\to\C(c_1,c_2)$, with $L_{0,2}\colon y\otimes x\to \C(c_0, c_2)$ being $\mu_{c_0,c_1,c_2}\circ(g\otimes f)$, where $\mu$ denotes the composition of $\C$. We denote by $j_c\colon I\to \C(c,c)$ the identity of an object $c$ in $\C$.
+\end{enumerate} 
+
+
+\begin{theorem}[Bi-Density of $\mathcal{A}$ in $\V\text{-}\CAT$]\label{thm:density_of_A_app}
+Let $\V$ be a monoidal category with an absorbing initial object. Then the class
+$$
+A \coloneqq \{\mathbf{1}, \mathbf{2}_x, \mathbf{3}_{x,y} \mid x,y \in \Obj(\V)\}
+$$
+is bi-dense in the $2$-category $\K \coloneqq \V\text{-}\CAT$.
+\end{theorem}
+
+\begin{proof}
+We only sketch the proof, since the argument closely follows the one given in \cite[Lemma~7.1]{hofstraInnerAutoequivalencesGeneral2024}. We denote by $\A$ the full sub-2-category $A$ spans in $\K$. Let $\C,\D$ be $\V$-categories. We show that 
+$$
+\K(\C,\D)\to[\K(-,\C)|_{\A^{\op}},\K(-,\D)|_{\A^{\op}}]_\Psd, F\mapsto F_*,
+$$
+is fully faithful and essentially surjective on objects. A modification $\Theta\colon F_*\Rrightarrow G_*$, where $F,G\colon \C\to \D$ are $\V$-functors, is determined by the values $(\alpha_c\coloneqq (\Theta_\textbf{1})_{\Delta_c}\colon I\to \D(Fc,Gc))_c$ which provides the faithfulness, and the $\V$-naturality of $\alpha$ is encoded by $\Theta$ at components $\textbf{2}_x$, which shows fullness.
+
+It remains to show essential surjectivity on objects. Consider a pseudonatural transformation 
+$$
+\Phi\colon \K(-,\C)|_{\A^{\op}}\Rightarrow \K(-,\D)|_{\A^{\op}}\colon \A^{\op}\to \CAT,
+$$
+with the strong structure provided by isomorphisms $\gamma_f(H)\colon \Phi_\textbf{b}(H)f\Rightarrow \Phi_\textbf{a}(Hf)$ for morphisms $f\colon \textbf{a}\to \textbf{b}$ in $\A$ and $\V$-functors $H\colon \textbf{b}\to \C$. Note that for each $H\colon \textbf{a}\to \C$ and a vertex $i$ of \textbf{a}, we have an isomorphism 
+$$
+\gamma_{v_i}(H)\colon \Phi_\textbf{a}(H)v_i\xrightarrow{\cong} \Phi_\textbf{1}(Hv_i)\eqqcolon \Phi'_\textbf{a}(H)(i),
+$$
+where $v_i\colon \textbf{1}\to \textbf{a}$ is the vertex inclusion choosing $i$ in \textbf{a}. The family $\Phi'$ extends uniquely to a $2$-natural transformation $\K(-,\C)|_{\A^{\op}}\Rightarrow \K(-,\D)|_{\A^{\op}}$, where the isomorphisms $\gamma_{v_{-}}(-)\colon \Phi\cong \Phi'$ form a modification. Therefore, we may assume that $\Phi$ itself is a strict natural transformation. The strict naturality of $\Phi$ means that the equations
+\begin{equation*}
+\Phi_\textbf{a}(FH) = \Phi_\textbf{b}(F)H,\qquad \Phi_\textbf{a}(\beta * H) = \Phi_\textbf{b}(\beta) * H,\qquad \Phi_\textbf{a}(F * \sigma) = \Phi_\textbf{b}(F) * \sigma
+\end{equation*}
+hold for all morphisms $H\colon \textbf{a}\to \textbf{b}$ in $\A$, $\V$-functors $F\colon \textbf{b}\to \C$, $\V$-natural transformations $\beta\colon F\Rightarrow F'\colon \textbf{b}\to \C$, and transformations $\sigma\colon H\Rightarrow H'\colon \textbf{a}\to \textbf{b}$ in $\A$. 
+
+We define $F\colon \C\to \D$ by setting $F(c)$ to be the object picked by $\Phi_\textbf{1}(\Delta_c)\colon \textbf{1}\to \D$. Consider then objects $c_1$ and $c_2$ in $\C$. Fix a morphism $f\colon x\to \C(c_1,c_2)$ in $\V$. The $\V$-functor $\Phi_{\textbf{2}_x}(H_f)\colon \textbf{2}_x\to \D$ corresponds to a morphism $\phi_x(f)\colon x\to \D(Fc_1,Fc_2)$, since $\Phi_{\textbf{2}_x}(H_f)v_{i-1} = \Phi_\textbf{1}(\Delta_{c_i})$ for $i = 1,2$. We then define $F_{c_1,c_2} = \phi_{\C(c_1,c_2)}(\id_{\C(c_1,c_2)})$. 
+
+We show that $F$ respects identities. Let $c$ be an object in $\C$. Consider the $\V$-functor $!\colon \textbf{2}_I\to \textbf{1}$ choosing the identity on the tensor unit $I$. As $H_{j_c} = \Delta_c\circ !$, we have
+$$
+H_{j_{Fc}} = \Delta_{Fc}\circ ! = \Phi_{\textbf{2}_I}(\Delta_c\circ !) = H_{F_{c,c}j_c}
+$$
+and thus $F_{c,c} j_c = j_{Fc}$ which shows that $F$ respects identities.
+
+To see that $F$ respects composition, fix objects $c_0,c_1$ and $c_2$. One needs to show that
+$$
+F_{c_0,c_2}\circ \mu = \mu \circ (F_{c_1,c_2}\otimes F_{c_0,c_1}). 
+$$
+Consider the $\V$-functor $L\colon \textbf{3}_{x,y}\to \C$ corresponding to the morphisms $\id_x\colon x = \C(c_0,c_1)$ and $\id_y\colon y = \C(c_1,c_2)$. Now $L_{0,2}$ is the composite $\mu_{c_0,c_1,c_2}$. Consider the morphism $d_{ij}^\textbf{a} = d_{ij}\colon \textbf{2}_{\textbf{a}(i,j)}\to \textbf{a}$ choosing the identity $\textbf{a}(i,j)\to \textbf{a}(i,j)$ for vertices $i$ and $j$ of $\textbf{a}\in A$. Now
+$$
+H_{\id_x} = L\circ d_{01}, \quad H_{\id_y} = L\circ d_{12},\quad  \text{and}\quad H_\mu = L\circ d_{02}.
+$$
+Due to the strict naturality of $\Phi$, we have
+$$
+\Phi_{\textbf{3}_{x,y}}(L)_{i,j} = \begin{cases}
+    F_{c_0,c_1}, &\text{ if $ij = 01$,}\\
+    F_{c_1,c_2}, &\text{ if $ij = 12$,}\\
+    F_{c_0,c_2}\circ \mu, &\text{ if $ij = 02$.}
+\end{cases}
+$$
+The $\V$-functoriality gives us that $\Phi_{\textbf{3}_{x,y}}(L)_{0,2} = \mu\circ (F_{c_1,c_2}\otimes F_{c_0,c_1})$. Thus $F$ is a $\V$-functor.
+
+Lastly, we need to see that $\Phi = F_*$. Consider $\textbf{a}\in A$ and $\alpha\colon H_1\Rightarrow H_2\colon \textbf{a}\to \C$; we need to show that $\Phi_\textbf{a}(\alpha) = F\alpha$. It is clear that the $\V$-functors $FH_i$ and $\Phi_\textbf{a}(H_i)$ are equal for $i = 1,2$. By naturality of $\Phi$, we have $\Phi_\textbf{a}(\alpha)*v_i = \Phi_\textbf{1}(\alpha*v_i)= F_{H_1i,H_2i}\circ \alpha_i= (F\alpha)*v_i$. Thus $\Phi_\textbf{a}(\alpha) = F\alpha$. Therefore, we have shown the needed equivalence.
+\end{proof}

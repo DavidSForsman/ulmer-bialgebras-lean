@@ -1,0 +1,23 @@
+{
+  "challenge_module": "Palomar.Thm4_19.Challenge",
+  "solution_module": "Palomar.Thm4_19.Solution",
+  "theorem_names": [
+    "UlmerBialgebras.Paper.thm_4_19",
+    "UlmerBialgebras.Model.pathCell._unary._proof_1",
+    "UlmerBialgebras.inserter_assoc_comp",
+    "UlmerBialgebras.PreModel.interp_subst",
+    "UlmerBialgebras.Model.interp_lift_ctx",
+    "UlmerBialgebras.Model.sigTm_fndom",
+    "UlmerBialgebras.Model.sigTm_fncod",
+    "UlmerBialgebras.Model.sigTm_subst",
+    "UlmerBialgebras.LeftExt.hom_ext",
+    "UlmerBialgebras.LeftExt.push_w"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,69 @@
+
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1.2in}
+\usepackage{amsmath, amsthm, amssymb, mathtools, extarrows}
+\usepackage{enumitem}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=red, urlcolor=blue]{hyperref}
+\bibliographystyle{abbrvurl-doi}
+\usepackage{xurl}
+\usepackage{xcolor}
+\newcommand{\todo}[1]{\textcolor{red}{[\textbf{TODO:} #1]}}
+\usepackage{soul}
+\usepackage{framed}
+\colorlet{cutyellow}{yellow!60}
+\sethlcolor{cutyellow}
+\newcommand{\cut}[1]{\hl{#1}}
+\newenvironment{cutblock}{\def\FrameCommand{\fboxsep=4pt\colorbox{cutyellow}}\MakeFramed{\advance\hsize-\width\FrameRestore}}{\endMakeFramed}
+\usepackage{comment}
+\colorlet{proposalblue}{blue!7}
+\newif\ifshowproposals
+\showproposalstrue
+\ifshowproposals
+\specialcomment{proposal}{\def\FrameCommand{\fboxsep=6pt\colorbox{proposalblue}}\MakeFramed{\advance\hsize-\width\FrameRestore}\noindent\textbf{Proposal.}\ }{\endMakeFramed}
+\else
+\excludecomment{proposal}
+\fi
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+\makeatletter
+\newcommand\leanlinksitem[3]{\@namedef{leanlinks@#1}{\leanlinks@box{#2}{#3}}}
+\newcommand\leanlinks@box[2]{\ {\normalfont\footnotesize\sffamily[\textcolor{teal}{Lean}#1%
+  \if\relax\detokenize{#2}\relax\else; \textit{#2}\fi]\leanlinks@legend}}
+\let\leanlinks@legend\relax
+\newcommand\leanlinkslegend[3]{\gdef\leanlinks@legend{\footnote{\normalfont\rmfamily
+  The boxes [Lean 1 2 \dots] link each numbered item to its Lean declarations in
+  \url{#1} at commit \texttt{\detokenize{#2}}. A Definition's declarations are marked
+  P (defined in the formalization), M (Mathlib's) or B (defined in the formalization and proved
+  equivalent to Mathlib's). A word after the links says how the Lean statement differs from the
+  paper's (stronger, weaker, different, or scope); otherwise it is the paper's. At most four
+  links are shown; ``+$n$'' leads to the full list in the \href{#3}{index}.}%
+  \global\let\leanlinks@legend\relax}}
+\newcommand\leanlinkmore[2]{\ \href{#1}{+#2}}
+\newcommand\leanlink[3]{\if\relax\detokenize{#2}\relax\href{#1}{\,$\nearrow$}\else
+  \ \href{#1}{#2}\fi\if\relax\detokenize{#3}\relax\else\textsuperscript{#3}\fi}
+\newcommand\leanlinks@patch{%
+  \let\leanlinks@thmhead\thmhead@plain
+  \def\thmhead@plain##1##2##3{\leanlinks@thmhead{##1}{##2}{##3}%
+    \ifcsname leanlinks@##2\endcsname\csname leanlinks@##2\endcsname\fi}%
+  \let\thmhead\thmhead@plain}
+\IfFileExists{lean-links.tex}{\input{lean-links.tex}\leanlinks@patch}{}
+\makeatother

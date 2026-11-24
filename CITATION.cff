@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite it as below, together with the paper."
+title: "A Syntactic Approach to Ulmer's Bialgebras: a Lean 4 formalization"
+type: software
+authors:
+  - family-names: "Forsman"
+    given-names: "David"
+    orcid: "https://orcid.org/0000-0003-0785-7034"
+    affiliation: "UCLouvain"
+license: Apache-2.0
+doi: "10.5281/zenodo.24483241"
+repository-code: "https://github.com/DavidSForsman/ulmer-bialgebras-lean"
+version: "v1.0.0"
+date-released: "2026-11-24"
+commit: "9e9491abe72d2b97637162feea52474234db274b"
+keywords:
+  - Lean 4
+  - Mathlib
+  - category theory
+  - 2-categories
+  - bialgebras
+preferred-citation:
+  type: article
+  title: "A Syntactic Approach to Ulmer's Bialgebras"
+  authors:
+    - family-names: "Forsman"
+      given-names: "David"
+      orcid: "https://orcid.org/0000-0003-0785-7034"
+      affiliation: "UCLouvain"
+  identifiers:
+    - type: other
+      value: "arXiv:2607.19587"
+  url: "https://arxiv.org/abs/2607.19587"

@@ -1,0 +1,45 @@
+name = "UlmerBialgebrasFormalization"
+defaultTargets = ["Foundations", "UlmerBialgebras", "Hopf", "InternalGroups", "AffineGroupSchemes", "Companion", "Palomar"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.36.0"
+
+# Mathlib's `lake build` options (see Mathlib's `lakefile.lean`), as weak options so that modules
+# not importing Mathlib still build. The header linter (part of the standard set) is off: it asks
+# for a copyright header, which this project does not use.
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.linter.style.header = false
+weak.linter.style.longFile = 1500
+
+[[lean_lib]]
+name = "Foundations"
+globs = ["Foundations.+"]
+
+[[lean_lib]]
+name = "UlmerBialgebras"
+globs = ["UlmerBialgebras.+"]
+
+[[lean_lib]]
+name = "Hopf"
+globs = ["Hopf", "Hopf.+"]
+
+[[lean_lib]]
+name = "InternalGroups"
+globs = ["InternalGroups", "InternalGroups.+"]
+
+[[lean_lib]]
+name = "AffineGroupSchemes"
+globs = ["AffineGroupSchemes", "AffineGroupSchemes.+"]
+
+[[lean_lib]]
+name = "Companion"
+globs = ["Companion.+"]
+
+[[lean_lib]]
+name = "Palomar"
+globs = ["Palomar.+"]

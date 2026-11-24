@@ -1,0 +1,4749 @@
+- id: '2.1'
+  uid: ulmer:v2:2.1
+  kind: Definition
+  title: PIE Limits in a 2-Category
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: false
+  clean: false
+  state: definition
+  status: proved
+  proof_route: null
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion in Mathlib: it has no 2-limits or weighted limits'
+- id: '2.2'
+  uid: ulmer:v2:2.2
+  kind: Remark
+  title: PIE Limits in CAT
+  parts:
+  - rem_2_2_ins
+  - rem_2_2_equif
+  stmt_hash:
+    rem_2_2_ins: '13092759468855141557'
+    rem_2_2_equif: '16740886601289456447'
+  cone_hash:
+    rem_2_2_ins: '12439876821366076772'
+    rem_2_2_equif: '13896305475169653316'
+  approved_hash:
+    rem_2_2_ins: '13092759468855141557'
+    rem_2_2_equif: '16740886601289456447'
+  approved_cone_hash:
+    rem_2_2_ins: '12439876821366076772'
+    rem_2_2_equif: '13896305475169653316'
+  approved_cone_note:
+    rem_2_2_ins: approved by the author
+    rem_2_2_equif: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: products of categories not stated separately (not needed, author)
+  issue: false
+  fidelity: scope
+  scope: partial
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '2.3'
+  uid: ulmer:v2:2.3
+  kind: Example
+  title: ''
+  parts:
+  - ex_2_3_1
+  - ex_2_3_2_prod
+  - ex_2_3_2_prod_lift
+  - ex_2_3_2_ins
+  - ex_2_3_2_equif
+  stmt_hash:
+    ex_2_3_1: '17070171575569660582'
+    ex_2_3_2_prod: '14892720643621928239'
+    ex_2_3_2_prod_lift: '2128069247898249562'
+    ex_2_3_2_ins: '9698119791779943552'
+    ex_2_3_2_equif: '3998572264892244283'
+  cone_hash:
+    ex_2_3_1: '2855143187303768067'
+    ex_2_3_2_prod: '11379957711681006692'
+    ex_2_3_2_prod_lift: '11233490758063804191'
+    ex_2_3_2_ins: '11113368844396287979'
+    ex_2_3_2_equif: '6105762192247879248'
+  approved_hash:
+    ex_2_3_1: '17070171575569660582'
+    ex_2_3_2_prod: '14892720643621928239'
+    ex_2_3_2_prod_lift: '2128069247898249562'
+    ex_2_3_2_ins: '9698119791779943552'
+    ex_2_3_2_equif: '3998572264892244283'
+  approved_cone_hash:
+    ex_2_3_1: '2855143187303768067'
+    ex_2_3_2_prod: '11379957711681006692'
+    ex_2_3_2_prod_lift: '11233490758063804191'
+    ex_2_3_2_ins: '11113368844396287979'
+    ex_2_3_2_equif: '6105762192247879248'
+  approved_cone_note:
+    ex_2_3_1: approved by the author
+    ex_2_3_2_prod: approved by the author
+    ex_2_3_2_prod_lift: approved by the author
+    ex_2_3_2_ins: approved by the author
+    ex_2_3_2_equif: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: part (2) for V-ACC is cited, not formalized (author decision)
+  issue: false
+  fidelity: scope
+  scope: partial
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.1'
+  uid: ulmer:v2:3.1
+  kind: Definition
+  title: Bialgebraic Data and Their Bialgebras
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '3.2'
+  uid: ulmer:v2:3.2
+  kind: Remark
+  title: ''
+  parts:
+  - rem_3_2_adj
+  - rem_3_2_rel
+  stmt_hash:
+    rem_3_2_adj: '16396430629031122749'
+    rem_3_2_rel: '7765792324654757002'
+  cone_hash:
+    rem_3_2_adj: '14873353636503927626'
+    rem_3_2_rel: '2712520379292011488'
+  approved_hash:
+    rem_3_2_adj: '16396430629031122749'
+    rem_3_2_rel: '7765792324654757002'
+  approved_cone_hash:
+    rem_3_2_adj: '14873353636503927626'
+    rem_3_2_rel: '2712520379292011488'
+  approved_cone_note:
+    rem_3_2_adj: approved by the author
+    rem_3_2_rel: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; both adjoint and relative-adjoint forms formalized
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.3'
+  uid: ulmer:v2:3.3
+  kind: Definition
+  title: The 2-Signature Sigma
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own; Mathlib''s FirstOrder.Language
+      is single-sorted'
+- id: '3.4'
+  uid: ulmer:v2:3.4
+  kind: Example
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: formalized as data, no separate statement
+  deviations: 'Σ_A is defined for any bicategory A (the paper: a small 2-category);
+    it needs no chosen products'
+  issue: true
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.5'
+  uid: ulmer:v2:3.5
+  kind: Definition
+  title: The 1-Signature sigma
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '3.6'
+  uid: ulmer:v2:3.6
+  kind: Definition
+  title: The Term Graph
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own; the closest is Quiver.Path,
+      with no comparison stated'
+- id: '3.7'
+  uid: ulmer:v2:3.7
+  kind: Definition
+  title: Arity, Coarity, and Bialgebraic Theories
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '3.8'
+  uid: ulmer:v2:3.8
+  kind: Definition
+  title: Sigma-Models
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own; compared only in examples
+      (MonEx.comparison to Mon C, fieldEquiv to FieldCat)'
+- id: '3.9'
+  uid: ulmer:v2:3.9
+  kind: Example
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's example
+  deviations: 'stronger: M_F is also defined for a pseudofunctor out of any bicategory
+    (the paper: a strict 2-functor out of a small 2-category)'
+  issue: true
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.10'
+  uid: ulmer:v2:3.10
+  kind: Definition
+  title: Lax, Oplax, and Strong Morphisms
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '3.11'
+  uid: ulmer:v2:3.11
+  kind: Proposition
+  title: ''
+  parts:
+  - prop_3_11_lax
+  - prop_3_11_strong
+  - prop_3_11_oplax
+  stmt_hash:
+    prop_3_11_lax: '1505740112077357274'
+    prop_3_11_strong: '6560910542799965902'
+    prop_3_11_oplax: '13040282596932182133'
+  cone_hash:
+    prop_3_11_lax: '5998788072487738493'
+    prop_3_11_strong: '12304695280916423372'
+    prop_3_11_oplax: '18219450306251032524'
+  approved_hash:
+    prop_3_11_lax: '1505740112077357274'
+    prop_3_11_strong: '6560910542799965902'
+    prop_3_11_oplax: '13040282596932182133'
+  approved_cone_hash:
+    prop_3_11_lax: '5998788072487738493'
+    prop_3_11_strong: '12304695280916423372'
+    prop_3_11_oplax: '18219450306251032524'
+  approved_cone_note:
+    prop_3_11_lax: approved by the author
+    prop_3_11_strong: approved by the author
+    prop_3_11_oplax: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.12'
+  uid: ulmer:v2:3.12
+  kind: Example
+  title: ''
+  parts:
+  - ex_3_12_lax
+  - ex_3_12_oplax
+  - ex_3_12_lax_bicat
+  - ex_3_12_oplax_bicat
+  stmt_hash:
+    ex_3_12_lax: '20784095450912442'
+    ex_3_12_oplax: '2166329058108628631'
+    ex_3_12_lax_bicat: '12337709599392866373'
+    ex_3_12_oplax_bicat: '15978248928768516909'
+  cone_hash:
+    ex_3_12_lax: '7226388690511865736'
+    ex_3_12_oplax: '11235471284899712326'
+    ex_3_12_lax_bicat: '4247273216213187627'
+    ex_3_12_oplax_bicat: '17342699378588012250'
+  approved_hash:
+    ex_3_12_lax: '20784095450912442'
+    ex_3_12_oplax: '2166329058108628631'
+    ex_3_12_lax_bicat: '12337709599392866373'
+    ex_3_12_oplax_bicat: '15978248928768516909'
+  approved_cone_hash:
+    ex_3_12_lax: '7226388690511865736'
+    ex_3_12_oplax: '11235471284899712326'
+    ex_3_12_lax_bicat: '4247273216213187627'
+    ex_3_12_oplax_bicat: '17342699378588012250'
+  approved_cone_note:
+    ex_3_12_lax: approved by the author
+    ex_3_12_oplax: approved by the author
+    ex_3_12_lax_bicat: approved by the author
+    ex_3_12_oplax_bicat: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: equivalences with transformation categories proved; +gap
+  deviations: 'stronger: ex_3_12_lax_bicat and ex_3_12_oplax_bicat state it for pseudofunctors
+    out of any bicategory (the paper: strict 2-functors), and ex_3_12_lax, ex_3_12_oplax
+    are derived from them'
+  issue: true
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.13'
+  uid: ulmer:v2:3.13
+  kind: Definition
+  title: The Object of Operations M^sigma
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '3.14'
+  uid: ulmer:v2:3.14
+  kind: Definition
+  title: Path Evaluation and the Object of Bialgebras M^T
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '3.15'
+  uid: ulmer:v2:3.15
+  kind: Proposition
+  title: ''
+  parts:
+  - prop_3_15
+  stmt_hash:
+    prop_3_15: '17270712610288549671'
+  cone_hash:
+    prop_3_15: '5792869608522652138'
+  approved_hash:
+    prop_3_15: '17270712610288549671'
+  approved_cone_hash:
+    prop_3_15: '5792869608522652138'
+  approved_cone_note:
+    prop_3_15: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.16'
+  uid: ulmer:v2:3.16
+  kind: Definition
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '3.17'
+  uid: ulmer:v2:3.17
+  kind: Remark
+  title: ''
+  parts:
+  - rem_3_17_unique
+  - rem_3_17_exists
+  - rem_3_17_em
+  stmt_hash:
+    rem_3_17_unique: '14953368294533133780'
+    rem_3_17_exists: '14585032785241567284'
+    rem_3_17_em: '17697769572114634147'
+  cone_hash:
+    rem_3_17_unique: '12390635360804626908'
+    rem_3_17_exists: '11584090947924773205'
+    rem_3_17_em: '14243432853283987877'
+  approved_hash:
+    rem_3_17_unique: '14953368294533133780'
+    rem_3_17_exists: '14585032785241567284'
+    rem_3_17_em: '17697769572114634147'
+  approved_cone_hash:
+    rem_3_17_unique: '12390635360804626908'
+    rem_3_17_exists: '11584090947924773205'
+    rem_3_17_em: '14243432853283987877'
+  approved_cone_note:
+    rem_3_17_unique: approved by the author
+    rem_3_17_exists: approved by the author
+    rem_3_17_em: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: regrouped
+    note: proved via PIE universal properties directly, not via 2-Yoneda lemma; +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.18'
+  uid: ulmer:v2:3.18
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_3_18_1
+  - lem_3_18_2
+  stmt_hash:
+    lem_3_18_1: '17749385523022216268'
+    lem_3_18_2: '6975423042838218081'
+  cone_hash:
+    lem_3_18_1: '7298387891896070356'
+    lem_3_18_2: '13060209688497501165'
+  approved_hash:
+    lem_3_18_1: '17749385523022216268'
+    lem_3_18_2: '6975423042838218081'
+  approved_cone_hash:
+    lem_3_18_1: '7298387891896070356'
+    lem_3_18_2: '13060209688497501165'
+  approved_cone_note:
+    lem_3_18_2: approved by the author
+    lem_3_18_1: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: 'stronger: for any substitution `sub : V → Trm wty` between arbitrary
+    contexts, at any environment `ρ`; the paper evaluates at `M_0` (lem_3_18_2)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.19'
+  uid: ulmer:v2:3.19
+  kind: Examples
+  title: Examples of 2-Signatures
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definitions
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.20'
+  uid: ulmer:v2:3.20
+  kind: Examples
+  title: ''
+  parts:
+  - ex_3_20_1
+  - ex_3_20_1_magma
+  - ex_3_20_1_iff
+  - ex_3_20_3
+  - ex_3_20_2
+  - ex_3_20_4_algebraic
+  - ex_3_20_4_mnd
+  - ex_3_20_4_mon
+  - ex_3_20_4_smon
+  stmt_hash:
+    ex_3_20_1: '3682066599464133843'
+    ex_3_20_1_magma: '13307985116440255555'
+    ex_3_20_1_iff: '9783511719017533053'
+    ex_3_20_3: '15775037478425478948'
+    ex_3_20_2: '6034187077708373350'
+    ex_3_20_4_algebraic: '6942793731026759260'
+    ex_3_20_4_mnd: '5331193675791265729'
+    ex_3_20_4_mon: '15860614866236110491'
+    ex_3_20_4_smon: '13526046318371360767'
+  cone_hash:
+    ex_3_20_1: '10170579208690795579'
+    ex_3_20_1_magma: '16724750527993255600'
+    ex_3_20_1_iff: '12399038235480147765'
+    ex_3_20_3: '14217861302944075651'
+    ex_3_20_2: '11744974206935772566'
+    ex_3_20_4_algebraic: '17112531837904415820'
+    ex_3_20_4_mnd: '11311831651349249607'
+    ex_3_20_4_mon: '6084691114538099965'
+    ex_3_20_4_smon: '12579801209477590718'
+  approved_hash:
+    ex_3_20_1: '3682066599464133843'
+    ex_3_20_1_magma: '13307985116440255555'
+    ex_3_20_1_iff: '9783511719017533053'
+    ex_3_20_3: '15775037478425478948'
+    ex_3_20_2: '6034187077708373350'
+    ex_3_20_4_algebraic: '6942793731026759260'
+    ex_3_20_4_mnd: '5331193675791265729'
+    ex_3_20_4_mon: '15860614866236110491'
+    ex_3_20_4_smon: '13526046318371360767'
+  approved_cone_hash:
+    ex_3_20_1: '10170579208690795579'
+    ex_3_20_1_magma: '16724750527993255600'
+    ex_3_20_1_iff: '12399038235480147765'
+    ex_3_20_3: '14217861302944075651'
+    ex_3_20_2: '11744974206935772566'
+    ex_3_20_4_algebraic: '17112531837904415820'
+    ex_3_20_4_mnd: '11311831651349249607'
+    ex_3_20_4_mon: '6084691114538099965'
+    ex_3_20_4_smon: '12579801209477590718'
+  approved_cone_note:
+    ex_3_20_2: approved by the author
+    ex_3_20_4_mon: approved by the author
+    ex_3_20_4_smon: approved by the author
+    ex_3_20_1: approved by the author
+    ex_3_20_1_magma: approved by the author
+    ex_3_20_1_iff: approved by the author
+    ex_3_20_3: approved by the author
+    ex_3_20_4_mnd: approved by the author
+    ex_3_20_4_algebraic: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: iso of categories for 3.20(1); +gap
+  deviations: '(2): assumes only a braided monoidal category (the paper: symmetric);
+    (1), (3), (4): exact, as the paper'
+  issue: true
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.21'
+  uid: ulmer:v2:3.21
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_3_21_1
+  - lem_3_21_2
+  stmt_hash:
+    lem_3_21_1: '5081260057662572198'
+    lem_3_21_2: '13799319920032998219'
+  cone_hash:
+    lem_3_21_1: '585818576914744537'
+    lem_3_21_2: '5072005080818312533'
+  approved_hash:
+    lem_3_21_1: '5081260057662572198'
+    lem_3_21_2: '13799319920032998219'
+  approved_cone_hash:
+    lem_3_21_1: '585818576914744537'
+    lem_3_21_2: '5072005080818312533'
+  approved_cone_note:
+    lem_3_21_1: approved by the author
+    lem_3_21_2: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.22'
+  uid: ulmer:v2:3.22
+  kind: Theorem
+  title: Induced Functor of Algebras Theorem
+  parts:
+  - thm_3_22
+  stmt_hash:
+    thm_3_22: '13513758888876216739'
+  cone_hash:
+    thm_3_22: '17218847029935568280'
+  approved_hash:
+    thm_3_22: '13513758888876216739'
+  approved_cone_hash:
+    thm_3_22: '17218847029935568280'
+  approved_cone_note:
+    thm_3_22: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.23'
+  uid: ulmer:v2:3.23
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_3_23_1
+  - cor_3_23_2
+  - cor_3_23_3
+  stmt_hash:
+    cor_3_23_1: '9331780542576053295'
+    cor_3_23_2: '17856374870942860604'
+    cor_3_23_3: '6938135832390146735'
+  cone_hash:
+    cor_3_23_1: '3244083742368653169'
+    cor_3_23_2: '8729287256727809022'
+    cor_3_23_3: '14306472762918541611'
+  approved_hash:
+    cor_3_23_1: '9331780542576053295'
+    cor_3_23_2: '17856374870942860604'
+    cor_3_23_3: '6938135832390146735'
+  approved_cone_hash:
+    cor_3_23_1: '3244083742368653169'
+    cor_3_23_2: '8729287256727809022'
+    cor_3_23_3: '14306472762918541611'
+  approved_cone_note:
+    cor_3_23_1: approved by the author
+    cor_3_23_2: approved by the author
+    cor_3_23_3: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; part (2) proved by duality
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '3.24'
+  uid: ulmer:v2:3.24
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_3_24
+  stmt_hash:
+    cor_3_24: '15349972716416647123'
+  cone_hash:
+    cor_3_24: '1594409006891321701'
+  approved_hash:
+    cor_3_24: '15349972716416647123'
+  approved_cone_hash:
+    cor_3_24: '1594409006891321701'
+  approved_cone_note:
+    cor_3_24: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: Corollary 3.23 (1) for the lax morphism of Σ_Mon-models, read through Example
+      3.20 (1); C and D are lifted to a common size
+  deviations: 'different (size): holds for categories in any universes (CHALLENGE.md,
+    *Size migration*)'
+  issue: false
+  fidelity: different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.1'
+  uid: ulmer:v2:4.1
+  kind: Definition
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: bridged
+    canonical: CategoryTheory.Limits.IsSubterminal (and its dual on the opposite category)
+    lemma: Subterminal is an abbrev of IsSubterminal; subterminal_iff_isSubterminal,
+      quotientInitial_iff (UlmerBialgebras/Kan/SubterminalMathlib.lean)
+- id: '4.2'
+  uid: ulmer:v2:4.2
+  kind: Definition
+  title: Kan Extensions
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: bridged
+    canonical: CategoryTheory.Bicategory.LeftExtension, RightExtension, LeftExtension.IsKan
+    lemma: LeftExt and RightExt are abbrevs of the Mathlib types; LeftExt.bicatEquiv,
+      LeftExt.isInitial_iff_isKan, RightExt.bicatEquiv, RightExt.isTerminal_iff_isKan
+      (Solution/Support/LeftExtensionBicat.lean, RightExtensionBicat.lean)
+- id: '4.3'
+  uid: ulmer:v2:4.3
+  kind: Definition
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'partial: preservation is compared with Mathlib''s PreservesColimit of the
+      empty diagram (preservesInitial_iff, preservesTerminal_iff); nothing for reflection
+      or creation, and Mathlib''s creation is up to isomorphism, not strict'
+- id: '4.4'
+  uid: ulmer:v2:4.4
+  kind: Definition
+  title: Preservation and Strict Creation of Kan Extensions
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'partial: Mathlib has no preservation of Kan extensions in a bicategory;
+      push is Mathlib''s whisker (LeftExt.toBicat_push), and absolute Kan extensions
+      are compared (LeftExt.isAbsoluteLeftKan_iff, RightExt.isAbsoluteRightKan_iff)'
+- id: '4.5'
+  uid: ulmer:v2:4.5
+  kind: Remark
+  title: ''
+  parts:
+  - rem_4_5
+  stmt_hash:
+    rem_4_5: '17568861526887388847'
+  cone_hash:
+    rem_4_5: '13428366113032010807'
+  approved_hash:
+    rem_4_5: '17568861526887388847'
+  approved_cone_hash:
+    rem_4_5: '13428366113032010807'
+  approved_cone_note:
+    rem_4_5: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.6'
+  uid: ulmer:v2:4.6
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_4_6_1
+  - lem_4_6_2
+  - lem_4_6_3
+  stmt_hash:
+    lem_4_6_1: '17751270019091458421'
+    lem_4_6_2: '15857682268242183381'
+    lem_4_6_3: '11995132007558718184'
+  cone_hash:
+    lem_4_6_1: '11581447130041011505'
+    lem_4_6_2: '2830307853182541114'
+    lem_4_6_3: '14853031226614784390'
+  approved_hash:
+    lem_4_6_1: '17751270019091458421'
+    lem_4_6_2: '15857682268242183381'
+    lem_4_6_3: '11995132007558718184'
+  approved_cone_hash:
+    lem_4_6_1: '11581447130041011505'
+    lem_4_6_2: '2830307853182541114'
+    lem_4_6_3: '14853031226614784390'
+  approved_cone_note:
+    lem_4_6_1: approved by the author
+    lem_4_6_3: approved by the author
+    lem_4_6_2: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; 2-categorical fullness bookkeeping; +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.7'
+  uid: ulmer:v2:4.7
+  kind: Theorem
+  title: Lifting Kan Extensions Along PIE Limits
+  parts:
+  - thm_4_7_1_preserves
+  - thm_4_7_1_creates
+  - thm_4_7_1_quotient
+  - thm_4_7_2_left
+  - thm_4_7_2_right
+  - thm_4_7_3_left
+  - thm_4_7_3_right
+  stmt_hash:
+    thm_4_7_1_preserves: '18258109843097084917'
+    thm_4_7_1_creates: '1107122036443918859'
+    thm_4_7_1_quotient: '12841467439227581904'
+    thm_4_7_2_left: '18189428236940353665'
+    thm_4_7_2_right: '5582406254490807686'
+    thm_4_7_3_left: '2192487757637692032'
+    thm_4_7_3_right: '8787258848762282675'
+  cone_hash:
+    thm_4_7_1_preserves: '5054447433185986651'
+    thm_4_7_1_creates: '13810286916165063104'
+    thm_4_7_1_quotient: '11032192459358310928'
+    thm_4_7_2_left: '16301280501314138958'
+    thm_4_7_2_right: '7588927845852406612'
+    thm_4_7_3_left: '2168412001219822881'
+    thm_4_7_3_right: '9087261372315733212'
+  approved_hash:
+    thm_4_7_1_preserves: '18258109843097084917'
+    thm_4_7_1_creates: '1107122036443918859'
+    thm_4_7_1_quotient: '12841467439227581904'
+    thm_4_7_2_left: '18189428236940353665'
+    thm_4_7_2_right: '5582406254490807686'
+    thm_4_7_3_left: '2192487757637692032'
+    thm_4_7_3_right: '8787258848762282675'
+  approved_cone_hash:
+    thm_4_7_1_preserves: '5054447433185986651'
+    thm_4_7_1_creates: '13810286916165063104'
+    thm_4_7_1_quotient: '11032192459358310928'
+    thm_4_7_2_left: '16301280501314138958'
+    thm_4_7_2_right: '7588927845852406612'
+    thm_4_7_3_left: '2168412001219822881'
+    thm_4_7_3_right: '9087261372315733212'
+  approved_cone_note:
+    thm_4_7_1_preserves: approved by the author
+    thm_4_7_1_creates: approved by the author
+    thm_4_7_1_quotient: approved by the author
+    thm_4_7_2_left: approved by the author
+    thm_4_7_2_right: approved by the author
+    thm_4_7_3_left: approved by the author
+    thm_4_7_3_right: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; right halves proved by duality
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.8'
+  uid: ulmer:v2:4.8
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_8_left
+  - cor_4_8_right
+  stmt_hash:
+    cor_4_8_left: '10043431468683334546'
+    cor_4_8_right: '1161845193101641712'
+  cone_hash:
+    cor_4_8_left: '4530412829293697334'
+    cor_4_8_right: '13762698348974247095'
+  approved_hash:
+    cor_4_8_left: '10043431468683334546'
+    cor_4_8_right: '1161845193101641712'
+  approved_cone_hash:
+    cor_4_8_left: '4530412829293697334'
+    cor_4_8_right: '13762698348974247095'
+  approved_cone_note:
+    cor_4_8_left: approved by the author
+    cor_4_8_right: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; right half proved by duality
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.9'
+  uid: ulmer:v2:4.9
+  kind: Definition
+  title: relatively algebraic and coalgebraic data
+  parts:
+  - def_4_9_algebraic_datum
+  - def_4_9_coalgebraic_datum
+  - def_4_9_theories
+  stmt_hash:
+    def_4_9_algebraic_datum: '13458211846891908422'
+    def_4_9_coalgebraic_datum: '16443882790534718606'
+    def_4_9_theories: '7339234640554402261'
+  cone_hash:
+    def_4_9_algebraic_datum: '4238499973876158926'
+    def_4_9_coalgebraic_datum: '10372221621291401266'
+    def_4_9_theories: '5240107105004021712'
+  approved_hash:
+    def_4_9_algebraic_datum: '13458211846891908422'
+    def_4_9_coalgebraic_datum: '16443882790534718606'
+    def_4_9_theories: '7339234640554402261'
+  approved_cone_hash:
+    def_4_9_algebraic_datum: '4238499973876158926'
+    def_4_9_coalgebraic_datum: '10372221621291401266'
+    def_4_9_theories: '5240107105004021712'
+  approved_cone_note:
+    def_4_9_coalgebraic_datum: approved by the author
+    def_4_9_theories: approved by the author
+    def_4_9_algebraic_datum: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; 'their subterminality' interpreted as 4.8's hypotheses
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: '4.10'
+  uid: ulmer:v2:4.10
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_10
+  stmt_hash:
+    cor_4_10: '13378621411629916171'
+  cone_hash:
+    cor_4_10: '14180919034691994914'
+  approved_hash:
+    cor_4_10: '13378621411629916171'
+  approved_cone_hash:
+    cor_4_10: '14180919034691994914'
+  approved_cone_note:
+    cor_4_10: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.11'
+  uid: ulmer:v2:4.11
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_11_left
+  - cor_4_11_right
+  - rem_4_11
+  stmt_hash:
+    cor_4_11_left: '5982253706435560201'
+    cor_4_11_right: '15129704289388332089'
+    rem_4_11: '4228555962727867625'
+  cone_hash:
+    cor_4_11_left: '6955016977645817222'
+    cor_4_11_right: '3586212161732857081'
+    rem_4_11: '1337250766747134987'
+  approved_hash:
+    cor_4_11_left: '5982253706435560201'
+    cor_4_11_right: '15129704289388332089'
+    rem_4_11: '4228555962727867625'
+  approved_cone_hash:
+    cor_4_11_left: '6955016977645817222'
+    cor_4_11_right: '3586212161732857081'
+    rem_4_11: '1337250766747134987'
+  approved_cone_note:
+    rem_4_11: approved by the author
+    cor_4_11_left: approved by the author
+    cor_4_11_right: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper (Prop 3.15 + Cor 4.8); transport along E.pt/E.e; +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.12'
+  uid: ulmer:v2:4.12
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_12
+  - cor_4_12_right
+  stmt_hash:
+    cor_4_12: '17186591671922004393'
+    cor_4_12_right: '14476246507518549482'
+  cone_hash:
+    cor_4_12: '5921935049709893261'
+    cor_4_12_right: '11556622741897142941'
+  approved_hash:
+    cor_4_12: '17186591671922004393'
+    cor_4_12_right: '14476246507518549482'
+  approved_cone_hash:
+    cor_4_12: '5921935049709893261'
+    cor_4_12_right: '11556622741897142941'
+  approved_cone_note:
+    cor_4_12_right: approved by the author
+    cor_4_12: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; term induction verified; +gap
+  deviations: 'stronger: the right Kan form, which the paper does not state (CHALLENGE.md,
+    *Stronger than the paper*) (cor_4_12_right)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.13'
+  uid: ulmer:v2:4.13
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_13
+  stmt_hash:
+    cor_4_13: '1901288826313466286'
+  cone_hash:
+    cor_4_13: '8320325214356120006'
+  approved_hash:
+    cor_4_13: '1901288826313466286'
+  approved_cone_hash:
+    cor_4_13: '8320325214356120006'
+  approved_cone_note:
+    cor_4_13: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; monad datum constructed; +gap
+  deviations: ''
+  issue: false
+  fidelity: exact
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.14'
+  uid: ulmer:v2:4.14
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_14
+  stmt_hash:
+    cor_4_14: '13038910144563773784'
+  cone_hash:
+    cor_4_14: '8090869205663983569'
+  approved_hash:
+    cor_4_14: '13038910144563773784'
+  approved_cone_hash:
+    cor_4_14: '8090869205663983569'
+  approved_cone_note:
+    cor_4_14: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: exact
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.15'
+  uid: ulmer:v2:4.15
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_15
+  stmt_hash:
+    cor_4_15: '3554366055457855795'
+  cone_hash:
+    cor_4_15: '16259352147499058047'
+  approved_hash:
+    cor_4_15: '3554366055457855795'
+  approved_cone_hash:
+    cor_4_15: '16259352147499058047'
+  approved_cone_note:
+    cor_4_15: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: exact
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.16'
+  uid: ulmer:v2:4.16
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_4_16
+  stmt_hash:
+    lem_4_16: '16990763220411138848'
+  cone_hash:
+    lem_4_16: '2512314853574617248'
+  approved_hash:
+    lem_4_16: '16990763220411138848'
+  approved_cone_hash:
+    lem_4_16: '2512314853574617248'
+  approved_cone_note:
+    lem_4_16: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; Fubini and finality verified; +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.17'
+  uid: ulmer:v2:4.17
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_17
+  stmt_hash:
+    cor_4_17: '17862372073476135079'
+  cone_hash:
+    cor_4_17: '17277966275789334038'
+  approved_hash:
+    cor_4_17: '17862372073476135079'
+  approved_cone_hash:
+    cor_4_17: '17277966275789334038'
+  approved_cone_note:
+    cor_4_17: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: exact
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.18'
+  uid: ulmer:v2:4.18
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_18
+  stmt_hash:
+    cor_4_18: '6420735916644496722'
+  cone_hash:
+    cor_4_18: '11156800668163126'
+  approved_hash:
+    cor_4_18: '6420735916644496722'
+  approved_cone_hash:
+    cor_4_18: '11156800668163126'
+  approved_cone_note:
+    cor_4_18: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; sifted-diagram construction; +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.19'
+  uid: ulmer:v2:4.19
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_4_19
+  stmt_hash:
+    thm_4_19: '12341793245481946134'
+  cone_hash:
+    thm_4_19: '11881858812808797786'
+  approved_hash:
+    thm_4_19: '12341793245481946134'
+  approved_cone_hash:
+    thm_4_19: '11881858812808797786'
+  approved_cone_note:
+    thm_4_19: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: exact
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.20'
+  uid: ulmer:v2:4.20
+  kind: Example
+  title: ''
+  parts:
+  - ex_4_20_1_coeq
+  - ex_4_20_1_eq
+  - ex_4_20_2_pushout
+  - ex_4_20_2_pullback
+  - ex_4_20_3
+  - ex_4_20_3_small
+  - ex_4_20_2_vect
+  - ex_4_20_general
+  - ex_4_20_general_2
+  stmt_hash:
+    ex_4_20_1_coeq: '8015492767054480161'
+    ex_4_20_1_eq: '15609328633131782569'
+    ex_4_20_2_pushout: '14208320357214000363'
+    ex_4_20_2_pullback: '4054864618018134903'
+    ex_4_20_3: '1722879776919447265'
+    ex_4_20_3_small: '12500693378013098542'
+    ex_4_20_2_vect: '7878241898772602579'
+    ex_4_20_general: '4862039983324858354'
+    ex_4_20_general_2: '15956545020997448459'
+  cone_hash:
+    ex_4_20_1_coeq: '14726947697760925938'
+    ex_4_20_1_eq: '13763290449052669445'
+    ex_4_20_2_pushout: '4502083383422963373'
+    ex_4_20_2_pullback: '5174414735595653208'
+    ex_4_20_3: '12642038527583871022'
+    ex_4_20_3_small: '4985467455529406964'
+    ex_4_20_2_vect: '17462029886537999790'
+    ex_4_20_general: '6516987876391277069'
+    ex_4_20_general_2: '16223256804097563866'
+  approved_hash:
+    ex_4_20_1_coeq: '8015492767054480161'
+    ex_4_20_1_eq: '15609328633131782569'
+    ex_4_20_2_pushout: '14208320357214000363'
+    ex_4_20_2_pullback: '4054864618018134903'
+    ex_4_20_3: '1722879776919447265'
+    ex_4_20_3_small: '12500693378013098542'
+    ex_4_20_2_vect: '7878241898772602579'
+    ex_4_20_general: '4862039983324858354'
+    ex_4_20_general_2: '15956545020997448459'
+  approved_cone_hash:
+    ex_4_20_1_coeq: '14726947697760925938'
+    ex_4_20_1_eq: '13763290449052669445'
+    ex_4_20_2_pushout: '4502083383422963373'
+    ex_4_20_2_pullback: '5174414735595653208'
+    ex_4_20_3: '12642038527583871022'
+    ex_4_20_3_small: '4985467455529406964'
+    ex_4_20_2_vect: '17462029886537999790'
+    ex_4_20_general: '6516987876391277069'
+    ex_4_20_general_2: '16223256804097563866'
+  approved_cone_note:
+    ex_4_20_2_vect: approved by the author
+    ex_4_20_3_small: approved by the author
+    ex_4_20_3: approved by the author
+    ex_4_20_2_pullback: approved by the author
+    ex_4_20_2_pushout: approved by the author
+    ex_4_20_1_eq: approved by the author
+    ex_4_20_1_coeq: approved by the author
+    ex_4_20_general: approved by the author
+    ex_4_20_general_2: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper for clauses 1-3; clause 4 is prose
+  deviations: 'stronger: each statement assumes only the part of the paper''s hypotheses
+    it needs (braided, not symmetric; no completeness or cocompleteness; closedness
+    only where ⊗ must preserve colimits) (CHALLENGE.md, *Stronger than the paper*)
+
+    different (size): the statements over C take [Category.{v} C], and ex_4_20_general
+    and ex_4_20_general_2 take models in Cat.{v, u}, with the chosen products, inserters
+    and equifiers of Cat.{v, u} as instance arguments; the library gives them when
+    the object universe is at least the morphism universe (`catInserter`, `catEquifier`;
+    tested in `UlmerBialgebrasTest/NonVacuity/Ex420Universes.lean`) (CHALLENGE.md,
+    *Size migration*)
+
+    different: ex_4_20_3_small gives creation in Mathlib''s sense, up to isomorphism,
+    for filtered shapes of other sizes (the author)'
+  issue: true
+  fidelity: stronger, different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '4.21'
+  uid: ulmer:v2:4.21
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_4_21
+  stmt_hash:
+    cor_4_21: '7838963112646341312'
+  cone_hash:
+    cor_4_21: '8793332905724261188'
+  approved_hash:
+    cor_4_21: '7838963112646341312'
+  approved_cone_hash:
+    cor_4_21: '8793332905724261188'
+  approved_cone_note:
+    cor_4_21: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.1'
+  uid: ulmer:v2:5.1
+  kind: Definition
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: bridged
+    canonical: CategoryTheory.MonadicRightAdjoint, ComonadicLeftAdjoint (for K = CAT)
+    lemma: CatTwo.isMonadic2_iff, CatTwo.isComonadic2_iff (Solution/CatTwoBridge.lean)
+    note: the case K = CAT; the general 2-categorical notion has no canonical counterpart
+- id: '5.2'
+  uid: ulmer:v2:5.2
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_5_2
+  stmt_hash:
+    lem_5_2: '8821592751959630257'
+  cone_hash:
+    lem_5_2: '14997529993268833013'
+  approved_hash:
+    lem_5_2: '8821592751959630257'
+  approved_cone_hash:
+    lem_5_2: '14997529993268833013'
+  approved_cone_note:
+    lem_5_2: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.3'
+  uid: ulmer:v2:5.3
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_5_3
+  - cor_5_3_bialg
+  stmt_hash:
+    cor_5_3: '18388885131562476929'
+    cor_5_3_bialg: '17245494857437315614'
+  cone_hash:
+    cor_5_3: '3546894465124191478'
+    cor_5_3_bialg: '527241752359898861'
+  approved_hash:
+    cor_5_3: '18388885131562476929'
+    cor_5_3_bialg: '17245494857437315614'
+  approved_cone_hash:
+    cor_5_3: '3546894465124191478'
+    cor_5_3_bialg: '527241752359898861'
+  approved_cone_note:
+    cor_5_3: approved by the author
+    cor_5_3_bialg: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; comonadic half proved by duality
+  deviations: 'stronger: holds in any strict 2-category without chosen inserters or
+    equifiers (CHALLENGE.md, *Stronger than the paper*) (cor_5_3_bialg)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.4'
+  uid: ulmer:v2:5.4
+  kind: Definition
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: it is stated directly with Mathlib''s HasColimitsOfShape
+      on ordinals, with no lemma about it'
+- id: '5.5'
+  uid: ulmer:v2:5.5
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_5_5_1
+  - thm_5_5_2
+  stmt_hash:
+    thm_5_5_1: '3720907369702663016'
+    thm_5_5_2: '7448597911949535016'
+  cone_hash:
+    thm_5_5_1: '6453064954823146419'
+    thm_5_5_2: '1644659499490598240'
+  approved_hash:
+    thm_5_5_1: '3720907369702663016'
+    thm_5_5_2: '7448597911949535016'
+  approved_cone_hash:
+    thm_5_5_1: '6453064954823146419'
+    thm_5_5_2: '1644659499490598240'
+  approved_cone_note:
+    thm_5_5_1: approved by the author
+    thm_5_5_2: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; Adámek constructions filled in; +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.6'
+  uid: ulmer:v2:5.6
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_5_6
+  - lem_5_6_iso
+  stmt_hash:
+    lem_5_6: '17842822939222172404'
+    lem_5_6_iso: '898778142641061398'
+  cone_hash:
+    lem_5_6: '1897284740569944595'
+    lem_5_6_iso: '12717108646842713091'
+  approved_hash:
+    lem_5_6: '17842822939222172404'
+    lem_5_6_iso: '898778142641061398'
+  approved_cone_hash:
+    lem_5_6: '1897284740569944595'
+    lem_5_6_iso: '12717108646842713091'
+  approved_cone_note:
+    lem_5_6: approved by the author
+    lem_5_6_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; pushout endofunctor constructed; +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.7'
+  uid: ulmer:v2:5.7
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_5_7
+  stmt_hash:
+    thm_5_7: '15151655427662533250'
+  cone_hash:
+    thm_5_7: '6558013015101859870'
+  approved_hash:
+    thm_5_7: '15151655427662533250'
+  approved_cone_hash:
+    thm_5_7: '6558013015101859870'
+  approved_cone_note:
+    thm_5_7: approved by the author (standing approval of generalizations)
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route:
+    verdict: follows
+    note: via Thm 5.5 and Lem 5.6; concrete inserter/equifier proof and CAT comparison
+  deviations: 'different (size): stated with objects and morphisms in independent
+    universes (CHALLENGE.md, *Size migration*); test `UlmerBialgebrasTest/Specializations/Sec5_7.lean`'
+  issue: false
+  fidelity: different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.8'
+  uid: ulmer:v2:5.8
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_5_8
+  stmt_hash:
+    cor_5_8: '16279512970026097098'
+  cone_hash:
+    cor_5_8: '12321919747599985107'
+  approved_hash:
+    cor_5_8: '16279512970026097098'
+  approved_cone_hash:
+    cor_5_8: '12321919747599985107'
+  approved_cone_note:
+    cor_5_8: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; adjunction chain expanded; +gap
+  deviations: 'different (size): stated in Cat.{v, u}, for signatures in any universes,
+    with the size bounds compared after Cardinal.lift, and with the products, inserters
+    and equifiers of Cat.{v, u} as instance arguments (CHALLENGE.md, *Size migration*)'
+  issue: true
+  fidelity: different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.9'
+  uid: ulmer:v2:5.9
+  kind: Corollary
+  title: ''
+  parts:
+  - modelCat_monadic
+  - modelCat_strictlyCreates
+  - cor_5_9_small
+  stmt_hash:
+    modelCat_monadic: '13518518874990238032'
+    modelCat_strictlyCreates: '12995602957307306975'
+    cor_5_9_small: '6125987837560321273'
+  cone_hash:
+    modelCat_monadic: '3223705269385850640'
+    modelCat_strictlyCreates: '12070999337182416192'
+    cor_5_9_small: '17460160549623555394'
+  approved_hash:
+    modelCat_monadic: '13518518874990238032'
+    modelCat_strictlyCreates: '12995602957307306975'
+    cor_5_9_small: '6125987837560321273'
+  approved_cone_hash:
+    modelCat_monadic: '3223705269385850640'
+    modelCat_strictlyCreates: '12070999337182416192'
+    cor_5_9_small: '17460160549623555394'
+  approved_cone_note:
+    cor_5_9_small: approved by the author
+    modelCat_monadic: approved by the author
+    modelCat_strictlyCreates: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: 'different (size): takes any [Category.{v} C], so it applies to Set
+    = Type v, with the products, inserters and equifiers of Cat.{v, u} as instance
+    arguments (CHALLENGE.md, *Size migration*)
+
+    stronger: the creation clause of cor_5_9 bounds only the objects of the sifted
+    shape I, with hom-sets of any size; the paper''s countable shapes also bound the
+    morphisms
+
+    different: creation in Mathlib''s sense, up to isomorphism (the author) (cor_5_9_small)'
+  issue: true
+  fidelity: stronger, different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.10'
+  uid: ulmer:v2:5.10
+  kind: Theorem
+  title: Accessible Adjoint Functor Theorem
+  parts:
+  - thm_5_10_1
+  - thm_5_10_2
+  - thm_5_10_2_cardinal
+  stmt_hash:
+    thm_5_10_1: '15075816290334236560'
+    thm_5_10_2: '2209468826646765369'
+    thm_5_10_2_cardinal: '15862036153103459640'
+  cone_hash:
+    thm_5_10_1: '14425243279439937539'
+    thm_5_10_2: '12796058309931109062'
+    thm_5_10_2_cardinal: '7122961822222326484'
+  approved_hash:
+    thm_5_10_1: '15075816290334236560'
+    thm_5_10_2: '2209468826646765369'
+    thm_5_10_2_cardinal: '15862036153103459640'
+  approved_cone_hash:
+    thm_5_10_1: '14425243279439937539'
+    thm_5_10_2: '12796058309931109062'
+    thm_5_10_2_cardinal: '7122961822222326484'
+  approved_cone_note:
+    thm_5_10_1: approved by the author
+    thm_5_10_2: approved by the author
+    thm_5_10_2_cardinal: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: 'stronger: left adjoint preserves $\kappa''''$-presentable objects at
+    the accessibility rank of $F$ (CHALLENGE.md, *Refinements checked next to the
+    paper''s statements*) (thm_5_10_2_cardinal)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '5.11'
+  uid: ulmer:v2:5.11
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_5_11
+  - thm_5_11_1_cardinal
+  - thm_5_11_acc_cardinal
+  stmt_hash:
+    thm_5_11: '18117718405561933769'
+    thm_5_11_1_cardinal: '5131618002878149823'
+    thm_5_11_acc_cardinal: '13362047013952168715'
+  cone_hash:
+    thm_5_11: '5487219299353831736'
+    thm_5_11_1_cardinal: '11061382831753187141'
+    thm_5_11_acc_cardinal: '10355664593791042617'
+  approved_hash:
+    thm_5_11: '18117718405561933769'
+    thm_5_11_1_cardinal: '5131618002878149823'
+    thm_5_11_acc_cardinal: '13362047013952168715'
+  approved_cone_hash:
+    thm_5_11: '5487219299353831736'
+    thm_5_11_1_cardinal: '11061382831753187141'
+    thm_5_11_acc_cardinal: '10355664593791042617'
+  approved_cone_note:
+    thm_5_11: approved by the author
+    thm_5_11_1_cardinal: approved by the author
+    thm_5_11_acc_cardinal: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: regrouped
+    note: 'kept: the case K = CAT, A = {1} of the sharpened Theorem 7.7, whose proof
+      is the paper''s argument for 5.11 taken hom-wise: U_B accessible by the closure
+      of ACC under inserters and equifiers, Bialg(B) complete (cocomplete) by creation,
+      then the adjoint functor theorem. The paper cites that closure ([LPC] 2.72,
+      2.76); here it is proved (Makkai-Pare generation, UlmerBialgebras/Basic/AccessibleInserter.lean,
+      AccessibleEquifier.lean, AccClosure.lean); +gap'
+  deviations: 'stronger: stated at one fixed regular cardinal $\kappa$ (CHALLENGE.md,
+    *Refinements checked next to the paper''s statements*) (thm_5_11_1_cardinal)
+
+    stronger: accessibility clause with explicit cardinals $\kappa \triangleleft \kappa''
+    \triangleleft \kappa''''$ (CHALLENGE.md, *Refinements checked next to the paper''s
+    statements*) (thm_5_11_acc_cardinal)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.1'
+  uid: ulmer:v2:6.1
+  kind: Definition
+  title: Orthogonal Factorization System
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: definition match
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'partial: orthogonality is Mathlib''s HasLiftingProperty (orthogonal_iff_hasLiftingProperty);
+      the classes are only included in rlp and llp (rightOrth_le_rlp, leftOrth_le_llp),
+      and no lemma takes an OFS to an IsWeakFactorizationSystem'
+- id: '6.2'
+  uid: ulmer:v2:6.2
+  kind: Remark
+  title: ''
+  parts:
+  - rem_6_2
+  stmt_hash:
+    rem_6_2: '13613459249793292607'
+  cone_hash:
+    rem_6_2: '4290948806126165655'
+  approved_hash:
+    rem_6_2: '13613459249793292607'
+  approved_cone_hash:
+    rem_6_2: '4290948806126165655'
+  approved_cone_note:
+    rem_6_2: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the cited argument (Riehl, Lemma 11.2.3)
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.3'
+  uid: ulmer:v2:6.3
+  kind: Theorem
+  title: Lifting OFS Along PIE Limits
+  parts:
+  - thm_6_3_1
+  - thm_6_3_2
+  - thm_6_3_3
+  stmt_hash:
+    thm_6_3_1: '9586460095024606055'
+    thm_6_3_2: '7490204878475135156'
+    thm_6_3_3: '5681336623045407618'
+  cone_hash:
+    thm_6_3_1: '12967530841092370190'
+    thm_6_3_2: '6569131198987804432'
+    thm_6_3_3: '972284454379792153'
+  approved_hash:
+    thm_6_3_1: '9586460095024606055'
+    thm_6_3_2: '7490204878475135156'
+    thm_6_3_3: '5681336623045407618'
+  approved_cone_hash:
+    thm_6_3_1: '12967530841092370190'
+    thm_6_3_2: '6569131198987804432'
+    thm_6_3_3: '972284454379792153'
+  approved_cone_note:
+    thm_6_3_1: approved by the author
+    thm_6_3_2: approved by the author
+    thm_6_3_3: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.4'
+  uid: ulmer:v2:6.4
+  kind: Definition
+  title: ''
+  parts:
+  - def_6_4_regular
+  - def_6_4_exact
+  stmt_hash:
+    def_6_4_regular: '17815786422146389598'
+    def_6_4_exact: '820631339530618195'
+  cone_hash:
+    def_6_4_regular: '8966138956162001607'
+    def_6_4_exact: '8931801764429644145'
+  approved_hash:
+    def_6_4_regular: '17815786422146389598'
+    def_6_4_exact: '820631339530618195'
+  approved_cone_hash:
+    def_6_4_regular: '8966138956162001607'
+    def_6_4_exact: '8931801764429644145'
+  approved_cone_note:
+    def_6_4_regular: approved by the author
+    def_6_4_exact: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: definition bridge
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: bridged
+    canonical: CategoryTheory.Regular, CategoryTheory.IsEquivalenceRelation; BarrExact
+      (Foundations, in Mathlib's style)
+    lemma: isRegularCat_iff_regular, isExactCat_iff_barrExact, isEquivRel_iff_isEquivalenceRelation
+      (Foundations/CategoryTheory/Factorization/RegularMathlib.lean); def_6_4_regular,
+      def_6_4_exact
+- id: '6.5'
+  uid: ulmer:v2:6.5
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_6_5
+  stmt_hash:
+    lem_6_5: '5246074437936172419'
+  cone_hash:
+    lem_6_5: '16444013869521493402'
+  approved_hash:
+    lem_6_5: '5246074437936172419'
+  approved_cone_hash:
+    lem_6_5: '16444013869521493402'
+  approved_cone_note:
+    lem_6_5: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; the step 'extremal epis are regular' needed an explicit
+      proof (gap filled)
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.6'
+  uid: ulmer:v2:6.6
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_6_6_1
+  - thm_6_6_2
+  - thm_6_6_3
+  - thm_6_6_3_coeq
+  stmt_hash:
+    thm_6_6_1: '13492873359789829422'
+    thm_6_6_2: '13692493383471070287'
+    thm_6_6_3: '11886203713275553955'
+    thm_6_6_3_coeq: '1750459935806836194'
+  cone_hash:
+    thm_6_6_1: '6917911246707806506'
+    thm_6_6_2: '4672442716100130064'
+    thm_6_6_3: '18157530064131623534'
+    thm_6_6_3_coeq: '16963558031602524385'
+  approved_hash:
+    thm_6_6_1: '13492873359789829422'
+    thm_6_6_2: '13692493383471070287'
+    thm_6_6_3: '11886203713275553955'
+    thm_6_6_3_coeq: '1750459935806836194'
+  approved_cone_hash:
+    thm_6_6_1: '6917911246707806506'
+    thm_6_6_2: '4672442716100130064'
+    thm_6_6_3: '18157530064131623534'
+    thm_6_6_3_coeq: '16963558031602524385'
+  approved_cone_note:
+    thm_6_6_1: approved by the author
+    thm_6_6_2: approved by the author
+    thm_6_6_3: approved by the author
+    thm_6_6_3_coeq: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: 'different (size): stated in `Cat.{v, max u v}`, with objects and morphisms
+    in independent universes (CHALLENGE.md, *Size migration*); test `UlmerBialgebrasTest/Specializations/Sec5_7.lean`
+
+    stronger: omits the hypothesis that $\BialgB$ has a terminal object (CHALLENGE.md,
+    *Stronger than the paper*) (thm_6_6_3_coeq)'
+  issue: false
+  fidelity: stronger, different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.7'
+  uid: ulmer:v2:6.7
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_6_7
+  stmt_hash:
+    cor_6_7: '13453473461954028604'
+  cone_hash:
+    cor_6_7: '12859684120274878638'
+  approved_hash:
+    cor_6_7: '13453473461954028604'
+  approved_cone_hash:
+    cor_6_7: '12859684120274878638'
+  approved_cone_note:
+    cor_6_7: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: 'different (size): stated in `Cat.{v, max u v}`, with objects and morphisms
+    in independent universes (CHALLENGE.md, *Size migration*); test `UlmerBialgebrasTest/Specializations/Sec5_7.lean`'
+  issue: false
+  fidelity: different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.8'
+  uid: ulmer:v2:6.8
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_6_8
+  stmt_hash:
+    cor_6_8: '10566086869799960643'
+  cone_hash:
+    cor_6_8: '7035024758575597424'
+  approved_hash:
+    cor_6_8: '10566086869799960643'
+  approved_cone_hash:
+    cor_6_8: '7035024758575597424'
+  approved_cone_note:
+    cor_6_8: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: 'different (size): stated in `Cat.{v, max u v}`, with objects and morphisms
+    in independent universes (CHALLENGE.md, *Size migration*); test `UlmerBialgebrasTest/Specializations/Sec5_7.lean`'
+  issue: false
+  fidelity: different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.9'
+  uid: ulmer:v2:6.9
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_6_9
+  stmt_hash:
+    cor_6_9: '8870027502685753760'
+  cone_hash:
+    cor_6_9: '9679078684724272011'
+  approved_hash:
+    cor_6_9: '8870027502685753760'
+  approved_cone_hash:
+    cor_6_9: '9679078684724272011'
+  approved_cone_note:
+    cor_6_9: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: applies Corollary 6.8 to M^{T₂} → M^{T₁} over the identity of M₀; +gap
+  deviations: 'different (size): stated in `Cat.{v, max u v}`, with objects and morphisms
+    in independent universes, so it applies to ModuleCat R (CHALLENGE.md, *Size migration*);
+    the reflexive pairs that `M(B)` preserves componentwise are of the shape `WalkingReflexivePair`
+
+    stronger: the maps of symbols and equations of the sub-signature need not be injective'
+  issue: true
+  fidelity: stronger, different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.10'
+  uid: ulmer:v2:6.10
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_6_10
+  stmt_hash:
+    lem_6_10: '7580667862656626143'
+  cone_hash:
+    lem_6_10: '8392449678525812925'
+  approved_hash:
+    lem_6_10: '7580667862656626143'
+  approved_cone_hash:
+    lem_6_10: '8392449678525812925'
+  approved_cone_note:
+    lem_6_10: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's proof
+  deviations: 'stronger: every family of lifts of the localizations has the stated
+    properties, not only the induced one (CHALLENGE.md, *Stronger than the paper*)
+
+    reading: ''regular ring'' as von Neumann regular (IsVonNeumannRegularRing), forced
+    by the conclusion that each R_α is a field; the author: a regular ring is a von
+    Neumann regular ring'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '6.11'
+  uid: ulmer:v2:6.11
+  kind: Corollary
+  title: ''
+  parts:
+  - modelCat_barrExact_reduction
+  - modelCat_barrExact
+  - modelCat_barrExact_moduleCat
+  stmt_hash:
+    modelCat_barrExact_reduction: '800560195873660238'
+    modelCat_barrExact: '804682706956451196'
+    modelCat_barrExact_moduleCat: '3751407919308465021'
+  cone_hash:
+    modelCat_barrExact_reduction: '9197342264356156976'
+    modelCat_barrExact: '1156921906944176082'
+    modelCat_barrExact_moduleCat: '16393283388287416836'
+  approved_hash:
+    modelCat_barrExact_reduction: '800560195873660238'
+    modelCat_barrExact: '804682706956451196'
+    modelCat_barrExact_moduleCat: '3751407919308465021'
+  approved_cone_hash:
+    modelCat_barrExact_reduction: '9197342264356156976'
+    modelCat_barrExact: '1156921906944176082'
+    modelCat_barrExact_moduleCat: '16393283388287416836'
+  approved_cone_note:
+    modelCat_barrExact_reduction: approved by the author
+    modelCat_barrExact: approved by the author
+    modelCat_barrExact_moduleCat: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: regrouped
+    note: 'proof score 3. Step 1 regrouped: the localizations of modules are lifted
+      to comonoids by a direct construction specialized to the theory needed, not
+      by Lemma 6.10. Steps 2, 4, 5, 6a as in the paper: step 4 is Lemma 6.5(3) for
+      the family of localizations (isBarrExact_of_family_transfer), step 5 is Corollary
+      6.9 (modelCat_barrExact_reduction, isExactCat_thyObj_of_restrict). Steps 3 and
+      6b supplied, no source proof: Hopf_k^coc and affine group schemes over a field
+      are Barr-exact, cited by the paper and proved here'
+  deviations: 'different (size): modelCat_barrExact_moduleCat states it for ModuleCat.{u}
+    R itself, modelCat_barrExact for the copy ModU R with hom-sets lifted to Type
+    (u + 1), and modelCat_barrExact_reduction takes A with Category.{v} A in independent
+    universes (CHALLENGE.md, *Size migration*)
+
+    stronger: modelCat_barrExact_reduction takes any symmetric monoidal A, and the
+    Barr-exactness of Hopf_k^coc that the paper cites is proved
+
+    reading: "commutative regular ring" as von Neumann regular (`IsVonNeumannRegularRing`);
+    the author: a regular ring is a von Neumann regular ring'
+  issue: true
+  fidelity: stronger, different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '7.1'
+  uid: ulmer:v2:7.1
+  kind: Definition
+  title: ''
+  parts:
+  - yoneda_biDense
+  - isBiDense_iff_isBiDense_fullSubBicatι
+  stmt_hash:
+    yoneda_biDense: '13593526526868178613'
+    isBiDense_iff_isBiDense_fullSubBicatι: '16656229057545715829'
+  cone_hash:
+    yoneda_biDense: '15759973571634283345'
+    isBiDense_iff_isBiDense_fullSubBicatι: '13058410062258815229'
+  approved_hash:
+    yoneda_biDense: '13593526526868178613'
+    isBiDense_iff_isBiDense_fullSubBicatι: '16656229057545715829'
+  approved_cone_hash:
+    yoneda_biDense: '15759973571634283345'
+    isBiDense_iff_isBiDense_fullSubBicatι: '13058410062258815229'
+  approved_cone_note:
+    yoneda_biDense: approved by the author
+    isBiDense_iff_isBiDense_fullSubBicatι: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; equivalence of categories split into cell + hom
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: bridged
+    canonical: Pseudofunctor.IsBiDense (Hofstra–Karvonen; Foundations/CategoryTheory/Bicategory/BiDense.lean)
+    lemma: isBiDense_iff_isBiDense_fullSubBicatι (Solution/Sec7Variant.lean)
+- id: '7.2'
+  uid: ulmer:v2:7.2
+  kind: Definition
+  title: A Properties
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper; scheme and instantiations formalized
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: bridged
+    canonical: Mathlib's completeness, accessibility, continuity and adjoints on each
+      hom-category K(a, c)
+    lemma: 'defined by those notions; for K = CAT and A = {1}: isARightAdjoint_one_iff,
+      isALeftAdjoint_one_iff, isAComplete_one_iff, isACocomplete_one_iff, isAContinuous_one_iff,
+      isACocontinuous_one_iff (Solution/CatTwoBridge.lean), isAAccessibleObj_one_iff,
+      isAAccessibleMor''_one_iff (Solution/CatAccessibleMonadicity.lean)'
+- id: '7.3'
+  uid: ulmer:v2:7.3
+  kind: Definition
+  title: A-local presentability
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: follows the paper's definition
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'partial: no lemma states IsLeftALocPres {1} c ↔ IsLocallyPresentable c
+      for K = CAT; the pieces exist (CatAccessibleMonadicity.lean) and one direction
+      (isLocallyPresentable_of_hasColimits_general)'
+- id: '7.4'
+  uid: ulmer:v2:7.4
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_7_4
+  stmt_hash:
+    thm_7_4: '5230783588159756933'
+  cone_hash:
+    thm_7_4: '8946154089891031422'
+  approved_hash:
+    thm_7_4: '5230783588159756933'
+  approved_cone_hash:
+    thm_7_4: '8946154089891031422'
+  approved_cone_note:
+    thm_7_4: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: four hom-set bijections identify precomposition with the canonical oplax
+      comparison (leftMateHomEquiv_apply); doctrinal adjunction assembles the family,
+      then bi-density lifts it
+  deviations: 'stronger: holds in any strict 2-category; the paper''s Section 7 assumes
+    K PIE-complete, which the proof does not use'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '7.5'
+  uid: ulmer:v2:7.5
+  kind: Corollary
+  title: ''
+  parts:
+  - cor_7_5
+  stmt_hash:
+    cor_7_5: '14523219949263609586'
+  cone_hash:
+    cor_7_5: '16064489069917820282'
+  approved_hash:
+    cor_7_5: '14523219949263609586'
+  approved_cone_hash:
+    cor_7_5: '16064489069917820282'
+  approved_cone_note:
+    cor_7_5: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: regrouped
+    note: instances unpacked; both cases explicit
+  deviations: 'stronger: holds in any strict 2-category with a bi-dense class `A`;
+    the paper''s Section 7 assumes `K` PIE-complete (cor_7_5)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '7.6'
+  uid: ulmer:v2:7.6
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_7_6
+  - thm_7_6_monadic
+  stmt_hash:
+    thm_7_6: '11174468066547372154'
+    thm_7_6_monadic: '15624311384390494038'
+  cone_hash:
+    thm_7_6: '12942545042416328395'
+    thm_7_6_monadic: '16355634480901506106'
+  approved_hash:
+    thm_7_6: '11174468066547372154'
+    thm_7_6_monadic: '15624311384390494038'
+  approved_cone_hash:
+    thm_7_6: '12942545042416328395'
+    thm_7_6_monadic: '16355634480901506106'
+  approved_cone_note:
+    thm_7_6: approved by the author
+    thm_7_6_monadic: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: Theorem 5.5(1)-(2) supplies the local inserter/equifier adjunctions; Theorem
+      7.4 lifts them, then the bialgebraic monadicity criterion applies. Kan extensions
+      use Lemma 5.6
+  deviations: 'stronger: does not assume bi-density of $\A$ or right Kan extensions
+    (CHALLENGE.md, *Same content, different form*) (thm_7_6)
+
+    stronger: does not assume K PIE-complete; the inserter and equifier needed are
+    taken as data (thm_7_6, thm_7_6_monadic)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: '7.7'
+  uid: ulmer:v2:7.7
+  kind: Theorem
+  title: ''
+  parts:
+  - thm_7_7
+  - thm_7_7_monadic
+  stmt_hash:
+    thm_7_7: '9664863882374139069'
+    thm_7_7_monadic: '15325368757128852792'
+  cone_hash:
+    thm_7_7: '13836774294905042570'
+    thm_7_7_monadic: '15771446369078965551'
+  approved_hash:
+    thm_7_7: '9664863882374139069'
+    thm_7_7_monadic: '15325368757128852792'
+  approved_cone_hash:
+    thm_7_7: '13836774294905042570'
+    thm_7_7_monadic: '15771446369078965551'
+  approved_cone_note:
+    thm_7_7: approved by the author
+    thm_7_7_monadic: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: regrouped
+    note: both branches proved (paper proves one); +gap
+  deviations: 'stronger: does not assume bi-density of $\A$ (CHALLENGE.md, *Same content,
+    different form*) (thm_7_7)
+
+    different (size): the (co)limit size `w₁` is independent of the accessibility
+    size `w₀`; the paper''s single size is `w₁ = w₀` (CHALLENGE.md, *Size migration*)
+    (thm_7_7)
+
+    stronger: does not assume K PIE-complete; the inserter and equifier needed are
+    taken as data (thm_7_7, thm_7_7_monadic)'
+  issue: false
+  fidelity: stronger, different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: A.1
+  uid: ulmer:v2:A.1
+  kind: Definition
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: definition match
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'partial: DirectedGraph.Path is an abbrev of Quiver.Path; IsForest has no
+      canonical counterpart (SimpleGraph.IsAcyclic is undirected)'
+- id: A.2
+  uid: ulmer:v2:A.2
+  kind: Definition
+  title: ''
+  parts: []
+  stmt_hash: {}
+  cone_hash: {}
+  approved_hash: {}
+  approved_cone_hash: {}
+  approved_cone_note: {}
+  stated: true
+  proved: true
+  approved: false
+  route: true
+  clean: false
+  state: definition
+  status: proved
+  proof_route:
+    verdict: follows
+    note: G_ℓ not materialized as a graph; hom-objects defined directly
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: A.3
+  uid: ulmer:v2:A.3
+  kind: Lemma
+  title: ''
+  parts:
+  - lem_A_3
+  - appendix_arrow_classification
+  - appendix_three_classification
+  stmt_hash:
+    lem_A_3: '1137082418034148105'
+    appendix_arrow_classification: '7608292774029150015'
+    appendix_three_classification: '4832169708128539115'
+  cone_hash:
+    lem_A_3: '15254623901721579039'
+    appendix_arrow_classification: '12147777537878788374'
+    appendix_three_classification: '7795466488852481454'
+  approved_hash:
+    lem_A_3: '1137082418034148105'
+    appendix_arrow_classification: '7608292774029150015'
+    appendix_three_classification: '4832169708128539115'
+  approved_cone_hash:
+    lem_A_3: '15254623901721579039'
+    appendix_arrow_classification: '12147777537878788374'
+    appendix_three_classification: '7795466488852481454'
+  approved_cone_note:
+    lem_A_3: approved by the author
+    appendix_arrow_classification: approved by the author
+    appendix_three_classification: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: regrouped
+    note: constructed explicitly instead of citing Wolff; universal property proved;
+      +gap
+  deviations: ''
+  issue: false
+  fidelity: null
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: A.4
+  uid: ulmer:v2:A.4
+  kind: Definition
+  title: ''
+  parts:
+  - def_A_4_isForest
+  stmt_hash:
+    def_A_4_isForest: '11147018767113685169'
+  cone_hash:
+    def_A_4_isForest: '11911742922601942240'
+  approved_hash:
+    def_A_4_isForest: '11147018767113685169'
+  approved_cone_hash:
+    def_A_4_isForest: '11911742922601942240'
+  approved_cone_note:
+    def_A_4_isForest: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: follows
+    note: forest property proved (paper asserts it)
+  deviations: 'stronger: also covers the linear graph with n = 0 (CHALLENGE.md, *Stronger
+    than the paper*)'
+  issue: false
+  fidelity: stronger
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: 'no canonical notion: a notion of the paper''s own'
+- id: A.5
+  uid: ulmer:v2:A.5
+  kind: Theorem
+  title: Bi-Density of 𝒜 in V-CAT
+  parts:
+  - appendix_biDense
+  - appendix_local_density
+  stmt_hash:
+    appendix_biDense: '11930903494423939969'
+    appendix_local_density: '17534798292861163420'
+  cone_hash:
+    appendix_biDense: '13431617678751604836'
+    appendix_local_density: '8428099478228219117'
+  approved_hash:
+    appendix_biDense: '11930903494423939969'
+    appendix_local_density: '17534798292861163420'
+  approved_cone_hash:
+    appendix_biDense: '13431617678751604836'
+    appendix_local_density: '8428099478228219117'
+  approved_cone_note:
+    appendix_biDense: approved by the author
+    appendix_local_density: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: true
+  clean: false
+  state: route
+  status: proved
+  proof_route:
+    verdict: regrouped
+    note: no strictification of Φ; reconstruction done on the pseudonatural family;
+      +gap
+  deviations: 'different (size): V-categories with objects in Type (max u w), at least
+    the universe of the morphisms of V; smaller ones are isomorphic to such through
+    ULift'
+  issue: false
+  fidelity: different
+  scope: null
+  open: ''
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.modelCat_iso_cartThy_univ
+  uid: ulmer:v2:Extra.modelCat_iso_cartThy_univ
+  kind: Extra
+  title: The same in arbitrary universes, via `AsSmall C` (addition beyond the paper)
+  parts:
+  - modelCat_iso_cartThy_univ
+  stmt_hash:
+    modelCat_iso_cartThy_univ: '5379256877596173368'
+  cone_hash:
+    modelCat_iso_cartThy_univ: '1608115185404162447'
+  approved_hash:
+    modelCat_iso_cartThy_univ: '5379256877596173368'
+  approved_cone_hash:
+    modelCat_iso_cartThy_univ: '1608115185404162447'
+  approved_cone_note:
+    modelCat_iso_cartThy_univ: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.modelCat_type_iso_cartThy
+  uid: ulmer:v2:Extra.modelCat_type_iso_cartThy
+  kind: Extra
+  title: The Set case, the instance `C := Type u` (addition beyond the paper)
+  parts:
+  - modelCat_type_iso_cartThy
+  stmt_hash:
+    modelCat_type_iso_cartThy: '13001475373118015001'
+  cone_hash:
+    modelCat_type_iso_cartThy: '6880524033621644698'
+  approved_hash:
+    modelCat_type_iso_cartThy: '13001475373118015001'
+  approved_cone_hash:
+    modelCat_type_iso_cartThy: '6880524033621644698'
+  approved_cone_note:
+    modelCat_type_iso_cartThy: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.ofLanguage_model_iff
+  uid: ulmer:v2:Extra.ofLanguage_model_iff
+  kind: Extra
+  title: Set models are Mathlib's first-order models `M ⊨ T` (addition beyond the
+    paper)
+  parts:
+  - ofLanguage_model_iff
+  stmt_hash:
+    ofLanguage_model_iff: '2293149789863566161'
+  cone_hash:
+    ofLanguage_model_iff: '3607646978996334932'
+  approved_hash:
+    ofLanguage_model_iff: '2293149789863566161'
+  approved_cone_hash:
+    ofLanguage_model_iff: '3607646978996334932'
+  approved_cone_note:
+    ofLanguage_model_iff: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.ofLanguage_isHom_iff
+  uid: ulmer:v2:Extra.ofLanguage_isHom_iff
+  kind: Extra
+  title: Set homomorphisms are Mathlib's `M →[L] N` (addition beyond the paper)
+  parts:
+  - ofLanguage_isHom_iff
+  stmt_hash:
+    ofLanguage_isHom_iff: '14240240089750403622'
+  cone_hash:
+    ofLanguage_isHom_iff: '1465020074950423434'
+  approved_hash:
+    ofLanguage_isHom_iff: '14240240089750403622'
+  approved_cone_hash:
+    ofLanguage_isHom_iff: '1465020074950423434'
+  approved_cone_note:
+    ofLanguage_isHom_iff: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.grp_modelCat_iso
+  uid: ulmer:v2:Extra.grp_modelCat_iso
+  kind: Extra
+  title: The theory of groups vs `grpTheory S` (Cor 6.11), iso over `C^S` in any universes
+    (addition beyond the paper)
+  parts:
+  - grp_modelCat_iso
+  stmt_hash:
+    grp_modelCat_iso: '2762662995214036289'
+  cone_hash:
+    grp_modelCat_iso: '10909431901787626936'
+  approved_hash:
+    grp_modelCat_iso: '2762662995214036289'
+  approved_cone_hash:
+    grp_modelCat_iso: '10909431901787626936'
+  approved_cone_note:
+    grp_modelCat_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.appendix_arrow_transformations
+  uid: ulmer:v2:Extra.appendix_arrow_transformations
+  kind: Extra
+  title: Transformations from the arrow probe are exactly the two endpoint components
+    satisfying one enriched naturality square
+  parts:
+  - appendix_arrow_transformations
+  stmt_hash:
+    appendix_arrow_transformations: '6468946008993743438'
+  cone_hash:
+    appendix_arrow_transformations: '17009765832862423871'
+  approved_hash:
+    appendix_arrow_transformations: '6468946008993743438'
+  approved_cone_hash:
+    appendix_arrow_transformations: '17009765832862423871'
+  approved_cone_note:
+    appendix_arrow_transformations: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.appendix_small_biDense
+  uid: ulmer:v2:Extra.appendix_small_biDense
+  kind: Extra
+  title: 'Related density result (auxiliary, not a result of the paper): small enriched
+    categories are bi-dense'
+  parts:
+  - appendix_small_biDense
+  stmt_hash:
+    appendix_small_biDense: '6765118063671369359'
+  cone_hash:
+    appendix_small_biDense: '14170363602188446494'
+  approved_hash:
+    appendix_small_biDense: '6765118063671369359'
+  approved_cone_hash:
+    appendix_small_biDense: '14170363602188446494'
+  approved_cone_note:
+    appendix_small_biDense: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: 'weaker: a larger class than Theorem A.5''s (all small enriched categories),
+    so it follows from A.5, because a full sub-2-category that contains a bi-dense
+    one is bi-dense (this closure is not formalized; CHALLENGE.md, *Auxiliary checked
+    statements*)'
+  issue: null
+  fidelity: weaker
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.appendix_tiny_biDense
+  uid: ulmer:v2:Extra.appendix_tiny_biDense
+  kind: Extra
+  title: 'Related density result (auxiliary, not a result of the paper): all enriched
+    categories with at most three objects are bi-dense'
+  parts:
+  - appendix_tiny_biDense
+  stmt_hash:
+    appendix_tiny_biDense: '5077288201636509434'
+  cone_hash:
+    appendix_tiny_biDense: '12994543637236717814'
+  approved_hash:
+    appendix_tiny_biDense: '5077288201636509434'
+  approved_cone_hash:
+    appendix_tiny_biDense: '12994543637236717814'
+  approved_cone_note:
+    appendix_tiny_biDense: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: 'weaker: a larger class than Theorem A.5''s (all enriched categories
+    with at most three objects), so it follows from A.5, because a full sub-2-category
+    that contains a bi-dense one is bi-dense (this closure is not formalized; CHALLENGE.md,
+    *Auxiliary checked statements*)'
+  issue: null
+  fidelity: weaker
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.appendix_unit_classification
+  uid: ulmer:v2:Extra.appendix_unit_classification
+  kind: Extra
+  title: 'Definition A.4 ([forsman2026syntactic]), point probe: enriched functors
+    out of `1` classify objects'
+  parts:
+  - appendix_unit_classification
+  stmt_hash:
+    appendix_unit_classification: '17666678154734186537'
+  cone_hash:
+    appendix_unit_classification: '13925999453482641639'
+  approved_hash:
+    appendix_unit_classification: '17666678154734186537'
+  approved_cone_hash:
+    appendix_unit_classification: '13925999453482641639'
+  approved_cone_note:
+    appendix_unit_classification: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.rep_preserves_equif
+  uid: ulmer:v2:Extra.rep_preserves_equif
+  kind: Extra
+  title: Section 2.2
+  parts:
+  - rep_preserves_equif
+  stmt_hash:
+    rep_preserves_equif: '4554816273061183580'
+  cone_hash:
+    rep_preserves_equif: '8789661060678359617'
+  approved_hash:
+    rep_preserves_equif: '4554816273061183580'
+  approved_cone_hash:
+    rep_preserves_equif: '8789661060678359617'
+  approved_cone_note:
+    rep_preserves_equif: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.rep_preserves_ins
+  uid: ulmer:v2:Extra.rep_preserves_ins
+  kind: Extra
+  title: Section 2.2
+  parts:
+  - rep_preserves_ins
+  stmt_hash:
+    rep_preserves_ins: '9421907657241481742'
+  cone_hash:
+    rep_preserves_ins: '17420500380377218185'
+  approved_hash:
+    rep_preserves_ins: '9421907657241481742'
+  approved_cone_hash:
+    rep_preserves_ins: '17420500380377218185'
+  approved_cone_note:
+    rep_preserves_ins: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.rep_preserves_prod
+  uid: ulmer:v2:Extra.rep_preserves_prod
+  kind: Extra
+  title: Section 2.2
+  parts:
+  - rep_preserves_prod
+  stmt_hash:
+    rep_preserves_prod: '15788661633039582852'
+  cone_hash:
+    rep_preserves_prod: '1267693561327368618'
+  approved_hash:
+    rep_preserves_prod: '15788661633039582852'
+  approved_cone_hash:
+    rep_preserves_prod: '1267693561327368618'
+  approved_cone_note:
+    rep_preserves_prod: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.rep_reflects_equif
+  uid: ulmer:v2:Extra.rep_reflects_equif
+  kind: Extra
+  title: Section 2.2
+  parts:
+  - rep_reflects_equif
+  stmt_hash:
+    rep_reflects_equif: '2609581760131767876'
+  cone_hash:
+    rep_reflects_equif: '16879945333575877309'
+  approved_hash:
+    rep_reflects_equif: '2609581760131767876'
+  approved_cone_hash:
+    rep_reflects_equif: '16879945333575877309'
+  approved_cone_note:
+    rep_reflects_equif: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: 'different: joint reflection stated as existence of an equifier with
+    the given candidate data when comparison functors are isomorphisms (CHALLENGE.md,
+    *Section 2.2, reflection*)'
+  issue: null
+  fidelity: different
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.rep_reflects_ins
+  uid: ulmer:v2:Extra.rep_reflects_ins
+  kind: Extra
+  title: Section 2.2
+  parts:
+  - rep_reflects_ins
+  stmt_hash:
+    rep_reflects_ins: '16960706155386558379'
+  cone_hash:
+    rep_reflects_ins: '4172249241414132320'
+  approved_hash:
+    rep_reflects_ins: '16960706155386558379'
+  approved_cone_hash:
+    rep_reflects_ins: '4172249241414132320'
+  approved_cone_note:
+    rep_reflects_ins: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: 'different: joint reflection stated as existence of an inserter with
+    the given candidate data when comparison functors are isomorphisms (CHALLENGE.md,
+    *Section 2.2, reflection*)'
+  issue: null
+  fidelity: different
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.rep_reflects_prod
+  uid: ulmer:v2:Extra.rep_reflects_prod
+  kind: Extra
+  title: Section 2.2
+  parts:
+  - rep_reflects_prod
+  stmt_hash:
+    rep_reflects_prod: '878050562544773625'
+  cone_hash:
+    rep_reflects_prod: '17836384532277171030'
+  approved_hash:
+    rep_reflects_prod: '878050562544773625'
+  approved_cone_hash:
+    rep_reflects_prod: '17836384532277171030'
+  approved_cone_note:
+    rep_reflects_prod: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: 'different: joint reflection stated as existence of a product cone with
+    the given candidate data when comparison functors are isomorphisms (CHALLENGE.md,
+    *Section 2.2, reflection*)'
+  issue: null
+  fidelity: different
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.monTheory_modelCat_iso
+  uid: ulmer:v2:Extra.monTheory_modelCat_iso
+  kind: Extra
+  title: Models of the theory of monoids are Mathlib's `Mon C` (addition beyond the
+    paper)
+  parts:
+  - monTheory_modelCat_iso
+  stmt_hash:
+    monTheory_modelCat_iso: '15504356087666186763'
+  cone_hash:
+    monTheory_modelCat_iso: '2628520661193143404'
+  approved_hash:
+    monTheory_modelCat_iso: '15504356087666186763'
+  approved_cone_hash:
+    monTheory_modelCat_iso: '2628520661193143404'
+  approved_cone_note:
+    monTheory_modelCat_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cmonTheory_modelCat_iso
+  uid: ulmer:v2:Extra.cmonTheory_modelCat_iso
+  kind: Extra
+  title: Commutative monoids, `CommMon C` (addition beyond the paper)
+  parts:
+  - cmonTheory_modelCat_iso
+  stmt_hash:
+    cmonTheory_modelCat_iso: '13676672542968409392'
+  cone_hash:
+    cmonTheory_modelCat_iso: '7475338208237579440'
+  approved_hash:
+    cmonTheory_modelCat_iso: '13676672542968409392'
+  approved_cone_hash:
+    cmonTheory_modelCat_iso: '7475338208237579440'
+  approved_cone_note:
+    cmonTheory_modelCat_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.grpTheory_modelCat_iso
+  uid: ulmer:v2:Extra.grpTheory_modelCat_iso
+  kind: Extra
+  title: Groups, `Grp C` (addition beyond the paper)
+  parts:
+  - grpTheory_modelCat_iso
+  stmt_hash:
+    grpTheory_modelCat_iso: '601668190329705618'
+  cone_hash:
+    grpTheory_modelCat_iso: '11696442909958224120'
+  approved_hash:
+    grpTheory_modelCat_iso: '601668190329705618'
+  approved_cone_hash:
+    grpTheory_modelCat_iso: '11696442909958224120'
+  approved_cone_note:
+    grpTheory_modelCat_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cmon_mon_forget
+  uid: ulmer:v2:Extra.cmon_mon_forget
+  kind: Extra
+  title: '`CommMon C ⥤ Mon C` is the reduct along `T_Mon → T_CMon` (addition beyond
+    the paper)'
+  parts:
+  - cmon_mon_forget
+  stmt_hash:
+    cmon_mon_forget: '12352827784988416642'
+  cone_hash:
+    cmon_mon_forget: '10654930325305209115'
+  approved_hash:
+    cmon_mon_forget: '12352827784988416642'
+  approved_cone_hash:
+    cmon_mon_forget: '10654930325305209115'
+  approved_cone_note:
+    cmon_mon_forget: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.grp_mon_forget
+  uid: ulmer:v2:Extra.grp_mon_forget
+  kind: Extra
+  title: '`Grp C ⥤ Mon C` is the reduct along `T_Mon → T_Grp` (addition beyond the
+    paper)'
+  parts:
+  - grp_mon_forget
+  stmt_hash:
+    grp_mon_forget: '11652143105414043265'
+  cone_hash:
+    grp_mon_forget: '5097460514887405875'
+  approved_hash:
+    grp_mon_forget: '11652143105414043265'
+  approved_cone_hash:
+    grp_mon_forget: '5097460514887405875'
+  approved_cone_note:
+    grp_mon_forget: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.monTheory_cartThy_iso
+  uid: ulmer:v2:Extra.monTheory_cartThy_iso
+  kind: Extra
+  title: '`Mon C` as `Σ_Cart`-models (addition beyond the paper)'
+  parts:
+  - monTheory_cartThy_iso
+  stmt_hash:
+    monTheory_cartThy_iso: '2078156715559417254'
+  cone_hash:
+    monTheory_cartThy_iso: '214553385932721872'
+  approved_hash:
+    monTheory_cartThy_iso: '2078156715559417254'
+  approved_cone_hash:
+    monTheory_cartThy_iso: '214553385932721872'
+  approved_cone_note:
+    monTheory_cartThy_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cmonTheory_cartThy_iso
+  uid: ulmer:v2:Extra.cmonTheory_cartThy_iso
+  kind: Extra
+  title: '`CommMon C` as `Σ_Cart`-models (addition beyond the paper)'
+  parts:
+  - cmonTheory_cartThy_iso
+  stmt_hash:
+    cmonTheory_cartThy_iso: '2506430241437643234'
+  cone_hash:
+    cmonTheory_cartThy_iso: '490546365223026881'
+  approved_hash:
+    cmonTheory_cartThy_iso: '2506430241437643234'
+  approved_cone_hash:
+    cmonTheory_cartThy_iso: '490546365223026881'
+  approved_cone_note:
+    cmonTheory_cartThy_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.grpTheory_cartThy_iso
+  uid: ulmer:v2:Extra.grpTheory_cartThy_iso
+  kind: Extra
+  title: '`Grp C` as `Σ_Cart`-models (addition beyond the paper)'
+  parts:
+  - grpTheory_cartThy_iso
+  stmt_hash:
+    grpTheory_cartThy_iso: '12944263867107274967'
+  cone_hash:
+    grpTheory_cartThy_iso: '1354740557245228243'
+  approved_hash:
+    grpTheory_cartThy_iso: '12944263867107274967'
+  approved_cone_hash:
+    grpTheory_cartThy_iso: '1354740557245228243'
+  approved_cone_note:
+    grpTheory_cartThy_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.modelFunctor_forget
+  uid: ulmer:v2:Extra.modelFunctor_forget
+  kind: Extra
+  title: '`φ^*` lies over the sort map (addition beyond the paper)'
+  parts:
+  - modelFunctor_forget
+  stmt_hash:
+    modelFunctor_forget: '4326380541544989599'
+  cone_hash:
+    modelFunctor_forget: '14477772447196401797'
+  approved_hash:
+    modelFunctor_forget: '4326380541544989599'
+  approved_cone_hash:
+    modelFunctor_forget: '14477772447196401797'
+  approved_cone_note:
+    modelFunctor_forget: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.isTheoryMorphism_comp
+  uid: ulmer:v2:Extra.isTheoryMorphism_comp
+  kind: Extra
+  title: Morphisms of theories compose (addition beyond the paper)
+  parts:
+  - isTheoryMorphism_comp
+  stmt_hash:
+    isTheoryMorphism_comp: '12450041545235081339'
+  cone_hash:
+    isTheoryMorphism_comp: '351251124225451638'
+  approved_hash:
+    isTheoryMorphism_comp: '12450041545235081339'
+  approved_cone_hash:
+    isTheoryMorphism_comp: '351251124225451638'
+  approved_cone_note:
+    isTheoryMorphism_comp: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.modelFunctor_id
+  uid: ulmer:v2:Extra.modelFunctor_id
+  kind: Extra
+  title: '`id^* = 𝟭` (addition beyond the paper)'
+  parts:
+  - modelFunctor_id
+  stmt_hash:
+    modelFunctor_id: '1116045676908023044'
+  cone_hash:
+    modelFunctor_id: '7358016507597450871'
+  approved_hash:
+    modelFunctor_id: '1116045676908023044'
+  approved_cone_hash:
+    modelFunctor_id: '7358016507597450871'
+  approved_cone_note:
+    modelFunctor_id: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.modelFunctor_comp
+  uid: ulmer:v2:Extra.modelFunctor_comp
+  kind: Extra
+  title: '`(ψ ∘ φ)^* = ψ^* ⋙ φ^*` (addition beyond the paper)'
+  parts:
+  - modelFunctor_comp
+  stmt_hash:
+    modelFunctor_comp: '16863212403058765660'
+  cone_hash:
+    modelFunctor_comp: '13224310581572787237'
+  approved_hash:
+    modelFunctor_comp: '16863212403058765660'
+  approved_cone_hash:
+    modelFunctor_comp: '13224310581572787237'
+  approved_cone_note:
+    modelFunctor_comp: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.ofLE_forget
+  uid: ulmer:v2:Extra.ofLE_forget
+  kind: Extra
+  title: The inclusion `T ⊆ T'` keeps the objects (addition beyond the paper)
+  parts:
+  - ofLE_forget
+  stmt_hash:
+    ofLE_forget: '12299034056369089236'
+  cone_hash:
+    ofLE_forget: '15663015882386174120'
+  approved_hash:
+    ofLE_forget: '12299034056369089236'
+  approved_cone_hash:
+    ofLE_forget: '15663015882386174120'
+  approved_cone_note:
+    ofLE_forget: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.ofRestrict_forget
+  uid: ulmer:v2:Extra.ofRestrict_forget
+  kind: Extra
+  title: The reduct keeps the objects (addition beyond the paper)
+  parts:
+  - ofRestrict_forget
+  stmt_hash:
+    ofRestrict_forget: '13234130156739674416'
+  cone_hash:
+    ofRestrict_forget: '4773007145707091081'
+  approved_hash:
+    ofRestrict_forget: '13234130156739674416'
+  approved_cone_hash:
+    ofRestrict_forget: '4773007145707091081'
+  approved_cone_note:
+    ofRestrict_forget: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cartTheory_modelCat_iso
+  uid: ulmer:v2:Extra.cartTheory_modelCat_iso
+  kind: Extra
+  title: '`Σ_Cart`-theories are equational theories (addition beyond the paper)'
+  parts:
+  - cartTheory_modelCat_iso
+  stmt_hash:
+    cartTheory_modelCat_iso: '8015424514772479219'
+  cone_hash:
+    cartTheory_modelCat_iso: '12661503062617179096'
+  approved_hash:
+    cartTheory_modelCat_iso: '8015424514772479219'
+  approved_cone_hash:
+    cartTheory_modelCat_iso: '12661503062617179096'
+  approved_cone_note:
+    cartTheory_modelCat_iso: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.modelCat_type_iso_foModelCat
+  uid: ulmer:v2:Extra.modelCat_type_iso_foModelCat
+  kind: Extra
+  title: Single-sorted equational theories are first-order theories (addition beyond
+    the paper)
+  parts:
+  - modelCat_type_iso_foModelCat
+  stmt_hash:
+    modelCat_type_iso_foModelCat: '2027459712522136756'
+  cone_hash:
+    modelCat_type_iso_foModelCat: '1596385921284761450'
+  approved_hash:
+    modelCat_type_iso_foModelCat: '2027459712522136756'
+  approved_cone_hash:
+    modelCat_type_iso_foModelCat: '1596385921284761450'
+  approved_cone_note:
+    modelCat_type_iso_foModelCat: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.mate_oplaxMor
+  uid: ulmer:v2:Extra.mate_oplaxMor
+  kind: Extra
+  title: Mates of a lax morphism form an oplax morphism (addition beyond the paper)
+  parts:
+  - mate_oplaxMor
+  stmt_hash:
+    mate_oplaxMor: '7308639800771815845'
+  cone_hash:
+    mate_oplaxMor: '17359220350624623164'
+  approved_hash:
+    mate_oplaxMor: '7308639800771815845'
+  approved_cone_hash:
+    mate_oplaxMor: '17359220350624623164'
+  approved_cone_note:
+    mate_oplaxMor: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.laxMor_iff_oplaxMor_mate
+  uid: ulmer:v2:Extra.laxMor_iff_oplaxMor_mate
+  kind: Extra
+  title: Lax structures are oplax structures on the left adjoints (addition beyond
+    the paper)
+  parts:
+  - laxMor_iff_oplaxMor_mate
+  stmt_hash:
+    laxMor_iff_oplaxMor_mate: '6102234230122933496'
+  cone_hash:
+    laxMor_iff_oplaxMor_mate: '4666883788984155044'
+  approved_hash:
+    laxMor_iff_oplaxMor_mate: '6102234230122933496'
+  approved_cone_hash:
+    laxMor_iff_oplaxMor_mate: '4666883788984155044'
+  approved_cone_note:
+    laxMor_iff_oplaxMor_mate: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.mateStr_bijective
+  uid: ulmer:v2:Extra.mateStr_bijective
+  kind: Extra
+  title: The mate correspondence (addition beyond the paper)
+  parts:
+  - mateStr_bijective
+  stmt_hash:
+    mateStr_bijective: '6593379657644029580'
+  cone_hash:
+    mateStr_bijective: '12171119649680533716'
+  approved_hash:
+    mateStr_bijective: '6593379657644029580'
+  approved_cone_hash:
+    mateStr_bijective: '12171119649680533716'
+  approved_cone_note:
+    mateStr_bijective: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.idData_laxMor
+  uid: ulmer:v2:Extra.idData_laxMor
+  kind: Extra
+  title: Identity lax morphisms (Proposition 3.11)
+  parts:
+  - idData_laxMor
+  stmt_hash:
+    idData_laxMor: '3549854841817792328'
+  cone_hash:
+    idData_laxMor: '16009566475984533889'
+  approved_hash:
+    idData_laxMor: '3549854841817792328'
+  approved_cone_hash:
+    idData_laxMor: '16009566475984533889'
+  approved_cone_note:
+    idData_laxMor: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.doctrinal_adjunction
+  uid: ulmer:v2:Extra.doctrinal_adjunction
+  kind: Extra
+  title: Doctrinal adjunction (addition beyond the paper)
+  parts:
+  - doctrinal_adjunction
+  stmt_hash:
+    doctrinal_adjunction: '4760122727283298440'
+  cone_hash:
+    doctrinal_adjunction: '6149336815995060234'
+  approved_hash:
+    doctrinal_adjunction: '4760122727283298440'
+  approved_cone_hash:
+    doctrinal_adjunction: '6149336815995060234'
+  approved_cone_note:
+    doctrinal_adjunction: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.doctrinal_adjunction_strong
+  uid: ulmer:v2:Extra.doctrinal_adjunction_strong
+  kind: Extra
+  title: Doctrinal adjunction for strong morphisms (addition beyond the paper)
+  parts:
+  - doctrinal_adjunction_strong
+  stmt_hash:
+    doctrinal_adjunction_strong: '1506053859793055873'
+  cone_hash:
+    doctrinal_adjunction_strong: '14121506883487757471'
+  approved_hash:
+    doctrinal_adjunction_strong: '1506053859793055873'
+  approved_cone_hash:
+    doctrinal_adjunction_strong: '14121506883487757471'
+  approved_cone_note:
+    doctrinal_adjunction_strong: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.laxNat_mate_oplaxNat
+  uid: ulmer:v2:Extra.laxNat_mate_oplaxNat
+  kind: Extra
+  title: Mates of a lax transformation (Houston, Prop 2.35; Example 3.12)
+  parts:
+  - laxNat_mate_oplaxNat
+  stmt_hash:
+    laxNat_mate_oplaxNat: '16992172213359886589'
+  cone_hash:
+    laxNat_mate_oplaxNat: '7440990777524577237'
+  approved_hash:
+    laxNat_mate_oplaxNat: '16992172213359886589'
+  approved_cone_hash:
+    laxNat_mate_oplaxNat: '7440990777524577237'
+  approved_cone_note:
+    laxNat_mate_oplaxNat: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.laxNat_adjunction
+  uid: ulmer:v2:Extra.laxNat_adjunction
+  kind: Extra
+  title: Adjunctions of lax transformations (Houston, Prop 2.35, through Example 3.12)
+  parts:
+  - laxNat_adjunction
+  stmt_hash:
+    laxNat_adjunction: '6806490253959115509'
+  cone_hash:
+    laxNat_adjunction: '743072431911658203'
+  approved_hash:
+    laxNat_adjunction: '6806490253959115509'
+  approved_cone_hash:
+    laxNat_adjunction: '743072431911658203'
+  approved_cone_note:
+    laxNat_adjunction: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.laxTrans_mate_oplaxTrans
+  uid: ulmer:v2:Extra.laxTrans_mate_oplaxTrans
+  kind: Extra
+  title: Mates of a lax transformation (Houston, Prop 2.35, through Example 3.12;
+    pseudofunctors)
+  parts:
+  - laxTrans_mate_oplaxTrans
+  stmt_hash:
+    laxTrans_mate_oplaxTrans: '15058780264115869650'
+  cone_hash:
+    laxTrans_mate_oplaxTrans: '4706776069596137588'
+  approved_hash:
+    laxTrans_mate_oplaxTrans: '15058780264115869650'
+  approved_cone_hash:
+    laxTrans_mate_oplaxTrans: '4706776069596137588'
+  approved_cone_note:
+    laxTrans_mate_oplaxTrans: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.laxTrans_adjunction
+  uid: ulmer:v2:Extra.laxTrans_adjunction
+  kind: Extra
+  title: Adjunctions of lax transformations (Houston, Prop 2.35, through Example 3.12;
+    pseudofunctors)
+  parts:
+  - laxTrans_adjunction
+  stmt_hash:
+    laxTrans_adjunction: '2576660170410059544'
+  cone_hash:
+    laxTrans_adjunction: '5821586226881240407'
+  approved_hash:
+    laxTrans_adjunction: '2576660170410059544'
+  approved_cone_hash:
+    laxTrans_adjunction: '5821586226881240407'
+  approved_cone_note:
+    laxTrans_adjunction: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.coalgebra_embeds_hopf
+  uid: ulmer:v2:Extra.coalgebra_embeds_hopf
+  kind: Extra
+  title: Every coalgebra over a commutative ring embeds into a commutative Hopf algebra
+    (additional checked result)
+  parts:
+  - coalgebra_embeds_hopf
+  stmt_hash:
+    coalgebra_embeds_hopf: '9970427058489792519'
+  cone_hash:
+    coalgebra_embeds_hopf: '15610179065712258357'
+  approved_hash:
+    coalgebra_embeds_hopf: '9970427058489792519'
+  approved_cone_hash:
+    coalgebra_embeds_hopf: '15610179065712258357'
+  approved_cone_note:
+    coalgebra_embeds_hopf: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cocomm_coalgebra_embeds_hopf
+  uid: ulmer:v2:Extra.cocomm_coalgebra_embeds_hopf
+  kind: Extra
+  title: Every cocommutative coalgebra embeds into a commutative cocommutative Hopf
+    algebra (additional checked result)
+  parts:
+  - cocomm_coalgebra_embeds_hopf
+  stmt_hash:
+    cocomm_coalgebra_embeds_hopf: '12189220385624563031'
+  cone_hash:
+    cocomm_coalgebra_embeds_hopf: '4872847170936587017'
+  approved_hash:
+    cocomm_coalgebra_embeds_hopf: '12189220385624563031'
+  approved_cone_hash:
+    cocomm_coalgebra_embeds_hopf: '4872847170936587017'
+  approved_cone_note:
+    cocomm_coalgebra_embeds_hopf: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cocomm_comonoid_embeds_group
+  uid: ulmer:v2:Extra.cocomm_comonoid_embeds_group
+  kind: Extra
+  title: Every cocommutative comonoid of modules over a commutative ring embeds into
+    a group object (additional checked result)
+  parts:
+  - cocomm_comonoid_embeds_group
+  stmt_hash:
+    cocomm_comonoid_embeds_group: '1108630458032423527'
+  cone_hash:
+    cocomm_comonoid_embeds_group: '8832263920697690130'
+  approved_hash:
+    cocomm_comonoid_embeds_group: '1108630458032423527'
+  approved_cone_hash:
+    cocomm_comonoid_embeds_group: '8832263920697690130'
+  approved_cone_note:
+    cocomm_comonoid_embeds_group: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.grp_cocomm_comonoid_monos_regular
+  uid: ulmer:v2:Extra.grp_cocomm_comonoid_monos_regular
+  kind: Extra
+  title: Every mono of group objects in cocommutative coalgebras over a field is regular
+    (additional checked result)
+  parts:
+  - grp_cocomm_comonoid_monos_regular
+  stmt_hash:
+    grp_cocomm_comonoid_monos_regular: '7988359700140459263'
+  cone_hash:
+    grp_cocomm_comonoid_monos_regular: '16029259237878124475'
+  approved_hash:
+    grp_cocomm_comonoid_monos_regular: '7988359700140459263'
+  approved_cone_hash:
+    grp_cocomm_comonoid_monos_regular: '16029259237878124475'
+  approved_cone_note:
+    grp_cocomm_comonoid_monos_regular: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cocomm_hopf_monos_regular
+  uid: ulmer:v2:Extra.cocomm_hopf_monos_regular
+  kind: Extra
+  title: Every mono of cocommutative Hopf algebras over a field is regular (additional
+    checked result)
+  parts:
+  - cocomm_hopf_monos_regular
+  stmt_hash:
+    cocomm_hopf_monos_regular: '13830483248908436203'
+  cone_hash:
+    cocomm_hopf_monos_regular: '817713629327230409'
+  approved_hash:
+    cocomm_hopf_monos_regular: '13830483248908436203'
+  approved_cone_hash:
+    cocomm_hopf_monos_regular: '817713629327230409'
+  approved_cone_note:
+    cocomm_hopf_monos_regular: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cocomm_hopf_barr_exact
+  uid: ulmer:v2:Extra.cocomm_hopf_barr_exact
+  kind: Extra
+  title: Cocommutative Hopf algebras over a field form a Barr-exact category (additional
+    checked result)
+  parts:
+  - cocomm_hopf_barr_exact
+  stmt_hash:
+    cocomm_hopf_barr_exact: '15996408419767715424'
+  cone_hash:
+    cocomm_hopf_barr_exact: '5004601068168741593'
+  approved_hash:
+    cocomm_hopf_barr_exact: '15996408419767715424'
+  approved_cone_hash:
+    cocomm_hopf_barr_exact: '5004601068168741593'
+  approved_cone_note:
+    cocomm_hopf_barr_exact: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded
+- id: Extra.cocomm_comonoid_cartesian_closed
+  uid: ulmer:v2:Extra.cocomm_comonoid_cartesian_closed
+  kind: Extra
+  title: Cocommutative coalgebras over a field form a cartesian closed category (additional
+    checked result)
+  parts:
+  - cocomm_comonoid_cartesian_closed
+  stmt_hash:
+    cocomm_comonoid_cartesian_closed: '12350762708511953171'
+  cone_hash:
+    cocomm_comonoid_cartesian_closed: '10582034158287057353'
+  approved_hash:
+    cocomm_comonoid_cartesian_closed: '12350762708511953171'
+  approved_cone_hash:
+    cocomm_comonoid_cartesian_closed: '10582034158287057353'
+  approved_cone_note:
+    cocomm_comonoid_cartesian_closed: approved by the author
+  stated: true
+  proved: true
+  approved: true
+  route: false
+  clean: false
+  state: approved
+  status: proved
+  proof_route: null
+  deviations: null
+  issue: null
+  fidelity: null
+  scope: null
+  open: null
+  bridge:
+    state: gap
+    note: no proved comparison with a canonical notion is recorded

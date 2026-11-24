@@ -1,0 +1,85 @@
+
+
+\section{Monadicity and Local Presentability in \texorpdfstring{$2$}{2}-Categories}\label{sec:representable}
+
+Using representable $2$-functors, we generalize the monadicity results of Section~\ref{sec:monadicity} to objects in PIE-complete $2$-categories with a choice of a bi-dense class of objects. For this section, we fix a $2$-category $\K$ with a class of objects $A$ and denote by $\A$ the full sub-$2$-category spanned by $A$.
+
+\subsection{Bi-Density and Representable Properties}
+
+For $2$-functors $F,G\colon \K\to \mathcal{L}$, we write $[F,G]_\Psd$ for the category of pseudonatural transformations $\eta \colon F\Rightarrow G$ and modifications $\Phi\colon \eta\Rrightarrow\theta$ (see Example~\ref{ex:modificationsAndTransformations}).
+
+\begin{definition}
+We say that the class of objects $A$ is \textbf{bi-dense} in $\K$ if the $2$-functor $c\mapsto \K(-,c)|_{\A^{\op}}\colon \K\to [\A^{\op},\CAT]$ is bi-fully faithful, that is, for all objects $a,b$ in $\K$, the functor
+\[
+\K(a,b)\to [\K(-,a)|_{\A^{\op}},\K(-,b)|_{\A^{\op}}]_\Psd,\quad f\mapsto f_*\coloneqq f*(-),
+\]
+is an equivalence of categories. This is a variation of the bicategorical notion of density introduced in \cite[Definition~6.2]{hofstraInnerAutoequivalencesGeneral2024}.
+\end{definition}
+The bicategorical Yoneda lemma \cite[(1.9)]{Street1980FibrationsBicategories} shows that the class of all objects of a $2$-category $\K$ is bi-dense. In the appendix, we show that, for a monoidal category $\V$ with an \textbf{absorbing initial object}, the linear $\V$-categories $\mathbf{1}$, $\mathbf{2}_x$ and $\mathbf{3}_{x,y}$, for objects $x$ and $y$ in $\V$, form a bi-dense class in $\V\text{-}\CAT$ (Theorem~\ref{thm:density_of_A_app}).
+
+\begin{definition}[$A$ Properties]\label{def:representableProperties}
+Consider a property $P$ of categories such as completeness, cocompleteness and accessibility. We say that an object $c$ in $\K$ is $A$-$P$ ($A$-\textbf{complete}, for example) if the category $\K(a,c)$ has the property $P$ for each $a\in A$. If $P'$ is a property of functors, we say that a morphism $f\colon c\to d$ in $\K$ is $A$-$P'$ if each functor $f_a\colon \K(a,c)\to \K(a,d)$ has the property $P'$.
+\end{definition}
+
+\begin{definition}[$\A$-local presentability]\label{def:ALocalPresentability}
+    Let $c$ be an object in $\K$. We say that $c$ is $\A$-\textbf{complete}, or has $\A$-\textbf{limits}, if $c$ is $A$-complete and has right Kan extensions along each morphism $k$ in $\A$. Similarly, we say that $c$ is $\A$-\textbf{cocomplete}, or has $\A$-colimits, if $c$ is $A$-cocomplete and has all left Kan extensions along morphisms in $\A$. We say that $c$ is (\textbf{left}) \textbf{right} $\A$-\textbf{locally presentable} if $c$ is $A$-accessible and $\A$-(co)complete. A morphism $f$ is said to be $\A$-(\textbf{co})\textbf{continuous} and to \textbf{preserve} $\A$-(\textbf{co})\textbf{limits} if $f$ is $A$-(co)continuous and preserves the (left) right Kan extensions along morphisms in $\A$.
+\end{definition}
+
+\subsection{Monadicity and Comonadicity in \texorpdfstring{$2$}{2}-Categories}
+
+We consider a PIE-complete $2$-category $\K$ with a bi-dense class of objects $A$, where we denote by $\A$ the full sub-$2$-category of $\K$ spanned by $A$. A morphism being an $A$-right adjoint is not sufficient for it to have a left adjoint, but with the following additional assumption we obtain the left adjoint from the local data:
+
+\begin{theorem}\label{thm:LiftingOfAdjoint}
+     Let $g\colon d\to c$ be a morphism in $\K$. Assume that $d$ has and $g$ preserves all right Kan extensions along morphisms in $\A$. If $g$ is an $A$-right adjoint, then $g$ is a right adjoint.
+\end{theorem}
+\begin{proof}
+    Denote by $L_a\colon \K(a,c)\to \K(a,d)$ the left adjoint of $g_a$ for each $a\in A$. We show that $(L_a)_{a\in A}$ defines a pseudonatural transformation $\K(-,c)\Rightarrow \K(-,d)\colon \A^{\op}\to \CAT$. Let $k\colon a\to b$ be a morphism in $\A$. We show that the diagram
+\[
+\begin{tikzcd}
+{\K(b,c)} \arrow[d, "k^c"'] \arrow[r, "L_b"] & {\K(b,d)} \arrow[d, "k^d"] \\
+{\K(a,c)} \arrow[r, "L_a"']                  & {\K(a,d)}
+\end{tikzcd}
+\]
+commutes up to coherent isomorphism. Note that the family $(L_a)_a$ forms an oplax natural transformation via the canonical composite
+\begin{equation}\label{cancomp:1}
+L_ak^c\Rightarrow L_ak^cg_bL_b = L_ag_ak^dL_b\Rightarrow k^dL_b
+\end{equation}
+By \cite[Proposition~2.35]{houstonLinearLogicUnits2013}, it suffices to show that the composite \eqref{cancomp:1} is an isomorphism for $L$ to be a left adjoint of $g_*$. Note that $L_ak^c$ and $k^dL_b$ have the same right adjoint:
+\begin{align*}
+    (L_ak^c(x),y) &\cong (xk,gy)\tag{$L_a\dashv g_a$}\\
+    &\cong (x, g_b\circ \Ran_k^d(y))\tag{$g$ preserves $\Ran_k$}\\
+    &\cong (L_b(x),\Ran_k^d(y)) \tag{$L_b\dashv g_b$}\\
+    &\cong (k^dL_b(x),y)    \tag{$k^d\dashv \Ran_k^d$}
+\end{align*}
+for each $x\colon b\to c$ and $y\colon a\to d$. Following this natural isomorphism shows that the canonical composite \eqref{cancomp:1} is an isomorphism. Thus $g_*\colon \K(-,d)|_{\A^{\op}}\Rightarrow\K(-,c)|_{\A^{\op}}$ is a right adjoint, and by the bi-density of $A$, $g$ is a right adjoint.
+\end{proof}
+\begin{corollary}\label{cor:2-categoricalAAFT}
+    Let $g\colon d\to c$ be an $A$-accessible morphism in $\K$. If $d$ has and $g$ preserves $\A$-limits, then $g$ is a right adjoint. Moreover, if $d$ has and $g$ preserves $\A$-colimits, then $g$ is a left adjoint.
+\end{corollary}
+\begin{proof}
+    Assume that $d$ has and $g$ preserves $\A$-limits. We show that $g$ is a right adjoint in $\K$. Since for every $a\in A$, $g_a\colon \K(a,d)\to \K(a,c)$ is accessible and continuous with $\K(a,d)$ being complete, we have that $g_a$ has a left adjoint (Theorem \ref{AAFT}). Since $A$ is bi-dense and $g$ preserves all right Kan extensions along morphisms in $\A$, we have that $g$ is a right adjoint by Theorem \ref{thm:LiftingOfAdjoint}. The left adjoint case follows similarly.
+\end{proof}
+\begin{theorem}\label{thm:2CategoricalMonadicityForBialgebras}
+    Let $\B = (c,\ f,g,\ f',g',\ \alpha,\beta)$ be a bialgebraic datum in $\K$. Assume:
+    \begin{enumerate}
+        \item The morphisms $g$ and $g'$ are right adjoints.
+        \item The object $c$ is $A$-cocomplete and has all right Kan extensions along morphisms in $\A$.
+        \item The functors $f_a\coloneqq \K(a,f)\colon \K(a,c)\to \K(a,x)$ and $f_a'\coloneqq \K(a,f')\colon \K(a,c)\to \K(a,y)$ preserve $\kappa_a$-colimits, where $\kappa_a$ is an infinite cardinal, for each $a\in A$. 
+    \end{enumerate} 
+    Then $u_\B\colon \BialgB\to c$ is monadic. Furthermore, if $K\xleftarrow{k}I\xrightarrow{d} \BialgB$ is a span in $\K$ so that $K\in A$, and the left Kan extensions of $ud$ and $fud$ along $k$ exist, then the left Kan extension of $d$ exists along $k$. In particular, $\BialgB$ is $A$-cocomplete.
+\end{theorem}
+\begin{proof}
+    By Corollary \ref{cor:GeneralMonadicity}, for monadicity of $u$ it is sufficient to show $u$ is a right adjoint. Notice that $u_a\colon \K(a,\BialgB)\to \K(a,c)$ has a left adjoint for each $a\in A$ by Theorem~\ref{thm:BigMonadicityB}. As $c$ has and $u$ strictly creates $k$-limits, $\BialgB$ has $k$-limits and $u$ preserves them for each morphism $k$ in $\A$. Thus the local left adjoints to $u$ provide a left adjoint to $u$ by Theorem \ref{thm:LiftingOfAdjoint}. Thus $u$ is monadic. The last part follows from Lemma \ref{lem:KanExtensionInserter}.
+\end{proof}
+
+\begin{theorem}\label{thm:2CatLPComonadicity}
+    Let $\B = (c,\ f,g,\ f',g',\ \alpha,\beta)$ be a bialgebraic datum in $\K$, where the morphisms $f,f',g,g'$ are $A$-accessible. Then the following hold:
+    \begin{enumerate}
+        \item If $c$ has and $g,g'$ preserve $\A$-limits, then $u_\B\colon \BialgB\to c$ is monadic, $A$-accessible and $\BialgB$ is right $\A$-locally presentable.
+        \item If $c$ has and $f,f'$ preserve $\A$-colimits, then $\BialgB$ is left $\A$-locally presentable with $u$ being comonadic and $A$-accessible.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    As the cases are similar, we prove the latter comonadicity case. Assume that $c$ has and $f,f'$ preserve $\A$-colimits. By Corollary~\ref{cor:strictCreationToBialgebraicDatumObjectsKan}, we have that  $u\colon \BialgB\to c$ strictly creates $\A$-colimits and since $c$ has $\A$-colimits, $\BialgB$ has and $u$ preserves $\A$-colimits. As $\BialgB$ is $A$-cocomplete and $A$-accessible, it is $A$-locally presentable. Thus $\BialgB$ is left $\A$-locally presentable and $u$ is $\A$-cocontinuous. Since $u$ is $A$-accessible, it has a right adjoint (Corollary~\ref{cor:2-categoricalAAFT}) and hence it is comonadic by Corollary \ref{cor:GeneralMonadicity}.
+\end{proof}
+

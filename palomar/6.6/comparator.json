@@ -1,0 +1,22 @@
+{
+  "challenge_module": "Palomar.Thm6_6.Challenge",
+  "solution_module": "Palomar.Thm6_6.Solution",
+  "theorem_names": [
+    "UlmerBialgebras.Paper.thm_6_6_1",
+    "UlmerBialgebras.Paper.thm_6_6_2",
+    "UlmerBialgebras.Paper.thm_6_6_3",
+    "UlmerBialgebras.Paper.thm_6_6_3_coeq",
+    "UlmerBialgebras.inserter_assoc_comp",
+    "UlmerBialgebras.LeftExt.hom_ext",
+    "UlmerBialgebras.RightExt.hom_ext",
+    "UlmerBialgebras.LeftExt.push_w",
+    "UlmerBialgebras.RightExt.push_w"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

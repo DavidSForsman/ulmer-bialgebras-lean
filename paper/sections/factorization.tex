@@ -1,0 +1,197 @@
+
+\section{Factorization Systems, Regularity, and Exactness}\label{sec:ofs}
+
+To establish how regularity and exactness lift along the construction $M\mapsto M^T$ in $\CAT$, we first study how orthogonal factorization systems lift along PIE limits in $\CAT$.
+
+\subsection{Orthogonal Factorization Systems}
+\begin{definition}[Orthogonal Factorization System]\label{def:1cat_ofs}
+   Let $\C$ be a category. Two morphisms $e$ and $m$ in $\C$ are said to be \textbf{orthogonal}, denoted $e \perp m$, if for every commutative square
+   \[
+\begin{tikzcd}
+a \arrow[d, "e"'] \arrow[r, "f"]                              & c \arrow[d, "m"] \\
+b \arrow[r, "g"'] \arrow[ru, "\exists!h" description, dotted] & d
+\end{tikzcd}
+   \] there exists a unique morphism $h\colon b\to c$, a \textbf{diagonal filler}, making the diagram commute. We write $e\perp_! m$ if at most one diagonal filler $h$ exists; we do not require its existence. We extend the notation $A\perp B$ to include classes of morphisms $A$ and $B$ in $\C$. We denote $A^\perp\coloneqq \{m\in \Mor(\C)\mid a\perp m\text{ for all $a\in A$}\}$, define ${}^\perp\! A$ dually, and call these the \textbf{right} and \textbf{left orthogonal classes} of $A$, respectively.
+
+   An \textbf{orthogonal factorization system (OFS)} on $\C$ is a pair $(\mathcal{E}, \mathcal{M})$ of classes of morphisms in $\C$ such that:
+   \begin{enumerate}
+       \item \textbf{Factorization:} Every morphism $f$ in $\C$ admits a factorization $f = m \circ e$ with $e \in \mathcal{E}$ and $m \in \mathcal{M}$. Such a factorization is called an $(\mathcal{E},\mathcal{M})$-factorization.
+       \item \textbf{Orthogonality:} $\mathcal{M} = \mathcal{E}^\perp$ and $\mathcal{E} = {}^\perp\! \mathcal{M}$.
+   \end{enumerate}
+   An OFS $(\mathcal{E},\mathcal{M})$ is called \textbf{stable} if $\mathcal{E}$ is stable under pullbacks.
+\end{definition}
+
+\begin{remark}
+   An orthogonal factorization system can be equivalently described as a pair $(\mathcal{E}, \mathcal{M})$ of classes of morphisms of $\C$ such that every morphism in $\C$ admits an $(\mathcal{E}, \mathcal{M})$-factorization, $\mathcal{E} \perp \mathcal{M}$ and both $\E$ and $\M$ are closed under retracts in the arrow category $\C^{\to}$ \cite[Lemma~11.2.3]{Riehl2014CategoricalHomotopyTheory}. In practice, these closure properties are useful when verifying that a lifted pair of classes forms an orthogonal factorization system.
+\end{remark}
+
+We now show how these factorization systems strictly lift along PIE limits in $\CAT$.
+
+\begin{theorem}[Lifting OFS Along PIE Limits]\label{thm:pie_ofs_creation}
+   Let $\C_i$ and $\C$ be categories equipped with orthogonal factorization systems $(\E_i',\M_i')$ and $(\E',\M')$, respectively, for each $i\in I$. Let $F,G\colon \C\to \D$ be functors. Then the following hold.
+   \begin{enumerate}
+       \item $(\prod_i \mathcal{E}_i',\prod_i \mathcal{M}_i')$ is the unique OFS on $\prod_i \C_i$ preserved by the projections.
+       \item If $F(\E')\perp G(\M')$, then $(U^{-1}(\mathcal{E}'),U^{-1}(\mathcal{M}'))$ is the unique OFS on $\Ins(F,G)$ preserved by the forgetful functor $U\colon \Ins(F,G)\to \C$.
+       \item Let $\eta,\theta\colon F\Rightarrow G$ be natural transformations. If $F(\E')\perp_! G(\M')$, then the equifier $E\colon \Eq(\eta,\theta)\to \C$ has a unique OFS $(E^{-1}(\mathcal{E}'), E^{-1}(\mathcal{M}'))$ that is preserved by $E$. 
+   \end{enumerate}
+\end{theorem}
+\begin{proof}
+Note in general that if $\M_1\subset \M_2$ and $\E_1\subset \E_2$ are classes of morphisms of some category, where $(\E_i,\M_i)$ is an OFS for $i = 1,2$, then $\M_1 = \M_2$ and $\E_1 = \E_2$. Hence the uniqueness claims of the statement hold.
+\begin{enumerate}
+   \item Clearly, $(\prod_i \mathcal{E}_i',\prod_i \mathcal{M}_i')$ is an orthogonal factorization system on $\prod_i \C_i$.
+
+   \item Denote $\mathcal{E} \coloneqq U^{-1}(\mathcal{E}')$ and $\mathcal{M} \coloneqq U^{-1}(\mathcal{M}')$ and assume that $F(\E')\perp G(\M')$. Clearly, $\mathcal{E}$ and $\mathcal{M}$ contain all isomorphisms and are closed under composition and retracts, so it suffices to show that each morphism in $\Ins(F,G)$ has an $(\mathcal{E},\mathcal{M})$-factorization and $\mathcal{E}\perp \mathcal{M}$.
+
+   Let $f\colon (x,\phi_x\colon Fx\to Gx)\to (z,\phi_z\colon Fz\to Gz)$ be a morphism in $\Ins(F,G)$. In $\C$, the morphism $f$ factors as $x\xrightarrow{e}y\xrightarrow{m}z$ with $e\in \mathcal{E}'$ and $m\in \mathcal{M}'$. Using the orthogonality $F(e)\perp G(m)$, we define the morphism $\phi_y\colon Fy\to Gy$ as the unique morphism making the diagram
+   \[
+   \begin{tikzcd}[column sep = 2 cm]
+F(x) \arrow[d, "\phi_x"'] \arrow[r, "F(e)\in F(\E')"] & F(y) \arrow[d, "\exists!\phi_y" description] \arrow[r, "F(m)"] & F(z) \arrow[d, "\phi_z"] \\
+G(x) \arrow[r, "G(e)"']                              & G(y) \arrow[r, "G(m)\in G(\M')"']                                   & G(z)
+\end{tikzcd}
+   \]
+   commute. Thus we have a factorization $f = me$ in $\Ins(F,G)$, where $m\in \mathcal{M}$ and $e\in \mathcal{E}$. Finally, we show $\mathcal{E}\perp \mathcal{M}$. Consider the following lifting problem:
+   \[
+   \begin{tikzcd}
+(x,\phi_x) \arrow[d, "e\in \mathcal{E}"'] \arrow[r, "f"] & (y,\phi_y) \arrow[d, "m\in \mathcal{M}"] \\
+(v,\phi_v) \arrow[r, "g"']                      & (w,\phi_w)
+\end{tikzcd}
+   \]
+   in $\Ins(F,G)$. There is a unique solution $\theta\colon v\to y$ in the underlying category $\C$, so the lifting problem has at most one solution. It suffices to show that $\theta$ is a morphism in $\Ins(F,G)$. We show that the diagram
+   \[
+   \begin{tikzcd}
+F(v) \arrow[d, "\phi_v" description] \arrow[r, "F(\theta)"] & F(y) \arrow[d, "\phi_y" description] \\
+G(v) \arrow[r, "G(\theta)"']                                  & G(y)
+\end{tikzcd}
+   \]
+   commutes. The orthogonality $F(e)\perp G(m)$ induces a unique morphism $\phi\colon Fv\to Gy$ with $\phi F(e) = G(f)\phi_x$ and $G(m)\phi = \phi_w F(g)$; see the diagram
+   \[
+\begin{tikzcd}[column sep = 2 cm]
+Fx \arrow[d, "\phi_x" description] \arrow[r, "F(e)" description] \arrow[rr, "Ff", bend left] & Fv \arrow[r, "F(\theta)" description] \arrow[d, "\phi_v" description] \arrow[rd, "\exists!\phi" description] \arrow[rr, "F(g)", bend left] & Fy \arrow[r, "F(m)" description] \arrow[d, "\phi_y" description] & Fw \arrow[d, "\phi_w" description] \\
+Gx \arrow[r, "G(e)" description] \arrow[rr, "G(f)"', bend right]                                & Gv \arrow[r, "G(\theta)" description] \arrow[rr, "G(g)"', bend right]                                                                         & Gy \arrow[r, "G(m)" description]                                    & Gw
+\end{tikzcd}
+\]
+   As both morphisms $G(\theta)\phi_v$ and $\phi_yF(\theta)$ satisfy the defining condition of $\phi$, it follows that $G(\theta)\phi_v = \phi_y F(\theta)$. Thus $\theta\colon (v,\phi_v)\to (y,\phi_y)$ is a morphism in $\Ins(F,G)$.
+
+   \item Assume $F(\E')\perp_! G(\M')$ and write $\mathcal{E}\coloneqq E^{-1}(\mathcal{E}')$ and $\mathcal{M} \coloneqq E^{-1}(\mathcal{M}')$. We show that $(\mathcal{E},\mathcal{M})$ is an OFS on $\Eq(\eta,\theta)$. Let $f\colon x\to z$ be a morphism in $\Eq(\eta,\theta)$ and consider a factorization $f\colon x\xrightarrow{e}y\xrightarrow{m}z$, where $e\in \mathcal{E}'$ and $m\in \mathcal{M}'$. By the full faithfulness of $E$, it suffices to check that $\eta_y = \theta_y$ to show that $(\mathcal{E},\mathcal{M})$ is an orthogonal factorization system on $\Eq(\eta,\theta)$.
+   Consider the following diagram:
+   \[
+\begin{tikzcd}[column sep = 2cm]
+F(x) \arrow[d, "\eta_x = \theta_x" description] \arrow[r, "F(e)\in F(\mathcal{E}')"] & F(y) \arrow[d, "\eta_y"', shift right] \arrow[d, "\theta_y", shift left] \arrow[r, "F(m)"] & F(z) \arrow[d, "\eta_z = \theta_z" description] \\
+G(x) \arrow[r, "G(e)"']                                                 & G(y) \arrow[r, "G(m)\in G(\mathcal{M}')"']                                                              & G(z)
+\end{tikzcd}
+\]
+   As $F(e)\perp_! G(m)$, the diagonal filler is unique. Since both $\eta_y$ and $\theta_y$ make both squares commute, $\eta_y = \theta_y$. This shows that $y$ is an object of $\Eq(\eta,\theta)$. \qedhere
+\end{enumerate}
+\end{proof}
+
+\subsection{Regularity and Exactness}
+
+\begin{definition}
+   Let $\C$ be a category. We say that $\C$ is a \textbf{regular} category if $\C$ has finite limits and a stable OFS $(\E,\M)$, where $\M$ is the class of monos in $\C$. A regular category $\C$ is called \textbf{exact} if each internal equivalence relation $R\rightrightarrows c$ in $\C$ is the kernel pair of some morphism in $\C$.\footnote{A jointly monomorphic pair of morphisms $R\rightrightarrows c$ in a category $\C$ is called an equivalence relation if the induced subset of $\hom(x,c)\times \hom(x,c)$ is an equivalence relation for each object $x$ in $\C$.}
+\end{definition}
+
+In a category $\C$ with pullbacks, we have that $\mathcal{E} =\! ^\perp\! \mathcal{M}$ and $\mathcal{M} = \mathcal{E}^\perp$ where $\mathcal{M}$ is the class of monomorphisms and $\mathcal{E}$ is the class of extremal epimorphisms in $\C$ (morphisms in $\E^\bot$ lift against their kernel pairs making them monic). If $\C$ is a regular category, then, by \cite[Proposition 2.2(b)]{Kelly1991}, $\E$ is the class of regular epis and from this one obtains the existence of coequalizers of kernel pairs. The $(\E,\M)$ factorization of a morphism $f$ is then obtained via the coequalizer of the kernel pair of $f$. 
+
+
+\begin{lemma}\label{lem:reflecting_regularity_exactness}
+    Let $U\colon \D\to \C$ be a pullback preserving functor reflecting monics with $\D$ having finite limits. Let $\M = U^{-1}(\M')$ and $\E = U^{-1}(\E')$, where $\E'$ and $\M'$ are the classes of extremal epimorphisms and monomorphisms of $\C$, respectively. Then the following hold:
+    \begin{enumerate}
+        \item If $(\E,\M)$ is an OFS on $\D$ and $\E'$ is stable under pullbacks, then $\D$ is regular.
+        \item If $\D$ has coequalizers of kernel pairs, $U$ is a regular epi preserving conservative functor, and the category $\C$ is regular, then $\D$ is regular.
+        \item If $\D$ has coequalizers of equivalence relations preserved by the functor $U$, $U$ is conservative, and the category $\C$ is exact, then $\D$ is exact.
+    \end{enumerate}
+\end{lemma}
+\begin{proof} Note that as $U$ preserves pullbacks, hence monics, and reflects monics, we obtain that $\M$ is the class of monomorphisms in $\D$. 
+    \begin{enumerate}
+        \item Assume $(\E,\M)$ is an OFS on $\D$ and $\E'$ is stable. As $\D$ has finite limits, it suffices that $\E$ is pullback stable. Since $\E'$ is closed under pullbacks, $U$ preserves pullbacks and $\E = U^{-1}(\E')$, it follows that $\E$ is closed under pullbacks. Thus $\D$ is regular.
+        \item Assume $\D$ has coequalizers of kernel pairs, $U$ is conservative and preserves regular epis, and $\C$ is regular. We show that $\D$ is regular. By part 1, it suffices to show that $(\E,\M)$ factorizations exist and $\E$ is the class of extremal epis in $\D$. Consider a morphism $f\colon d\to d'$ in $\D$ and consider its canonical factorization $f = me$, where $e$ is the coequalizer of the kernel pair of $f$. As $U$ preserves pullbacks and regular epis, $Uf = Um Ue$ is the canonical factorization in $\C$ and thus $Um$ is monic by regularity of $\C$. Thus $f$ has an $(\E,\M)$ factorization. As each extremal epi in $\D$ is regular and $U$ preserves regular epis, we have all extremal epis of $\D$ are in $\E$. Conversely, if a morphism $f$ is mapped to an extremal epi by $U$, then by conservativity of $U$, $f$ is an extremal epi and hence $\E$ is the class of extremal epis.
+        \item Assume $\D$ has and $U$ preserves coequalizers of equivalence relations. Assume that $U$ is conservative and $\C$ is exact. We show that $\D$ is exact. By part $2$, $\D$ is regular. Consider then an equivalence relation $r_1,r_2\colon R\to x$ in $\D$, and consider the comparison $t\colon R\to S$, where $S$ is constructed as the kernel pair of the coequalizer $q$ of $r_1$ and $r_2$. Since $r_1,r_2$ is jointly monic, $t$ is a monomorphism. As $U$ preserves monomorphisms, $Ur_1,Ur_2$ is a relation in $\C$. The pullback preservation of $U$ shows that $Ur_1,Ur_2$ is an equivalence relation in $\C$ and thus the kernel pair of their coequalizer $Uq$. Thus $Ut$ is an isomorphism and by conservativity of $U$, $t$ is an isomorphism. Hence $r_1,r_2\colon R\to x$ is a kernel pair in $\D$. \qedhere
+    \end{enumerate}
+
+
+\end{proof}
+
+Proposition 3.7 in \cite{Wissmann2022Minimality} shows how a monad $T\colon \C\to \C$ preserving the left class of an orthogonal factorization system $(\mathcal{E},\mathcal{M})$ on $\C$ induces an orthogonal factorization system on the Eilenberg--Moore category $\C^T$, generalizing the original result of Linton \cite{Linton1969}. We further generalize these results by lifting orthogonal factorization systems to arbitrary categories of bialgebras in the following theorem:
+
+\begin{theorem}\label{thm:liftingregularexact}
+    Let $\B = (\C,\ F,G,\ F',G',\ \alpha,\beta)$ be a bialgebraic datum in $\CAT$. Assume that $\C$ is equipped with an orthogonal factorization system $(\E',\M')$. Denote $\M = U_\B^{-1}(\M')$ and $\E = U_\B^{-1}(\E')$. Then the following conditions hold:
+    \begin{enumerate}
+        \item If $F(\E')\perp G(\M')$ and $F'(\E')\perp_! G'(\M')$, then the pair $(\E,\M)$ is the unique OFS on $\BialgB$ preserved by $U_\B\colon \BialgB\to \C$.
+        \item Assume $\C$ is regular, $\M'$ is the class of monomorphisms in $\C$, and $\BialgB$ has a terminal object. Assume that $F$ preserves regular epis, $F'(\E')\perp_! G'(\M')$, $G$ preserves pullbacks, and $G'$ the joint monicness of pullback projections. Then $\BialgB$ is regular with $U$ strictly creating pullbacks and preserving regular epimorphisms.
+        \item If $\C$ is exact, $\BialgB$ has a terminal object, $F$ preserves coequalizers of kernel pairs, $F'$ maps regular epis to epis, $G$ preserves pullbacks and $G'$ the joint monicness of pullback projections, then $\BialgB$ is exact with $U$ strictly creating coequalizers of kernel pairs.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    The first part follows from Theorem \ref{thm:pie_ofs_creation}. We then prove the second part. By Corollary \ref{cor:strictCreationToBialgebraicDatumObjectsKan}, $U$ strictly creates pullbacks. By the first part then $(\E,\M)$ is an OFS on $\BialgB$. Thus $\BialgB$ is regular with $U$ preserving regular epimorphisms by Lemma~\ref{lem:reflecting_regularity_exactness}(1).
+
+    We show the third part. Assume that $\C$ is exact, $\BialgB$ has a terminal object, $F$ preserves coequalizers of kernel pairs, $F'$ maps regular epis to epis, $G$ preserves pullbacks and $G'$ the joint monicness of pullback projections. Part 2 shows that $\BialgB$ is regular. Since $U$ preserves pullbacks, it maps equivalence relations to kernel pairs. Since these kernel pairs have coequalizers which are preserved by $F$ and whose quotient initiality is preserved by $F'$, it follows from Corollary \ref{cor:strictCreationToBialgebraicDatumObjectsKan} that $U$ strictly creates this colimit. Lemma~\ref{lem:reflecting_regularity_exactness}(3) shows that $\BialgB$ is exact.
+\end{proof}
+
+\begin{corollary}
+    Let $M$ be a $\Sigma$-model in $\CAT$. Assume each category $M_c$ is equipped with an OFS $(\E_c,\M_c)$. Let $T$ be a $\sigma$-theory and denote $(\E,\M) \coloneqq (U^{-1}(\prod_s \E_{c_s}),U^{-1}(\prod_s \M_{c_s}))$, where $U\colon M^T\to M_0$ is the forgetful functor. Then the following hold:
+    \begin{enumerate}
+        \item If $T$ is (co)algebraic and each functor $M(B)$ preserves the (right) left classes componentwise, then $(\E,\M)$ is the unique OFS on $M^T$ preserved by $U$.
+        \item If each functor $M(B)$ preserves both classes componentwise, then $(\E,\M)$ is the unique OFS on $M^T$ that is preserved by $U$.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    Follows immediately from Theorem~\ref{thm:liftingregularexact}(1).
+\end{proof}
+
+\begin{corollary}\label{cor:ExactnessReflectionPrinciple}
+    Let $\B_i = (\C_i,\ F_i,G_i,\ F_i',G_i',\ \alpha_i,\beta_i)$ be a bialgebraic datum in $\CAT$ for $i = 1,2$. Consider a commutative diagram
+    $$
+    \begin{tikzcd}
+\Bialg(\B_1) \arrow[d, "U_1"'] \arrow[r, "\bar{F}"] & \Bialg(\B_2) \arrow[d, "U_2"] \\
+\C_1 \arrow[r, "F"']                                & \C_2                         
+\end{tikzcd}
+    $$
+    of functors, where $U_i = U_{\B_i}$ for $i = 1,2$. Assume the following:
+    \begin{enumerate}
+        \item The category $\C_1$ has and $F$ preserves pullbacks and reflexive coequalizers.
+        \item The functor $F$ is conservative.
+        \item The function arity functors $F_1, F_2$ preserve reflexive coequalizers and the equational arity functors $F_1',F_2'$ map regular epis to epis.
+        \item The function coarity functors $G_1$ and $G_2$ preserve pullbacks and the equational coarity functors $G_1',G_2'$ preserve the joint monicness of pullback projections.
+    \end{enumerate}
+    Then $\Bialg(\B_1)$ has and $\bar{F}$ preserves pullbacks and reflexive coequalizers, and $\bar{F}$ is conservative. Moreover, if $\Bialg(\B_2)$ is exact and $\Bialg(\B_1)$ has a terminal object, then $\Bialg(\B_1)$ is exact. 
+\end{corollary}
+\begin{proof}
+    As the forgetful functors $U_i$ strictly create pullbacks and reflexive coequalizers for $i = 1,2$ (Corollary \ref{cor:strictCreationToBialgebraicDatumObjectsKan}), $\Bialg(\B_1)$ has these (co)limits and the functor $\bar{F}$ preserves them. Since $F,U_1$ and $U_2$ are conservative, so is $\bar{F}$. By Lemma~\ref{lem:reflecting_regularity_exactness}(3), $\bar{F}$ reflects exactness when its domain has a terminal object.
+\end{proof}
+\begin{corollary}\label{cor:exactnessLiftingAlongAlgebraicExtensionsOfTheories}
+    Let $\sigma_1\subset\sigma_2$ be $1$-signatures relative to $\Sigma$ with the same set of sorts. Let $T_1\subset T_2$ be algebraic $\sigma_1$- and $\sigma_2$-theories, respectively, with $M$ a categorical $\Sigma$-model. Assume that each category $M_c$ has finite limits and reflexive coequalizers and each functor $M(B)$ preserves reflexive coequalizers componentwise. If $M^{T_1}$ is exact, then so is $M^{T_2}$. 
+\end{corollary}
+\begin{proof}
+    Follows directly by considering the forgetful functor $U\colon M^{T_2}\to M^{T_1}$ and applying Corollary~\ref{cor:ExactnessReflectionPrinciple}. 
+\end{proof}
+
+\subsection{Examples of Exact Categories via Theory Extension}
+
+Consider a commutative ring $R$. The ring $R$ is said to be von Neumann regular, or just regular, if each element $r\in R$ has a pseudo-inverse $s\in R$, that is, $rsr = r$ and $srs = s$. The pseudo-inverse is necessarily unique, permitting a description of commutative regular rings with a theory of universal algebra. For each maximal ideal $\alpha$ of $R$, one can consider the localization $R_\alpha\coloneqq (R\setminus \alpha)^{-1}R$.
+\begin{lemma}\label{lem:localizations}
+    Let $T$ be a bialgebraic theory, with $S$ as the set of sorts, over the $2$-signature for symmetric monoidal categories. Then the localizations at maximal ideals $\alpha$ determine a jointly conservative family 
+    $$
+    (L_\alpha^T\colon \Mod_R^T\to\Mod_{R_\alpha}^T)_\alpha
+    $$
+    of functors preserving sifted colimits. In the case $R$ is a regular ring, the localization $L^T_\alpha$ preserves finite cosifted limits and $R_\alpha$ is a field for each maximal ideal $\alpha$ of $R$.
+\end{lemma}
+\begin{proof}
+    Consider a maximal ideal $\alpha$ of $R$ and the localization $L_\alpha\colon \Mod_R\to \Mod_{R_\alpha}, M\mapsto M\otimes_{R} R_\alpha$. The functor $L_\alpha$ is exact, symmetric monoidal, and jointly conservative over all maximal ideals $\alpha$ by \cite[Chapter 3]{atiyah_introduction_1969}. Denote the induced functor of algebras by $L_\alpha^T\colon \Mod_R^T\to \Mod_{R_\alpha}^T$ (Theorem \ref{thm:induced_morphism_between_algebras}). The joint conservativity claim is clear. Since the monoidal products preserve colimits componentwise, the forgetful functor $\Mod_R^T\to \Mod_R^S$ strictly creates all sifted colimits (Corollary \ref{cor:liftingSifted}). Thus $L_\alpha^T$ preserves all sifted colimits. 
+
+    In the case $R$ is a regular ring, we have by \cite[Chapter~2, Exercise~27; Chapter~3, Exercise~10]{atiyah_introduction_1969} that the localization $R_\alpha$ is a field and the tensor $\otimes_R$ is left-exact componentwise. Thus $\Mod_R^T\to \Mod_R^S$ (similarly for the codomain of $L_\alpha^T$) strictly creates finite cosifted limits and hence $L_\alpha^T$ preserves them.
+\end{proof}
+Consider a symmetric monoidal category $A$ and denote by $\mathbf{Comon}^{\mathrm{coc}}_A$ the category of internal cocommutative comonoids. The category of internal cocommutative Hopf algebras $\Hopf_A^{\mathrm{coc}}$ in $A$ is defined as the category $\mathbf{Grp}(\mathbf{Comon}^{\mathrm{coc}}_A)$ of internal groups within $\mathbf{Comon}^{\mathrm{coc}}_A$. In the case where $A$ is the symmetric monoidal category of $k$-vector spaces or its dual, it has been shown that the category $\Hopf^{\mathrm{coc}}_A$ is exact (even semi-abelian) \cite{GRAN20194171, forsman2026semiabeliannessaffinegroupschemes}. The following corollary generalizes some exactness results found in \cite{bevilacquaCoalgebraicModelsOmega2026, granHopfBracesSemiabelian2026} by showing that $(\mathbf{Comon}^{\mathrm{coc}}_A)^T$ is exact for all algebraic theories $T$ extending the theory of groups, when $A$ is either the symmetric monoidal category of $R$-modules or its dual for a commutative regular ring $R$:
+\begin{corollary}\label{cor:algebraicExtensionLiftingExactness}
+    Consider a commutative regular ring $R$. Let $T$ be a multi-sorted theory of universal algebra extending the theory of groups in each sort $s\in S$. Then $(\Comon_A^\coc)^T$ is exact for $A = \Mod_R, \Mod_R^\mathrm{op}$.
+\end{corollary}
+\begin{proof}
+    Consider first the case $A = \Mod_R$ and consider the following functors over maximal ideals $\alpha$ from Lemma~\ref{lem:localizations}
+    $$
+    (\Comon_R^\coc)^T\xrightarrow{U} (\Hopf_R^\coc)^S\xrightarrow{L_\alpha^S} (\Hopf_{R_\alpha}^\coc)^S
+    $$
+    Since $R$ is a regular ring, the localizations preserve coreflexive equalizers and finite products, so they preserve finite limits. Thus $\Hopf_R^\coc$ is exact by Lemma \ref{lem:reflecting_regularity_exactness}(3) and the fact that $\Hopf_k^\coc$ is exact for all fields $k$ by \cite{GRAN20194171}. Then by Corollary~\ref{cor:exactnessLiftingAlongAlgebraicExtensionsOfTheories}, $(\Comon_R^\coc)^T$ is exact. 
+
+    Now consider the case $A = \Mod_R^{\mathrm{op}}$. Note that $\Comon_A^\coc$ is the category of affine schemes over $R$. The exactness of affine group schemes over a field is shown in \cite{forsman2026semiabeliannessaffinegroupschemes}. Thus the exactness of $(\Comon_A^\coc)^T$ follows in the same manner as the previous case.
+\end{proof}
+
+Recently, there has been interest in cocommutative Hopf braces \cite{agoreCategoryHopfBraces2026, Angiono_2016}, which are skew braces within the category $\Comon_k^\coc$, and $\Omega$-Hopf algebras, which are internal $\Omega$-groups \cite{bevilacquaCoalgebraicModelsOmega2026} within $\Comon_k^\coc$. Corollary~\ref{cor:algebraicExtensionLiftingExactness} immediately shows their exactness. 

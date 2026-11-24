@@ -1,0 +1,33 @@
+name: Publish documentation
+on:
+  workflow_dispatch:
+  push:
+    tags: ['*']
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+      - run: lake exe cache get
+      - name: Build Lean documentation
+        working-directory: docbuild
+        run: |
+          MATHLIB_NO_CACHE_ON_UPDATE=1 lake update doc-gen4
+          lake build +Companion.Statements:docs +Companion.Proofs:docs
+      - name: Assemble Pages artifact
+        run: |
+          mkdir -p site/docs
+          cp -a docbuild/.lake/build/doc/. site/docs/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

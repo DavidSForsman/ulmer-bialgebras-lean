@@ -1,0 +1,12 @@
+name = "docbuild"
+reservoir = false
+packagesDir = "../.lake/packages"
+
+[[require]]
+name = "doc-gen4"
+git = "https://github.com/leanprover/doc-gen4.git"
+rev = "b3ed25bf7905565f793c47f2a13737d742d96f14"
+
+[[require]]
+name = "UlmerBialgebrasFormalization"
+path = ".."

@@ -1,0 +1,76 @@
+
+\section{2-Categorical Preliminaries and PIE Limits}\label{sec:preliminaries}
+
+Throughout this paper, we work in a strict $2$-categorical setting. We assume familiarity with the basics of $2$-categories, bicategories, and enriched categories, referring the reader to \cite{Kelly:Enriched, lack2CategoriesCompanion2010}.
+
+\subsection{Conventions and Notation}
+Let $\K$ be a strict $2$-category.\footnote{We assume the existence of a Grothendieck universe $U$ and its successor $U^+$. The elements of $U$ are called small sets, and elements of $U^+$ are large.}
+\begin{itemize}
+    \item Objects, morphisms ($1$-cells) and transformations ($2$-cells) of $\K$ are denoted as follows:\begin{itemize}
+        \item \textbf{Objects:} $a,b,c,\ldots$
+        \item \textbf{Morphisms:} $f,g,h,\ldots \colon a\to b$ are the objects of the hom-category $\K(a,b)$ for objects $a,b$ in $\K$.
+        \item \textbf{Transformations:} $\alpha,\beta,\gamma\colon f\Rightarrow g\colon a\to b$ are the morphisms of $\K(a,b)$.
+    \end{itemize}
+    \item Vertical composition of $2$-cells in $\K(a,b)$ is denoted $\beta \bullet \alpha$, horizontal composition of $1$-cells is denoted $gf$ for morphisms $a\xrightarrow{f}b\xrightarrow{g} c$ in $\K$, and horizontal composition of $2$-cells is denoted $\beta * \alpha$ for transformations $\alpha\colon f_1\Rightarrow f_2\colon a\to b$ and $\beta\colon g_1\Rightarrow g_2\colon b\to c$ in $\K$. The bifunctoriality of horizontal composition can be seen as the interchange law $\beta * \alpha = \beta f_2 \bullet g_1\alpha = g_2\alpha \bullet \beta f_1$, with whiskerings defined by $\beta g \coloneqq \beta * \id_g$ and $h\alpha \coloneqq \id_h * \alpha$.
+    \item For a monoidal category $\V$, $\V\text{-}\CAT$ denotes the strict $2$-category of $\V$-categories, $\V$-functors, and $\V$-natural transformations \cite{Kelly:Enriched}. In particular, $\CAT\text{-}\CAT$ is the $2$-category of $2$-categories, (strict) $2$-functors and $2$-natural transformations.
+\end{itemize}
+
+As the limits we work with are flexible, the results have a corresponding non-strict version for bicategories via strictification \cite{birdFlexibleLimits2categories1989, GordonPowerStreet1995CoherenceTricategories}.
+
+\subsection{PIE Limits}
+We recall the notions of strict PIE limits (products, inserters, and equifiers).
+\begin{definition}[PIE Limits in a $2$-Category]
+   Let $\K$ be a $2$-category. We define the following $2$-dimensional limits by their explicit universal properties on both $1$-cells and $2$-cells:
+   \begin{itemize}
+       \item \textbf{Products:} The product of a family of objects $(c_i)_{i \in I}$ is an object $\prod_i c_i$ equipped with projection morphisms $\pi_j \colon \prod_i c_i \to c_j$ satisfying:
+       \begin{enumerate}[label=(\roman*)]
+           \item For any family of morphisms $(f_i\colon x\to c_i)_{i\in I}$ in $\K$ there is a unique morphism $f\colon x\to \prod_i c_i$ such that $f_i = \pi_i f$ for each $i\in I$. We often denote $f = (f_i)_i$.
+           \item For any family $(\alpha_i\colon f_i\Rightarrow g_i\colon x\to c_i)_{i\in I}$ of transformations in $\K$, there exists a unique transformation $\alpha\colon (f_i)_i\Rightarrow (g_i)_i\colon x\to \prod_i c_i$ such that $\alpha_i = \pi_i* \alpha$ for each $i\in I$, often denoted $\alpha = (\alpha_i)_i$.
+       \end{enumerate}
+
+       \item \textbf{Inserters:} Let $f,g\colon c\to d$ be parallel morphisms in $\K$. The \textbf{inserter} of $f$ and $g$ is an object $\Ins(f,g)$ in $\K$ equipped with a morphism $u\colon\Ins(f,g) \to c$ and a universal transformation $\phi \colon f \circ u \Rightarrow g \circ u$ satisfying:
+       \begin{enumerate}[label=(\roman*)]
+           \item For any morphism $h'\colon x\to c$ with a transformation $\alpha\colon fh'\Rightarrow gh'$, there exists a unique morphism $h\colon x\to \Ins(f,g)$ such that $h' = uh$ and $\alpha = \phi*h$.
+           \item For any pair of morphisms $h_1,h_2\colon x\to \Ins(f,g)$ with a transformation $\alpha'\colon uh_1\Rightarrow uh_2$ making the diagram
+           \begin{equation}\label{cd:2ndUnivInserter}
+           \begin{tikzcd}
+fuh_1 \arrow[d, "f*\alpha'"', Rightarrow] \arrow[r, "\phi*h_1", Rightarrow] & guh_1 \arrow[d, "g*\alpha'", Rightarrow] \\
+fuh_2 \arrow[r, "\phi*h_2"', Rightarrow]                                   & guh_2
+\end{tikzcd}
+           \end{equation}
+           commute, there is a unique transformation $\alpha\colon h_1\Rightarrow h_2$ such that $\alpha' = u*\alpha$.
+       \end{enumerate}
+
+       \item \textbf{Equifiers:} Let $\eta, \theta \colon f\Rightarrow g\colon c\to d$ be parallel transformations in $\K$. The \textbf{equifier} of $\eta$ and $\theta$ is an object $\Eq(\eta, \theta)$ equipped with a morphism $u \colon \Eq(\eta, \theta) \to c$ such that $\eta * u = \theta * u$, satisfying:
+       \begin{enumerate}[label=(\roman*)]
+           \item Any morphism $h'\colon x\to c$, satisfying $\eta*h' = \theta*h'$, has a unique lift $h\colon x\to \Eq(\eta,\theta)$ along $u$, meaning $h' = uh$.
+           \item The functor $u_x\coloneqq u*(-)\colon \K(x,\Eq(\eta,\theta))\to \K(x,c)$ is fully faithful for every object $x$ in $\K$.
+       \end{enumerate}
+   \end{itemize}
+   We say that $\K$ is \textbf{PIE-complete} if it has small products, inserters and equifiers.
+\end{definition}
+
+
+\begin{remark}[PIE Limits in $\CAT$]
+   In the $2$-category $\CAT$, small products are standard cartesian products of categories, and inserters and equifiers are computed explicitly:
+   \begin{itemize}
+       \item Let $F, G \colon \C \to \D$ be parallel functors. The \textbf{inserter category} $\Ins(F, G)$ has as objects pairs $(c, \alpha\colon Fc\to Gc)$, where $c$ is an object of $\C$ and $\alpha$ is a morphism in $\D$. A morphism $f\colon (c,\alpha)\to (d,\beta)$ in $\Ins(F,G)$ consists of a morphism $f\colon c\to d$ in $\C$ making the diagram
+       \[
+       \begin{tikzcd}
+Fc \arrow[d, "F(f)"'] \arrow[r, "\alpha"] & Gc \arrow[d, "G(f)"] \\
+Fd \arrow[r, "\beta"']                             & Gd
+       \end{tikzcd}
+       \]
+       commute. The universal functor $U \colon \Ins(F, G) \to \C$ is the forgetful functor $f\colon (c,\alpha)\to (d,\beta)\mapsto f\colon c\to d$, and the universal natural transformation $\phi$ has components $\phi_{(c,\alpha)} = \alpha$.
+
+       \item Let $\eta,\theta\colon F\Rightarrow G\colon \C\to \D$ be natural transformations. The \textbf{equifier category} $\Eq(\eta, \theta)$ is the full subcategory of $\C$ consisting of those objects $c$ for which $\eta_c = \theta_c$. The universal functor $E \colon \Eq(\eta, \theta) \to \C$ is the canonical fully faithful inclusion.
+   \end{itemize}
+\end{remark}
+The universal properties above say precisely that the representable $2$-functors $\K(x,-)\colon \K\to \CAT$ preserve and jointly reflect PIE limits, which in $\CAT$ are described in the remark above.
+\begin{example}
+    We give some examples of $2$-categories with PIE limits:
+    \begin{enumerate}
+        \item The $2$-category $\CAT$ of locally small categories has all PIE limits.
+        \item The $2$-category $\ACC$ of accessible categories, accessible functors and natural transformations is closed under the PIE limits of $\CAT$ \cite{MakkaiPare1989AccessibleCategories, LPC}. Accessibility generalizes to two different notions for $\V\text{-}\CAT$, when $\V$ is a locally presentable symmetric monoidal closed category \cite{LACK2023107196}. For both of these notions of accessibility, the $2$-category $\V\text{-}\ACC$ of $\V$-accessible $\V$-categories, $\V$-accessible $\V$-functors and $\V$-natural transformations is closed under the PIE limits in $\V\text{-}\CAT$ \cite[Theorem 5.5, Theorem 5.9]{LACK2023107196}.
+    \end{enumerate}
+\end{example}
