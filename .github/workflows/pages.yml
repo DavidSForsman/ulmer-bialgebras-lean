@@ -18,17 +18,20 @@ jobs:
       - name: Free disk space and add swap
         run: |
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc
-          sudo fallocate -l 12G /swapfile22
-          sudo chmod 600 /swapfile22
-          sudo mkswap /swapfile22
-          sudo swapon /swapfile22
+          sudo fallocate -l 12G /swapfile2
+          sudo chmod 600 /swapfile2
+          sudo mkswap /swapfile2
+          sudo swapon /swapfile2
+          sudo sysctl -w vm.overcommit_memory=1
+          free -h
+          df -h
       - uses: leanprover/lean-action@v1
       - run: lake exe cache get
       - name: Build Lean documentation
         working-directory: docbuild
         run: |
           MATHLIB_NO_CACHE_ON_UPDATE=1 lake update doc-gen4
-          lake build -j 2 +Companion.Statements:docs +Companion.Proofs:docs
+          lake build +Companion.Statements:docs +Companion.Proofs:docs
       - name: Assemble Pages artifact
         run: |
           mkdir -p site/docs
